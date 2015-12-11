@@ -1,0 +1,39 @@
+<template name="layoutHeaderNew">
+  <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="/resources/logo-white.png" alt="" /></a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+              <li class="active explore-btn"><a href="/">Explore</a></li>
+              <li><a href="http://huntrs-staging.herokuapp.com/user-profile">Sell</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+              <li><a href="#">{{> accounts tpl="loginDropdown"}}</a></li>
+              <li><a href="#">{{> cartIcon}}</a></li>
+
+          </ul>
+          <!-- <form class="navbar-form" role="search">
+            <div class="input-group user-search">
+                <input class="form-control typeahead" name="username" type="text"
+                   placeholder="Search for users..."
+                   autocomplete="off" spellcheck="off"
+                   data-source="usernames"/>
+            </div>
+          </form> -->
+      </div>
+  </div>
+
+<div class="container-fluid">
+  {{>bootstrapAlerts}}
+</div>
+</template>
