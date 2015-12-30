@@ -1,0 +1,46 @@
+#landing .row {
+  min-height: 40vh;
+  text-align: center;
+  line-height: 40vh; }
+#landing .banner {
+  border: 10px solid black; }
+  #landing .banner p {
+    font-size: 4rem;
+    color: white;
+    font-family: HelveticaNeue-Bold;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    margin-right: -4px;
+    margin-left: -5px;
+    transition-duration: 0.3s;
+    cursor: pointer; }
+  #landing .banner p:hover {
+    transition-duration: 0.3s;
+    background: rgba(0, 0, 0, 0.4); }
+#landing .top-banner {
+  background-image: url("resources/bwstripes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#landing .mid-top-right-banner {
+  background-image: url("resources/buttons.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#landing .mid-top-left-banner {
+  background-image: url("resources/gloves.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#landing .mid-bottom-right-banner {
+  background-image: url("resources/style.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#landing .mid-bottom-left-banner {
+  background-image: url("resources/bwjacket.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#landing .bottom-banner {
+  background-image: url("resources/boatsntie.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+/*# sourceMappingURL=landing.css.map */
