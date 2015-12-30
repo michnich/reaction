@@ -54,6 +54,7 @@ coffeescript@1.0.10
 cosmos:browserify@0.3.0
 d3js:d3@3.5.5
 dburles:factory@0.3.10
+dburles:mongo-collection-instances@0.3.4
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.1
@@ -89,6 +90,7 @@ jparker:crypto-core@0.1.0
 jparker:crypto-md5@0.1.1
 jparker:gravatar@0.3.1
 jquery@1.11.4
+lai:collection-extensions@0.1.4
 launch-screen@1.0.4
 less@2.5.0_3
 livedata@1.0.15
@@ -99,6 +101,7 @@ meteor@1.1.9
 meteor-base@1.0.1
 meteorhacks:inject-initial@1.0.2
 meteorhacks:ssr@2.1.2
+meteortoys:toykit@2.2.1
 minifiers@1.1.7
 minimongo@1.0.10
 mobile-experience@1.0.1
@@ -108,6 +111,7 @@ mongo@1.1.2
 mongo-id@1.0.1
 mongo-livedata@1.0.9
 mquandalle:bower@1.5.2_1
+msavin:mongol@1.6.2
 nemo64:bootstrap@3.3.5_2
 nemo64:bootstrap-data@3.3.5
 npm-bcrypt@0.7.8_2

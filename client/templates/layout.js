@@ -11,6 +11,6 @@ Template.layout.replaces ("coreLayout");
 
 Template.layoutHeaderNew.replaces("layoutHeader");
 
-Template.productsNew.replaces("products");
+// Template.landingPro.replaces("products");
 
 // Template.productDetailNew.replaces("productDetail");
