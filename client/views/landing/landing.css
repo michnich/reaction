@@ -14,7 +14,9 @@
     margin-right: -4px;
     margin-left: -5px;
     transition-duration: 0.3s;
-    cursor: pointer; }
+    cursor: pointer;
+    text-transform: lowercase;
+    text-shadow: 1px 1px 1px black; }
   #landing .banner p:hover {
     transition-duration: 0.3s;
     background: rgba(0, 0, 0, 0.4); }
