@@ -10,7 +10,7 @@ ReactionController = ShopController.extend({
 Router.map(function() {
   return this.route("productsNew", {
     controller: ReactionController,
-    path: "/productsNew"
+    path: "/products"
   });
 });
 Router.map(function() {
