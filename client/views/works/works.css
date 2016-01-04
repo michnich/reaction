@@ -11,7 +11,8 @@
     background: #FAFAFA; }
   #works .col-xs-8 {
     padding-left: 2em;
-    padding-bottom: 1em; }
+    padding-bottom: 1em;
+    border-bottom: 1px solid darkgrey; }
   #works .row h1 {
     text-align: left;
     text-transform: lowercase; }
