@@ -7,6 +7,23 @@ ReactionController = ShopController.extend({
   }
 });
 
+
+ProfileController=ReactionController.extend({
+    layoutTemplate:"profile",
+    waitOn:function(){
+        return Meteor.subscribe("allUserData");
+        return Meteor.subscribe("userProfile",this.params.username);
+    },
+    data:function(){
+        var username=Router.current().params.username;
+        return Meteor.users.findOne({
+            username:username
+        });
+    }
+});
+
+
+
 Router.map(function() {
   return this.route("productsNew", {
     controller: ReactionController,
@@ -29,5 +46,12 @@ Router.map(function() {
   return this.route("works", {
     controller: ReactionController,
     path: "/how-it-works"
+  });
+});
+
+Router.map(function() {
+  return this.route("profile", {
+    path: "/profile/:username",
+    controller:ProfileController
   });
 });

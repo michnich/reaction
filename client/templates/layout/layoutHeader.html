@@ -14,7 +14,15 @@
 
               <li class="active explore-btn"><a href="/productsNew">Explore</a></li>
               <li><a href="{{pathFor 'userProfile'}}">Sell</a></li>
-
+              <li><form class="navbar-form" role="search">
+                <div class="input-group user-search">
+                    <input class="form-control typeahead" name="username" type="text"
+                       placeholder="Search for users..."
+                       autocomplete="off" spellcheck="off"
+                       data-source="usernames"/>
+                </div>
+              </form>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
 
