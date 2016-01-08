@@ -1,0 +1,30 @@
+<template name="profile">
+  Username: {{username}}<br>
+  {{emails.[0].address}}
+  {{! with acts as an if : the following part won't be displayed
+      if the user document has no profile property}}
+  {{#with profile}}
+      <p>First name : {{first_name}}</p>
+      <p>Last name : {{last_name}}</p>
+      <p>About: {{about}}</p>
+
+  {{/with}}
+  <!-- if this is the current user -->
+  {{#if isUser}}
+    <h1>Hello World</h1>
+
+
+    <form class="first-name">
+      <input type="text" name="first_name" placeholder="Add Your First Name" />
+    </form>
+
+    <form class="last-name">
+      <input type="text" name="last_name" placeholder="Add Your Last Name" />
+    </form>
+
+    <form class="about">
+      <input type="text" name="about" placeholder="Add A little Bit about yourself" />
+    </form>
+
+  {{/if}}
+</template>
