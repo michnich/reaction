@@ -49,6 +49,21 @@ Template.profile.events({
     );
     // Clear form
     event.target.about.value = "";
+  },
+
+  "submit .username": function (event) {
+    // Prevent default browser form submit
+    event.preventDefault();
+
+    // Get value from form element
+    var username = event.target.username.value;
+
+    // Insert a task into the collection
+    Meteor.users.update(Meteor.userId(),
+    {$set: {'username': username}}
+    );
+    // Clear form
+    event.target.username.value = "";
   }
 
 
