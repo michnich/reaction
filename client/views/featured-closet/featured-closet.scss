@@ -1,0 +1,102 @@
+.featured-closet{
+  .featured-banner{
+    margin-top:-66px;
+    min-height: 100%;
+    min-height: 100vh;
+    .text{
+      position: absolute;
+      z-index: 6;
+      text-align: center;
+      color: #fff;
+      top: 54%;
+      width: 100%;
+      margin-top: -122px;
+      left: 0;
+        h1{
+          font-size: 5em;
+          color: white;
+          font-family: 'Garamond';
+
+          text-shadow: 1px 1px 1px black;
+          text-transform: uppercase;
+          font-style: italic;
+          letter-spacing: 4px;
+        }
+        h2{
+          font-family: 'Garamond';
+          text-shadow: 1px 1px 1px black;
+          font-style: italic;
+          color: white;
+          text-transform: lowercase;
+        }
+
+    }
+  }
+
+  // Second full height banner
+  .second-banner, .third-banner{
+    margin-top: 0;
+  }
+  // Content layout
+  .content{
+    margin: 7rem 0;
+    h1{
+      // text-align: center;
+      margin: 2rem 0;
+      font-size: 5em;
+
+    }
+    p{
+      font-size: 1.4em;
+    }
+      text-align: left;
+  }
+
+// Gallery for featured-closet
+.media-row{
+  margin: 7rem 0 0;
+}
+
+
+  .closet-media{
+    border: 4px solid white;
+  }
+  .media-large{
+    // img{
+    //   max-height: 400px;
+    //   margin: 0 auto;
+    // }
+  }
+  .media-small{
+    // img{
+    //   max-height: 400px;
+    //   margin: 0 auto;
+    // }
+  }
+
+
+  // QUESTIONS SECTION
+  .questions{
+    text-align: left;
+    .question{
+      font-family: 'Garamond';
+      margin: 3.5rem 0;
+
+
+    }
+  }
+}
+
+
+
+// backgrounds for banner
+
+.featured-banner{
+  background-image: url('/resources/featured-car.jpg');
+}
+.second-banner{
+  background-image: url('/resources/featured-banner.jpg');
+}
+.third-banner{
+  background-image: url('/resources/featured-camera.jpg');
+}
