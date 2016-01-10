@@ -55,3 +55,9 @@ Router.map(function() {
     controller:ProfileController
   });
 });
+Router.map(function() {
+  return this.route("featuredCloset", {
+    path: "/featured-closet",
+    controller:ProfileController
+  });
+});

@@ -1,0 +1,99 @@
+#userPro {
+  margin: 2rem auto;
+  height: 100%; }
+  #userPro input[type="file"] {
+    display: block;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 33px; }
+  #userPro #profile {
+    height: 100%; }
+    #userPro #profile .bio, #userPro #profile .style {
+      margin-top: 1rem;
+      font-family: "EB Garamond", serif;
+      font-size: 0.9em; }
+    #userPro #profile .style {
+      margin-top: 0;
+      border-bottom: 1px solid darkgrey;
+      padding-bottom: 0.5em; }
+    #userPro #profile .btn {
+      height: 200px;
+      line-height: 200px;
+      background-color: darkgrey;
+      margin-top: 1rem; }
+      #userPro #profile .btn .add-product {
+        color: white;
+        transition: 0.3s;
+        height: 200px; }
+      #userPro #profile .btn .add-product:hover {
+        text-decoration: none;
+        transition: 0.3s; }
+    #userPro #profile .btn:hover {
+      background-color: grey; }
+    #userPro #profile .send-email {
+      margin: 1rem 0;
+      border-bottom: 1px solid darkgrey;
+      padding-bottom: 0.5em; }
+      #userPro #profile .send-email a {
+        font-family: "EB Garamond", serif;
+        color: black;
+        transition: 0.3s; }
+        #userPro #profile .send-email a i {
+          font-size: 1.4em;
+          padding-right: 1em; }
+      #userPro #profile .send-email a:hover {
+        text-decoration: none;
+        color: darkgrey;
+        transition: 0.3s; }
+  #userPro .profile-img, #userPro .uploaded-image {
+    height: 120px;
+    width: 120px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  #userPro #closet {
+    background-color: #EFF0F1;
+    margin-top: 2em;
+    min-height: 70vh;
+    padding: 2em; }
+
+.username {
+  font-family: Garamond;
+  font-size: 1.5em; }
+
+.closet-name {
+  font-family: 'HelveticaNeue-Bold', sans-serif;
+  text-transform: lowercase; }
+
+.product-desc {
+  font-family: 'HelveticaNeue-Bold';
+  font-weight: bold;
+  margin-bottom: 0; }
+
+.product a {
+  font-family: "EB Garamond", serif;
+  color: black;
+  transition: .3s; }
+.product a:hover {
+  text-decoration: none;
+  color: darkgrey;
+  transition: .3s; }
+  .product a:hover .stock {
+    opacity: 0.8; }
+
+input.delete-image {
+  display: block;
+  position: relative;
+  /* right: 0; */
+  text-align: right;
+  float: left;
+  margin: 1em 0;
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  color: #C1332C; }
