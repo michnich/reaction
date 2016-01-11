@@ -1,0 +1,340 @@
+// ************************************************
+// THIS FILE IS FOR YOU TO MODIFY REACTION THEMING!
+// ************************************************
+//
+// It won't be overwritten as long as it exists.
+//
+// This file is the last import after all base reaction
+// variables, styles, and mixins.
+//
+// If you want to override variables or add custom styles to the top,
+// see 'custom.reaction.import.less'
+
+
+.reactionAvatar-small {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.navbar-default{
+  background-color: black;
+
+}
+.tag-link-list {
+    float: left;
+    margin-top: 29px;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-right: 2em;
+    border-right: 1px solid darkgrey;
+}
+// .checkout-login{
+//   display: none!important;
+// }
+// .col-md-6.pull-right.guest-checkout {
+//     float: right !important;
+//     float: none !important;
+//     margin: 0 auto;
+// }
+.checkout-login{
+  visibility: hidden;
+}
+
+// NAVIGATION
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+.navbar, .navbar-default {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  padding-top: 1em;
+  background-color: #000; }
+  @media (min-width: 1200px) {
+    .navbar .container, .navbar-default .container {
+      max-width: 970px; } }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #FFF;
+  background-color: transparent; }
+
+html {
+  background: white; }
+
+/* Custom page footer */
+.footer {
+  background-color: #000; }
+  .footer .nav, .footer .navbar-nav {
+    border: none; }
+    .footer .nav li a, .footer .navbar-nav li a {
+      color: #777; }
+    .footer .nav li a:hover, .footer .navbar-nav li a:hover {
+      color: #FFF;
+      background-color: transparent; }
+  .footer p, .footer a, .footer i {
+    color: #FFF; }
+
+/* basic typeahead styles */
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 396px;
+  padding: 8px 12px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  outline: none; }
+
+.typeahead {
+  background-color: #fff; }
+
+.typeahead:focus {
+  border: 2px solid #0097cf; }
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.tt-hint {
+  color: #999; }
+
+.tt-menu {
+  width: 422px;
+  margin: 4px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px; }
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf; }
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf; }
+
+.tt-suggestion p {
+  margin: 0; }
+
+.navbar-brand img {
+  height: 100%; }
+
+// .cart-icon{
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//
+// }
+
+
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+}
+.navbar-brand img {
+    height: 100%;
+}
+
+////////////////////////////////////////// FOOTER
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+.footer {
+  font-family: 'EB Garamond';
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #EFF0F1;
+  padding-top: 1em; }
+.footer-default{
+  padding:0;
+}
+
+//////////////////////////////////////////// GLOBAL
+
+
+
+h1,h2{
+  font-family: 'HelveticaNeue-Bold', sans-serif;
+}
+//fonts
+
+.reaction-navigation-header{
+  .navbar-default .navbar-nav,li>a{
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+  }
+
+}
+
+p,h3,h4{
+  font-family: 'Garamond';
+}
+
+
+///////////////////////////////////////////////// JUMBOTRON
+.container-fluid{
+  padding: 0;
+  margin: 0;
+}
+.container-fluid .jumbotron {
+    border-radius: 0px;
+}
+#main{
+  padding: 0px;
+}
+.jumbotron{
+  background: url('/resources/Hunters-Explore.jpg');
+  background-size: cover;
+  background-position:top;
+  height: 502px;
+  color: white;
+  margin-bottom: 0;
+  border-radius: 0;
+  .content{
+    display: table;
+    height: 100%;
+    .container{
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+}
+// .dropdown{
+//   top: 0;
+//   right: 80px
+// }
+.spinner-container {
+    left: 0;
+    position: absolute;
+    top: 0;
+    background-color: white;
+}
+.tag-link-list{
+  float: left;
+  margin-top: 29px;
+  margin-left: 2em;
+  li{
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+
+// NAVIGATION BUTTON
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle  {
+    background-color: transparent;
+    border-color: transparent;
+}
+// HAMBURGER
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+    height: 1px;
+}
+
+
+// NAVBAR
+.navbar-default .navbar-nav > li > a {
+    padding-top:0;
+    line-height: 50px;
+}
+.reactionAvatar .reactionAvatar-image, .reactionAvatar .reactionAvatar-initials {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}
+
+.cart-icon {
+    color: darkgrey;
+    border: none;
+    padding: 0px 1rem;
+    border-radius: 0;
+    position: relative;
+    background-color: transparent;
+    height: 50px;
+}
+.cart-icon:hover{
+  background-color: white;
+}
+.cart-icon .badge {
+    position: absolute;
+    bottom: 0px;
+    margin-right: 9px;
+    color: darkgrey;
+    background-color: transparent;
+}
+.user-accounts-dropdown-apps {
+  list-style-type: none;
+}
+
+
+
+///////////// PRODUCT DETAIL
+
+//Title
+.pdp-container .title h1 {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: inherit;
+
+
+}
+
+//Subtitle
+
+.pdp-container .pageTitle h2 {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #1999dd;
+}
+
+//add to cart button
+.pdp-container .add-to-cart-block {
+  background-color: #c1332C;
+  border-radius: 0;
+  border:none;
+  font-family: 'EB Garamond', serif;
+}
+.container-main{
+  background-color: white;
+}
+.pdp-container .price {
+    font-weight: bold;
+    font-size: 2em;
+    overflow: visible;
+    display: inline-block;
+}
+
+//UNDERLINE UNDER price
+.row.social-pricing {
+    border-bottom: 1px solid darkgrey;
+    padding-bottom: 1rem;
+}
+
+.progress-bar-success {
+    background-color: #25C331;
+}
+#logged-in-display-name {
+    text-transform: lowercase;
+}

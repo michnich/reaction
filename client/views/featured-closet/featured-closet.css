@@ -1,0 +1,57 @@
+.featured-closet .featured-banner {
+  margin-top: -66px;
+  min-height: 100%;
+  min-height: 100vh; }
+  .featured-closet .featured-banner .text {
+    position: absolute;
+    z-index: 6;
+    text-align: center;
+    color: #fff;
+    top: 54%;
+    width: 100%;
+    margin-top: -122px;
+    left: 0; }
+    .featured-closet .featured-banner .text h1 {
+      font-size: 5em;
+      color: white;
+      font-family: 'Garamond';
+      text-shadow: 1px 1px 1px black;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 4px; }
+    .featured-closet .featured-banner .text h2 {
+      font-family: 'Garamond';
+      text-shadow: 1px 1px 1px black;
+      font-style: italic;
+      color: white;
+      text-transform: lowercase; }
+.featured-closet .second-banner, .featured-closet .third-banner {
+  margin-top: 0; }
+.featured-closet .content {
+  margin: 7rem 0;
+  text-align: left; }
+  .featured-closet .content h1 {
+    margin: 2rem 0;
+    font-size: 5em; }
+  .featured-closet .content p {
+    font-size: 1.4em; }
+.featured-closet .media-row {
+  margin: 7rem 0 0; }
+.featured-closet .closet-media {
+  border: 4px solid white; }
+.featured-closet .questions {
+  text-align: left; }
+  .featured-closet .questions .question {
+    font-family: 'Garamond';
+    margin: 3.5rem 0; }
+
+.featured-banner {
+  background-image: url("/resources/featured-car.jpg"); }
+
+.second-banner {
+  background-image: url("/resources/featured-banner.jpg"); }
+
+.third-banner {
+  background-image: url("/resources/featured-camera.jpg"); }
+
+/*# sourceMappingURL=featured-closet.css.map */
