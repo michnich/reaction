@@ -12,4 +12,4 @@ Template.layout.replaces ("coreLayout");
 Template.layoutHeaderNew.replaces("layoutHeader");
 
 // Template.landingPro.replaces("products");
-Template.login.replaces("loginFormSignUpView");
+
