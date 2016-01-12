@@ -55,4 +55,3 @@ Router.map(function() {
     controller:ProfileController
   });
 });
-
