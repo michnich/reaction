@@ -113,12 +113,15 @@ if (Meteor.isClient) {
           {$set: {'profile.name': Meteor.userId()}}
           );
           alert('hello' + Meteor.user().profile.name);
-        } else if (Meteor.user().emails[0].address.length > 1) {
+        }
+      });
+      Tracker.autorun(function(){
+        if (Meteor.user().emails[0].address.length > 1) {
           Meteor.users.update(Meteor.userId(),
             {$set: {'profile.name': Meteor.user().emails[0].address}}
           );
         }
-      });
+      })
 
     });
 
