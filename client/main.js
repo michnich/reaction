@@ -103,18 +103,27 @@ Meteor.app = _.extend(Meteor.app || {}, {
 });
 
 
+
 if (Meteor.isClient) {
   // This code only runs on the client
 
     Meteor.startup(function () {
       Tracker.autorun(function () {
         if (Meteor.user().emails == undefined ){
-          Meteor.users.update(Meteor.userId(),
-          {$set: {'profile.name': Meteor.userId()}}
-          );
-          alert('hello' + Meteor.user().profile.name);
+          // Meteor.users.update(Meteor.userId(),
+          // {$set: {'profile.name': 'default'}}
+          // );
+          // alert('hello' + Meteor.user().profile.name);
+
+          Meteor.call('profile', function(){
+
+          });
         }
       });
+
+
+
+
       Tracker.autorun(function(){
         if (Meteor.user().emails[0].address.length > 1) {
           Meteor.users.update(Meteor.userId(),
@@ -124,5 +133,4 @@ if (Meteor.isClient) {
       })
 
     });
-
 }

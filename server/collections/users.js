@@ -15,6 +15,11 @@ Meteor.publish("userProfile",function(username){
         // then we return the corresponding full document via a cursor
         return Meteor.users.find(this.userId);
     }
+    // if(user.emails == undefined){
+    //   Meteor.users.update(Meteor.userId(),
+    //   {$set: {'profile.name': 'default'}}
+    //   );
+    // }
     else{
         // if we are viewing only the public part, strip the "profile"
         // property from the fetched document, you might want to
@@ -30,7 +35,16 @@ Meteor.publish("userProfile",function(username){
 
 
 Meteor.publish('directory', function(){
+
+  var user=Meteor.users.findOne({});
+
+  // if(user.emails == undefined){
+  //   Meteor.users.update(Meteor.userId(),
+  //   {$set: {'profile.name': 'default'}}
+  //   );
+  // }
   return Meteor.users.find({}, {fields: {emails:1, profile: 1}});
+
 });
 Meteor.publish('userProducts', function(){
   return userProducts
