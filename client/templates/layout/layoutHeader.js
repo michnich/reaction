@@ -28,8 +28,13 @@ Template.layoutHeader.helpers({
   },
   usernames: function(){
     return Meteor.users.find().fetch().map(function(user){
-      return user.profile.name;
-      console.log(user.profile.name);
+      if (user.profile.name == undefined){
+        Meteor.users.update(Meteor.userId(),
+        {$set: {'profile.name': 'default'}}
+        );
+      } else {
+        return user.profile.name;
+      }
     });
   }
 });
