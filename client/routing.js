@@ -4,6 +4,9 @@ ReactionController = ShopController.extend({
   layoutTemplate: "layout",
   waitOn: function() {
     return Meteor.subscribe('Products');
+    return Meteor.subscribe("directory");
+    return Meteor.subscribe('userProducts');
+
   }
 });
 
@@ -12,7 +15,10 @@ ProfileController=ReactionController.extend({
     layoutTemplate:"profile",
     waitOn:function(){
         return Meteor.subscribe("allUserData");
+        return Meteor.subscribe("directory");
         return Meteor.subscribe("userProfile",this.params.username);
+        return Meteor.subscribe('userProducts');
+
     },
     data:function(){
         var username=Router.current().params.username;
@@ -30,12 +36,16 @@ Router.map(function() {
     path: "/products"
   });
 });
-Router.map(function() {
-  return this.route("userProfile", {
-    controller: ReactionController,
-    path: "/profile"
-  });
-});
+// Router.map(function() {
+//   return this.route("profile", {
+//     controller: ReactionController,
+//     data: function(){
+//       var username=Meteor.user().profile.name
+//       return username;
+//     },
+//     path: "/profile/:username"
+//   });
+// });
 Router.map(function() {
   return this.route("featuredCloset", {
     controller: ReactionController,
@@ -52,6 +62,21 @@ Router.map(function() {
 Router.map(function() {
   return this.route("profile", {
     path: "/profile/:username",
+    waitOn:function(){
+
+        return Meteor.subscribe('userProducts');
+
+    },
     controller:ProfileController
+  });
+});
+Router.map(function() {
+  return this.route("addProduct", {
+    controller: ReactionController,
+    waitOn:function(){
+        return Meteor.subscribe('userProducts');
+
+    },
+    path: '/add-product'
   });
 });

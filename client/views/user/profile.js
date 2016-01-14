@@ -1,8 +1,13 @@
 Template.profile.helpers({
   isUser: function(){
-    return Meteor.user().username === Router.current().params.username
+    return Meteor.user().profile.name === Router.current().params.username
   },
-
+  username: function(){
+    return Router.current().params.username
+  },
+  products: function(){
+    return userProducts.find({author: Router.current().params.username}).fetch()
+  },
 });
 Template.profile.events({
   "submit .first-name": function (event) {
@@ -60,11 +65,10 @@ Template.profile.events({
 
     // Insert a task into the collection
     Meteor.users.update(Meteor.userId(),
-    {$set: {'username': username}}
+    {$set: {'profile.name': username}}
     );
+
     // Clear form
     event.target.username.value = "";
   }
-
-
 });

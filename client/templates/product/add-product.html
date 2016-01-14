@@ -1,0 +1,209 @@
+<template name="addProduct">
+  <div class="add-product container">
+    <form class="main" role="form" id="new-product">
+      <h2>List A Product</h2>
+      <li class="break"></li>
+      <!-- product info -->
+      <div class="row">
+        <div class="col-md-3"><h2>Product Info</h2></div>
+        <div class="col-md-9">
+          <div class="form-group">
+            <div class="control-group">
+              <label for="type">*Type</label>
+              <div class="controls">
+                <select class="form-control" name="type" id="type" placeholder="Type">
+                  <option value="pants">Pants</option>
+                  <option value="shirts">Shirts</option>
+                  <option value="accessories">Accessories</option>
+                  <option value="jacket">Jacket</option>
+                  <option value="boots">Boots</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="control-group">
+              <label for="type">*Category</label>
+              <div class="controls">
+                <select class="form-control" name="category" id="category">
+                  <option value="pants">Pants</option>
+                  <option value="shirts">Shirts</option>
+                  <option value="accessories">Accessories</option>
+                  <option value="jacket">Jacket</option>
+                  <option value="boots">Boots</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="control-group">
+              <label for="size">*Size</label>
+              <div class="controls">
+                <select class="form-control" name="size" id="size">
+                  <option value="pants">XS</option>
+                  <option value="shirts">S</option>
+                  <option value="accessories">M</option>
+                  <option value="jacket">L</option>
+                  <option value="boots">XL</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="control-group">
+              <label for="color">*Color</label>
+              <div class="controls">
+                <select class="form-control" name="color" id="color">
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                  <option value="Red">Red</option>
+                  <option value="Yellow">Yellow</option>
+                  <option value="Green">Green</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="condition">*Condition</label>
+              <div class="controls">
+                <select class="form-control" name="condition" id="condition">
+                  <option value="Poor">Poor</option>
+                  <option value="Fair">Fair</option>
+                  <option value="Good">Good</option>
+                  <option value="Excellent">Excellent</option>
+                  <option value="Brand New">Brand New</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="control-group">
+              <label for="size">*Size</label>
+              <div class="controls">
+                <select class="form-control" name="size2" id="size2">
+                  <option value="pants">XS</option>
+                  <option value="shirts">S</option>
+                  <option value="accessories">M</option>
+                  <option value="jacket">L</option>
+                  <option value="boots">XL</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <li class="break"></li>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Upload A Photo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, minima, hic. Amet, quasi. Autem vitae dolores excepturi atque hic enim iste vel, quaerat, aspernatur labore quis porro eum minus error.</p>
+        </div>
+        <div class="col-md-9">
+          <div class="upload-box">
+            <div class="row">
+              <div class="col-xs-12">
+                <!-- {{> uploadImage imageCollection="productImages" doc=currentUser classImage="image-round" classInput="image-picker" inputName="product-image"}} -->
+                <button class="upload-photo">Upload Photo Here</button>
+              </div>
+              <!-- <div class="col-xs-4">
+
+              </div> -->
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <li class="break"></li>
+
+      <div class="row">
+        <div class="col-md-3"><h2>Description</h2></div>
+        <div class="col-md-9">
+          <textarea name="description" id="product-desc" cols="30" rows="10" placeholder="Describe what you are selling. Or your favourite fruit. Its up to you."></textarea>
+        </div>
+      </div>
+
+      <li class="break"></li>
+
+      <div class="row">
+        <div class="col-md-3"><h2>More Info</h2></div>
+        <div class="col-md-9">
+          <div class="control-group">
+            <label for="name" class="control-label">*Title</label>
+            <div class="controls">
+              <input name="name" type="text" value="" id="productName" class="form-control" placeholder="Title of New Product">
+            </div>
+          </div>
+          <div class="control-group">
+            <!-- CONDITION -->
+            <label for="condition">*Condition</label>
+            <div class="controls">
+              <select class="form-control" name="Condition" id="condition">
+                <option value="Poor">Poor</option>
+                <option value="Fair">Fair</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Brand New">Brand New</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="price">Asking Price</label>
+            <div class="controls">
+              <input name="price" min="0.01" step="0.01" max="2500" id='productPrice' class="form-control"  placeholder="Asking Price">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="size">*Size</label>
+            <div class="controls">
+              <select class="form-control" name="Size" id="size">
+                <option value="pants">XS</option>
+                <option value="shirts">S</option>
+                <option value="accessories">M</option>
+                <option value="jacket">L</option>
+                <option value="boots">XL</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <li class="break"></li>
+      <div class="controls">
+          <button type="submit" value="Submit"  class="btn btn-large" id="product-button" style="text-transform:none;">Add Product</button>
+          <a href="#" class="cancel">Cancel</a>
+      </div>
+
+    </form>
+  </div>
+  <script type="text/javascript">
+  $('.upload-photo').on('click', function(event){
+      event.preventDefault();
+     $('.image-picker').trigger('click');
+    });
+  </script>
+</template>
+
+
+
+
+<template name="thanksForAdding">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Thank You For Adding a Product</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Please give us here at huntrs 3-5 days to review your submission.</p>
+                    <p>Once a decision has been made we will email you with the next steps</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

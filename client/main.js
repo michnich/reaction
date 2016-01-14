@@ -101,3 +101,25 @@ Meteor.app = _.extend(Meteor.app || {}, {
     return Roles.userIsInRole(Meteor.user(), "admin") || this.isOwner;
   }
 });
+
+
+if (Meteor.isClient) {
+  // This code only runs on the client
+
+    Meteor.startup(function () {
+      Tracker.autorun(function () {
+        if (Meteor.user().emails == undefined ){
+          Meteor.users.update(Meteor.userId(),
+          {$set: {'profile.name': Meteor.userId()}}
+          );
+          alert('hello' + Meteor.user().profile.name);
+        } else if (Meteor.user().emails[0].address.length > 1) {
+          Meteor.users.update(Meteor.userId(),
+            {$set: {'profile.name': Meteor.user().emails[0].address}}
+          );
+        }
+      });
+
+    });
+
+}

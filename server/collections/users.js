@@ -27,3 +27,11 @@ Meteor.publish("userProfile",function(username){
         });
     }
 });
+
+
+Meteor.publish('directory', function(){
+  return Meteor.users.find({}, {fields: {emails:1, profile: 1}});
+});
+Meteor.publish('userProducts', function(){
+  return userProducts
+});

@@ -12,16 +12,21 @@
       <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 
-              <li class="active explore-btn"><a href="/productsNew">Explore</a></li>
-              <li class="profile-button"><a href="/profile/elliott">Sell</a></li>
-              <li><form class="navbar-form" role="search">
-                <div class="input-group user-search">
-                    <input class="form-control typeahead" name="username" type="text"
-                       placeholder="Search for users..."
-                       autocomplete="off" spellcheck="off"
-                       data-source="usernames"/>
-                </div>
-              </form>
+              <li class="active explore-btn"><a href="/products">Explore</a></li>
+
+              {{#if currentUser}}
+              <li class="profile-button"><a href="/profile/{{username}}">Sell</a></li>
+              {{/if}}
+
+              <li>
+                {{#if currentUser}}
+                  {{> search}}
+                {{/if}}
+
+                <!-- test for each username -->
+                {{#each usernames}}
+                <p>{{this}}</p>
+                {{/each}}
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -30,18 +35,21 @@
               <li><a href="#">{{> cartIcon}}</a></li>
 
           </ul>
-          <!-- <form class="navbar-form" role="search">
-            <div class="input-group user-search">
-                <input class="form-control typeahead" name="username" type="text"
-                   placeholder="Search for users..."
-                   autocomplete="off" spellcheck="off"
-                   data-source="usernames"/>
-            </div>
-          </form> -->
+
       </div>
   </div>
 
 <div class="container-fluid">
   {{>bootstrapAlerts}}
 </div>
+</template>
+
+
+
+<template name="search">
+  <form class="navbar-form" role="search">
+    <div class="input-group user-search">
+        <textarea class="form-control typeahead" name="username" type="email" role="presentation" placeholder="Search for users..." autocomplete="off" spellcheck="off" data-source="usernames"></textarea>
+    </div>
+  </form>
 </template>

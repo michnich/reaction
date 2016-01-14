@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-md-5 col-xs-12">
 
-            <!-- <img src="/images/profile.jpg" alt="" class="profile-img img-responsive"> -->
+            <img src="https://secure.gravatar.com/avatar/208ed8aa776ab804d92f7c6fe1f787ae?default=https%3A%2F%2Fraw.githubusercontent.com%2Freactioncommerce%2Freaction%2Fdevelopment%2Fpublic%2Fresources%2Favatar.gif&size=200" alt="" class="profile-img img-responsive">
             <!-- {{> profile}} -->
           </div>
           <div class="col-md-7 col-xs-12">
@@ -36,8 +36,8 @@
 
           {{#each products}}
           <div class="col-md-6 product">
-            <a href="{{pathFor 'productPage'}}">
-              <img src="/images/product.jpg" alt="">
+            <a class="" href="{{pathFor 'productsNew'}}">
+              <img style="height:200px" src="/resources/buttons.jpg" alt="">
               <div class="description">
                 <a class="avatar product-desc"> </a>
                 <p class="product-desc">${{price}}</p>
@@ -48,8 +48,9 @@
           </div>
           {{/each}}
           <div class="col-md-6">
+            {{#if isUser}}
             <a class="btn" href="{{pathFor 'addProduct'}}"><a class="add-product"><i class="fa fa-plus-circle"></i> Add New Product</a></a>
-
+            {{/if}}
           </div>
 
           <span class="bottom-hash"></span>
