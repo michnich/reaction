@@ -107,7 +107,7 @@ Meteor.app = _.extend(Meteor.app || {}, {
 if (Meteor.isClient) {
   // This code only runs on the client
 
-    Meteor.startup(function () {
+    // Meteor.startup(function () {
       // Tracker.autorun(function () {
       //   if (Meteor.user().emails == undefined ){
       //     Meteor.users.update(Meteor.userId(),
@@ -122,7 +122,7 @@ if (Meteor.isClient) {
             {$set: {'profile.name': Meteor.user().emails[0].address}}
           );
         }
-      })
+      });
 
-    });
+    // });
 }
