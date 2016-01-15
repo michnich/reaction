@@ -28,13 +28,27 @@ Template.layoutHeader.helpers({
   },
   usernames: function(){
     return Meteor.users.find().fetch().map(function(user){
-      if (user.profile.name == undefined){
-        Meteor.users.update(Meteor.userId(),
-        {$set: {'profile.name': 'default'}}
-        );
-      } else {
-        return user.profile.name;
+
+      var userProfile = user.profile;
+
+      var amountOfUser = Meteor.users.find().fetch().length;
+
+
+      for(var i= 0; i <= amountOfUser; i++){
+        if (userProfile !== undefined) {
+          return user.profile.name;
+          console.log(user);
+        }
       }
+
+      // if (user.profile.name == undefined){
+      //   // Meteor.users.update(Meteor.userId(),
+      //   // {$set: {'profile.name': 'default'}}
+      //   // );
+      //   this.
+      // } else {
+      //   return user.profile.name;
+      // }
     });
   }
 });
