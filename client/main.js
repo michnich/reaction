@@ -121,6 +121,10 @@ if (Meteor.isClient) {
           Meteor.users.update(Meteor.userId(),
             {$set: {'profile.name': Meteor.user().emails[0].address}}
           );
+        } else {
+          Meteor.users.update(Meteor.userId(),
+            {$set: {'profile.name': 'default'}}
+          );
         }
       });
 
