@@ -104,10 +104,36 @@ Meteor.app = _.extend(Meteor.app || {}, {
 
 
 
+// if (Meteor.isClient) {
+//   // This code only runs on the client
+//
+//     // Meteor.startup(function () {
+//       // Tracker.autorun(function () {
+//       //   if (Meteor.user().emails == undefined ){
+//       //     Meteor.users.update(Meteor.userId(),
+//       //     {$set: {'profile.name': 'default'}}
+//       //     );
+//       //     alert('hello' + Meteor.user().profile.name);
+//       //   }
+//       // });
+//       Tracker.autorun(function(){
+//         if (Meteor.user().emails[0].address.length > 1) {
+//           // Meteor.users.update(Meteor.userId(),
+//           //   {$set: {'profile.name': Meteor.user().emails[0].address}}
+//           // );
+//         } else {
+//           Meteor.users.update(Meteor.userId(),
+//             {$set: {'profile.name': 'default'}}
+//           );
+//         }
+//       });
+//
+//     // });
+// }
 if (Meteor.isClient) {
   // This code only runs on the client
 
-    // Meteor.startup(function () {
+    Meteor.startup(function () {
       // Tracker.autorun(function () {
       //   if (Meteor.user().emails == undefined ){
       //     Meteor.users.update(Meteor.userId(),
@@ -121,12 +147,8 @@ if (Meteor.isClient) {
           Meteor.users.update(Meteor.userId(),
             {$set: {'profile.name': Meteor.user().emails[0].address}}
           );
-        } else {
-          Meteor.users.update(Meteor.userId(),
-            {$set: {'profile.name': 'default'}}
-          );
         }
-      });
+      })
 
-    // });
+    });
 }

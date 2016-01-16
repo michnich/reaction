@@ -3,8 +3,9 @@
 //     if (Meteor.user().emails[0].address.length > 1){
 //       alert('email is set');
 //       var username = prompt("set username");
+//       var profileName = Meteor.user().profile.name;
 //       Meteor.users.update(Meteor.userId(),
-//       {$set: {'username': username}}
+//       {$set: {profileName: username}}
 //       );
 //     }
 //
