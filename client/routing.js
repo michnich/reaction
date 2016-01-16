@@ -53,6 +53,12 @@ Router.map(function() {
   });
 });
 Router.map(function() {
+  return this.route("aboutUs", {
+    controller: ReactionController,
+    path: "/about-us"
+  });
+});
+Router.map(function() {
   return this.route("works", {
     controller: ReactionController,
     path: "/how-it-works"
