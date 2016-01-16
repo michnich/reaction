@@ -1,19 +1,21 @@
-// Template.layoutHeader.events({
-//   'click .profile-button':function(event){
-//     if (Meteor.user().emails[0].address.length > 1){
-//       alert('email is set');
-//       var username = prompt("set username");
-//       var profileName = Meteor.user().profile.name;
-//       Meteor.users.update(Meteor.userId(),
-//       {$set: {profileName: username}}
-//       );
-//     }
-//
-//   }
-// });
+Template.layoutHeader.events({
+  'click .profile-button':function(event){
+    if (Meteor.user().profile == undefined){
+      Meteor.users.update(Meteor.userId(),{$set: {'profile.name': Meteor.user().emails[0].address}});
+      Router.go('/profile/' + Meteor.user().profile.name);
+    }
+
+  }
+});
 
 
 Template.layoutHeader.onRendered(function(){
+
+  // $('.profile-button').on('click', function(){
+  //   if (Meteor.user().profile == undefined){
+  //     Meteor.users.update(Meteor.userId(),{$set: {'profile.name': Meteor.user().emails[0].address}});
+  //   }
+  //   });
 
   Meteor.subscribe("allUserData");
   Meteor.typeahead.inject();
