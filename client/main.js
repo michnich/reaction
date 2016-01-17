@@ -133,6 +133,7 @@ Meteor.app = _.extend(Meteor.app || {}, {
 if (Meteor.isClient) {
   // This code only runs on the client
 
+
       // Deps.autorun(function () {
       //   if (Meteor.user().emails == undefined ){
       //     Meteor.users.update(Meteor.userId(),

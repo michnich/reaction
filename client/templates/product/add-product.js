@@ -7,29 +7,44 @@
 Template.addProduct.events({
   'submit form': function(e) {
       e.preventDefault();
-      var product = {
 
-        type: $(e.target).find('[name=type]').val(),
-        category: $(e.target).find('[name=category]').val(),
-        size: $(e.target).find('[name=size]').val(),
-        color: $(e.target).find('[name=color]').val(),
-        condition: $(e.target).find('[name=condition]').val(),
-        type: $(e.target).find('[name=type]').val(),
-        size2: $(e.target).find('[name=size2]').val(),
-        description: $(e.target).find('[name=description]').val(),
-        name: $(e.target).find('[name=name]').val(),
-        price: $(e.target).find('[name=price]').val(),
-        // image: $('.uploaded-image').prop('src')
+      // send email
+      // var userEmail = return Meteor.user().emails[0].address;
+      var productName = $('#productName').val();
+      var productPrice = $('#productPrice').val();
 
-      }
-
-      Meteor.call('product', product, function(error, id){
-        if (error){
-          // return alert(error.reason);
-        }
-        Router.go('/products');
-        Modal.show('thanksForAdding');
+      Meteor.call('sendEmail', {
+        to: Meteor.user().emails[0].address,
+        from: 'no-reply@huntrs.com',
+        subject: 'Thank you for adding a product please allow 3-5 days for us here at huntrs to review your submission!',
+        text: 'Mailgun is totally awesome for sending emails!',
+        html: 'Thank you for adding the following product, please allow 3-5 days for us to review your submission <br> ' + productName + '<br>' + productPrice
       });
+
+
+      // var product = {
+      //
+      //   type: $(e.target).find('[name=type]').val(),
+      //   category: $(e.target).find('[name=category]').val(),
+      //   size: $(e.target).find('[name=size]').val(),
+      //   color: $(e.target).find('[name=color]').val(),
+      //   condition: $(e.target).find('[name=condition]').val(),
+      //   type: $(e.target).find('[name=type]').val(),
+      //   size2: $(e.target).find('[name=size2]').val(),
+      //   description: $(e.target).find('[name=description]').val(),
+      //   name: $(e.target).find('[name=name]').val(),
+      //   price: $(e.target).find('[name=price]').val(),
+      //   // image: $('.uploaded-image').prop('src')
+      //
+      // }
+
+      // Meteor.call('product', product, function(error, id){
+      //   if (error){
+      //     // return alert(error.reason);
+      //   }
+      //   Router.go('/products');
+      //   Modal.show('thanksForAdding');
+      // });
     }
 
 });
