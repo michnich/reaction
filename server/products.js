@@ -33,35 +33,3 @@ if (Meteor.isServer){
   });
 
 }
-
-// type: $(e.target).find('[name=type]').val(),
-// category: $(e.target).find('[name=category]').val(),
-// size: $(e.target).find('[name=size]').val(),
-// color: $(e.target).find('[name=color]').val(),
-// condition: $(e.target).find('[name=condition]').val(),
-// type: $(e.target).find('[name=type]').val(),
-// size2: $(e.target).find('[name=size2]').val(),
-// description: $(e.target).find('[name=description]').val(),
-// name: $(e.target).find('[name=name]').val(),
-// price: $(e.target).find('[name=price]').val(),
-
-
-// Meteor.methods({
-//   sendEmail: function (mailFields) {
-//       console.log("about to send email...");
-//       check([mailFields.to, mailFields.from, mailFields.subject, mailFields.text, mailFields.html], [String]);
-//
-//       // Let other method calls from the same client start running,
-//       // without waiting for the email sending to complete.
-//       this.unblock();
-//
-//       Meteor.Mailgun.send({
-//           to: mailFields.to,
-//           from: mailFields.from,
-//           subject: mailFields.subject,
-//           text: mailFields.text,
-//           html: mailFields.html
-//       });
-//       console.log("email sent!");
-//   }
-// });

@@ -2,7 +2,8 @@ Template.layoutHeader.events({
   'click .profile-button':function(event){
     if (Meteor.user().profile == undefined){
       Meteor.users.update(Meteor.userId(),{$set: {'profile.name': Meteor.user().emails[0].address}});
-      Router.go('/profile/' + Meteor.user().profile.name);
+      Router.go('/profile/' + Meteor.user().emails[0].address);
+
     }
 
   }
@@ -27,7 +28,7 @@ Template.layoutHeader.onRendered(function(){
 
 Template.layoutHeader.helpers({
   username: function(){
-    return Meteor.user().profile.name;
+    return Meteor.user().emails[0].address
   },
   usernames: function(){
     return Meteor.users.find().fetch().map(function(user){

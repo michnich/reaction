@@ -11,7 +11,7 @@
           </div>
           <div class="col-md-7 col-xs-12">
             <div class="profile-content">
-              <h1 class="username">{{username}}</h1>
+              <h1 class="username">{{firstName}}</h1>
               <p>{{email}}</p>
             </div>
           </div>
@@ -68,14 +68,14 @@
   <!-- if this is the current user -->
   {{#if isUser}}
     <h1>Hello World</h1>
-    {{> editProfile}}
+    <!-- {{> editProfile}} -->
 
 
 
   {{/if}}
 </template>
 
-<template name="editProfile">
+<!-- <template name="editProfile">
   <form class="user-name">
     <input type="text" name="username" placeholder="Set your username" />
   </form>
@@ -91,4 +91,53 @@
   <form class="about">
     <input type="text" name="about" placeholder="Add A little Bit about yourself" />
   </form>
+</template> -->
+<template name="editProfile">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">We are excited for you to get started!</h4>
+                </div>
+
+                <div class="modal-body">
+                  <p>First we need a little bit of information from you so that we can build your closet!</p>
+                  <form class="closetinfo">
+                    <fieldset class="form-group">
+                      <label for="first_name">First Name</label>
+                      <input type="text" class="form-control" name="first_name" id="firstName" placeholder="Add Your First Name" />
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="last_name">Last Name</label>
+                      <input type="text" class="form-control" name="last_bane" id="lastName" placeholder="Add Your Last Name">
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                      <label for="exampleTextarea">Tell us about your style and what is interesting to you.</label>
+                      <textarea class="form-control" name="about" id="aboutYou" rows="3"></textarea>
+                    </fieldset>
+                    <!-- <fieldset class="form-group">
+                      <label for="exampleInputFile">File input</label>
+                      <input type="file" class="form-control-file" id="exampleInputFile">
+                      <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                    </fieldset> -->
+                    <!-- Agreeing to the terms -->
+                    <!-- <div class="checkbox">
+                      <p>By Submitting this information you are agreeing to Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis animi, temporibus dicta quis nesciunt suscipit ipsum excepturi, ab qui ipsam, architecto veniam earum quisquam impedit nobis eaque obcaecati tenetur voluptas!</p>
+                      <label>
+                        <input type="checkbox"> I agree
+                      </label>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary closet-info-btn">Submit</button>
+                  </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </template>

@@ -49,6 +49,7 @@ Router.map(function() {
 Router.map(function() {
   return this.route("featuredCloset", {
     controller: ReactionController,
+    loadingTemplate: "loading",
     path: "/featured-closet"
   });
 });
