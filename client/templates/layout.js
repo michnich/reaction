@@ -13,3 +13,4 @@ Template.layoutHeaderNew.replaces("layoutHeader");
 
 // Template.landingPro.replaces("products");
 Template.loginFormNew.replaces("loginFormSignUpView");
+// Template.productDetailNew.replaces("productDetail");

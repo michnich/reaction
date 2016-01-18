@@ -8,16 +8,45 @@ Template.addProduct.events({
   'submit form': function(e) {
       e.preventDefault();
 
-      // send email
+      // add product to product collection and to user closet
+
+      var product = {
+
+        type: $(e.target).find('[name=type]').val(),
+        category: $(e.target).find('[name=category]').val(),
+        size: $(e.target).find('[name=size]').val(),
+        color: $(e.target).find('[name=color]').val(),
+        condition: $(e.target).find('[name=condition]').val(),
+        type: $(e.target).find('[name=type]').val(),
+        size2: $(e.target).find('[name=size2]').val(),
+        description: $(e.target).find('[name=description]').val(),
+        name: $(e.target).find('[name=name]').val(),
+        price: $(e.target).find('[name=price]').val(),
+        // image: $('.uploaded-image').prop('src')
+
+      }
+
+    Meteor.call('product', product, function(error, id){
+        if (error){
+          // return alert(error.reason);
+        }
+        Router.go('/products');
+        Modal.show('thanksForAdding');
+        var productId = userProducts.insert(product);
+        console.log(productId);
+      });
+
+
+      // // send email
       var userEmail = Meteor.user().emails[0].address;
       var productName = $('#productName').val();
       var productPrice = $('#productPrice').val();
-
-      // Send email to huntrs
+      //
+      // // Send email to huntrs
       Meteor.call('sendEmail', {
         to: 'ehughestaylor@codedbykids.com',
         from: 'no-reply@huntrs.com',
-        subject: userEmail + ' just added a product to his closet, please review and respond to this user within 3-5 days',
+        subject: userEmail + 'has added a product check it out',
         text: 'Mailgun is totally awesome for sending emails!',
         html: '<h1>Product Details </h1> <br> ' + productName + '<br>' + productPrice
       });

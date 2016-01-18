@@ -25,7 +25,7 @@
         >{{this}}</span>
 
         <div class="send-email">
-          <a href="mailto:{{email}}"><i class="fa fa-envelope"></i>message {{username}}</a>
+          <a href="mailto:{{username}}"><i class="fa fa-envelope"></i>message {{username}}</a>
         </div>
 
       </div>
@@ -42,9 +42,20 @@
                 <a class="avatar product-desc"> </a>
                 <p class="product-desc">${{price}}</p>
                 <p class="title product-desc">{{name}}</p>
+
+                <!-- <p class="id product-des">id: {{_id}}</p> -->
               <!-- <p class="author product-desc">{{author}}</p> -->
               </div>
             </a>
+            {{#if isOwner}}
+            <!-- <form class="idUpdate">
+              <fieldset class="form-group">
+                <label for="product_id">Set Product Id</label>
+                <input type="text" class="form-control" name="productId" id="productId" placeholder="Set product Id" />
+              </fieldset>
+            </form> -->
+            {{/if}}
+
           </div>
           {{/each}}
           <div class="col-md-6">
@@ -67,7 +78,7 @@
 
   <!-- if this is the current user -->
   {{#if isUser}}
-    <h1>Hello World</h1>
+
     <!-- {{> editProfile}} -->
 
 
