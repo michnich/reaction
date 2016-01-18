@@ -19,8 +19,30 @@
 }
 .navbar-default{
   background-color: black;
-
 }
+
+
+/////////MOBILE BUG THAT LOGIN FORM IS OFFSET TO THE RIGHT FIX
+@media (max-width: 767px){
+.navbar-nav .open .dropdown-menu {
+    position: static;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    float: left;
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cart-icon .badge {
+      position: relative;
+  }
+}
+
 .tag-link-list {
     float: left;
     margin-top: 29px;
