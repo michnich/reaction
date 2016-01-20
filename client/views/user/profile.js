@@ -21,8 +21,15 @@ Template.profile.helpers({
     var email = Router.current().params.username;
     return Meteor.users.findOne({"emails.address": email}).profile.first_name;
   },
+  aboutYou: function(){
+    var email = Router.current().params.username;
+    return Meteor.users.findOne({"emails.address": email}).profile.about;
+  },
   products: function(){
     return userProducts.find({author: Router.current().params.username}).fetch()
+  },
+  isVerified: function(){
+    return Meteor.user().emails[0].verified
   }
 });
 Template.profile.events({

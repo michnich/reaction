@@ -1,0 +1,26 @@
+#userPro{
+  .price, .condition{
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .price{
+    float: left;
+    font-family: 'HelveticaNeue-Bold';
+
+  }
+  .condition{
+    float: right;
+    font-family: 'EB Garamond';
+    color: darkgrey;
+    font-size: 0.9em;
+  }
+  .product-desc{
+    clear: both;
+  }
+  .product{
+    width: auto;
+  }
+  .inline{
+    display: inline-block;
+  }
+}

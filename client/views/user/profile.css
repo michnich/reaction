@@ -1,5 +1,6 @@
 #userPro {
   margin: 2rem auto;
+  padding: 0 15px;
   height: 100%; }
   #userPro input[type="file"] {
     display: block;
@@ -21,6 +22,7 @@
       height: 200px;
       line-height: 200px;
       background-color: darkgrey;
+      border-radius: 0;
        }
       #userPro #profile .btn .add-product {
         color: white;
@@ -71,7 +73,7 @@
   text-transform: lowercase; }
 
 .product-desc {
-  font-family: 'HelveticaNeue-Bold';
+  font-family: 'EB Garamond', serif;
   font-weight: bold;
   margin-bottom: 0; }
 
@@ -96,4 +98,5 @@ input.delete-image {
   border: none;
   background: transparent;
   text-decoration: underline;
-  color: #C1332C; }
+  color: #C1332C;
+}
