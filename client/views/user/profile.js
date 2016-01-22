@@ -29,7 +29,8 @@ Template.profile.helpers({
     return userProducts.find({author: Router.current().params.username}).fetch()
   },
   isVerified: function(){
-    return Meteor.user().emails[0].verified
+    var email = Router.current().params.username;
+    return Meteor.users.findOne({"emails.address": email}).emails[0].verified;
   }
 });
 Template.profile.events({
