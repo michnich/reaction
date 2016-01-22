@@ -44,14 +44,11 @@
   .featured-closet .questions .question {
     font-family: 'Garamond';
     margin: 3.5rem 0; }
-
-.featured-banner {
-  background-image: url("/resources/featured-car.jpg"); }
-
-.second-banner {
-  background-image: url("/resources/featured-banner.jpg"); }
-
-.third-banner {
-  background-image: url("/resources/featured-camera.jpg"); }
+.featured-closet .featured-banner {
+  background-image: url("/resources/featured-banner-1.jpg"); }
+.featured-closet .second-banner {
+  background-image: url("/resources/featured-banner2.jpg"); }
+.featured-closet .third-banner {
+  background-image: url("/resources/featured-banner-3.jpg"); }
 
 /*# sourceMappingURL=featured-closet.css.map */

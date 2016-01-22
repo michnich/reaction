@@ -85,18 +85,19 @@
 
     }
   }
+
+
+  .featured-banner{
+    background-image: url('/resources/featured-banner-1.jpg');
+  }
+  .second-banner{
+    background-image: url('/resources/featured-banner2.jpg');
+  }
+  .third-banner{
+    background-image: url('/resources/featured-banner-3.jpg');
+  }
 }
 
 
 
 // backgrounds for banner
-
-.featured-banner{
-  background-image: url('/resources/featured-car.jpg');
-}
-.second-banner{
-  background-image: url('/resources/featured-banner.jpg');
-}
-.third-banner{
-  background-image: url('/resources/featured-camera.jpg');
-}
