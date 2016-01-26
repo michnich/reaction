@@ -15,8 +15,13 @@
               <li class="active explore-btn"><a href="/products">Hunt</a></li>
 
               {{#if currentUser}}
-              <li class="profile-button"><a href="/profile/{{username}}">Sell</a></li>
+              <li class="profile-button"><a href="/profile/{{username}}">Closet</a></li>
               {{/if}}
+
+              <!-- if not a current user then show the sell info page -->
+              {{#unless currentUser}}
+              <li><a href="{{pathFor 'sell'}}">Sell</a></li>
+              {{/unless}}
 
               <li>
                 {{#if currentUser}}

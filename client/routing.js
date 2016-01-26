@@ -87,3 +87,9 @@ Router.map(function() {
     path: '/add-product'
   });
 });
+Router.map(function() {
+  return this.route("sell", {
+    controller: ReactionController,
+    path: '/sell'
+  });
+});
