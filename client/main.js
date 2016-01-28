@@ -130,19 +130,27 @@ Meteor.app = _.extend(Meteor.app || {}, {
 //
 //     // });
 // }
-if (Meteor.isClient) {
-  // This code only runs on the client
+if (Meteor.isClient){
+  Template.products.rendered = function(){
+    var pathArray = window.location.pathname.split('/');
+    //return the product tag
+    typeOfProduct = pathArray[3];
 
 
-      // Deps.autorun(function () {
-      //   if (Meteor.user().emails == undefined ){
-      //     Meteor.users.update(Meteor.userId(),
-      //     {$set: {'profile.name': Meteor.userId()}}
-      //     );
-      //   } else if (Meteor.user().emails[0].address.length > 1) {
-      //     Meteor.users.update(Meteor.userId(),
-      //     {$set: {'profile.name': Meteor.user().emails[0].address}}
-      //     );
-      //   }
-      // });
+    if(window.location.pathname.indexOf("/product/tag/"+typeOfProduct) == 0){
+      //place a jumbotron before the main container
+      $("#main").prepend("<div class='jumbotron featured-banner'> <div class='text'> <h1> " + typeOfProduct + "</h1></div>");
+      // dynamically add the class of the tag so that the jumbotron background can change with the product tag
+      $('.featured-banner').addClass(typeOfProduct);
+      console.log(typeOfProduct);
+    } else{
+      $(".jumbotron").remove();
+    }
+  }
+  // Tracker.autorun(function(){
+  //   if($('#landing').siblings(0).hasClass('featured-banner')){
+  //     $('.featured-banner').hide();
+  //   }
+  // });
+
 }

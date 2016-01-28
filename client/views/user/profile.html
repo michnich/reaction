@@ -72,12 +72,12 @@
                 </div>
               </a>
               {{#if isOwner}}
-              <!-- <form class="idUpdate">
+              <form class="idUpdate">
                 <fieldset class="form-group">
                   <label for="product_id">Set Product Id</label>
                   <input type="text" class="form-control" name="productId" id="productId" placeholder="Set product Id" />
                 </fieldset>
-              </form> -->
+              </form>
               {{/if}}
             </div>
           </div>
@@ -95,23 +95,10 @@
   </div>
 
 <!-- footer -->
-<footer class="footer">
-  <div class="container" style="margin:0;">
-      <div class="navbar">
-        <div class="navbar-header">
-          <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                  <li><a href="http://huntrs-staging.herokuapp.com/about">About</a></li>
-                  <li><a href="http://huntrs-staging.herokuapp.com/terms">Terms</a></li>
-                  <li><a href="http://huntrs-staging.herokuapp.com/press">Press</a></li>
-                  <li><a href="http://huntrs-staging.herokuapp.com/contact">Contact</a></li>
-                  <li><a href="/dashboard">Admin</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </div>
-  </footer>
+<div style="position:absolute; bottom:0; left:0; width:100%">
+  {{> footer}}
+
+</div>
 
 
   <!-- if this is the current user -->

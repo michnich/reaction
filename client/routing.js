@@ -93,3 +93,9 @@ Router.map(function() {
     path: '/sell'
   });
 });
+Router.map(function() {
+  return this.route("redirect", {
+    controller: ReactionController,
+    path: '/landing'
+  });
+});

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,SAAS;EACP,gBAAgB,EAAE,mCAAmC;;AAEvD,OAAO;EACL,gBAAgB,EAAE,mCAAmC",
+"sources": ["jumbotron.scss"],
+"names": [],
+"file": "jumbotron.css"
+}
