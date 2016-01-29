@@ -139,7 +139,7 @@ if (Meteor.isClient){
 
     if(window.location.pathname.indexOf("/product/tag/"+typeOfProduct) == 0){
       //place a jumbotron before the main container
-      $("#main").prepend("<div class='jumbotron featured-banner'> <div class='text'> <h1> " + typeOfProduct + "</h1></div>");
+      $("#main").prepend("<div class='jumbotron featured-banner'> <div class='text' style='text-align:center;'> <h1> " + typeOfProduct + "</h1></div>");
       // dynamically add the class of the tag so that the jumbotron background can change with the product tag
       $('.featured-banner').addClass(typeOfProduct);
       console.log(typeOfProduct);

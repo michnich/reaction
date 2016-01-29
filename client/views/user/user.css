@@ -12,8 +12,23 @@
 #userPro .product-desc {
   clear: both; }
 #userPro .product {
-  width: auto; }
+  width: auto;
+  height: 300px; }
+  #userPro .product img {
+    height: 200px; }
 #userPro .inline {
   display: inline-block; }
+#userPro .verified {
+  color: #25C331;
+  font-size: 2.2em;
+  position: absolute;
+  top: 5px;
+  right: 10px; }
+#userPro .not-verified {
+  color: #C1332C;
+  font-size: 2.2em;
+  position: absolute;
+  top: 5px;
+  right: 10px; }
 
 /*# sourceMappingURL=user.css.map */

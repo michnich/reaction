@@ -19,8 +19,28 @@
   }
   .product{
     width: auto;
+    height: 300px;
+    img{
+      height: 200px;
+    }
   }
   .inline{
     display: inline-block;
+  }
+
+
+  .verified{
+    color: #25C331;
+    font-size:2.2em;
+    position: absolute;
+    top: 5px;
+    right:10px;
+  }
+  .not-verified{
+    color:#C1332C;
+    font-size:2.2em;
+    position: absolute;
+    top: 5px;
+    right:10px;
   }
 }

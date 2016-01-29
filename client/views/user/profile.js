@@ -31,16 +31,32 @@ Template.profile.helpers({
   isVerified: function(){
     var email = Router.current().params.username;
     return Meteor.users.findOne({"emails.address": email}).emails[0].verified;
+  },
+  isListed: function(){
+    return userProducts.findOne({_id:this._id}).link_id;
   }
 });
+
+
+// verify product has been listed by adding link_id
 Template.profile.events({
+  "click .updateIdTrigger": function(event){
+    Modal.show('#updateModal');
+  },
   "submit .idUpdate": function (event){
-  //   event.preventDefault();
-  //   newId = $('#productId').val();
-  //
-  //   Meteor.call('updateId', newId);
+    event.preventDefault();
+    var oldId = this._id;
+    var newId = event.target.text.value;
+    alert(oldId);
+    alert(newId);
+    userProducts.update(oldId, {
+      $set: {link_id: newId}
+    });
   }
 });
+
+
+
 Template.editProfile.events({
 
   "submit .closetinfo": function (event) {

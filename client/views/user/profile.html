@@ -59,25 +59,36 @@
           {{#each products}}
           <div class="col-xs-12 col-md-6 product">
             <div class="product">
-              <a class="" href="{{pathFor 'productsNew'}}">
-                <img style="height:200px" src="/resources/buttons.jpg" alt="">
+              <a class="" href="/product/{{link_id}}">
+                <img src="/resources/buttons.jpg" alt="">
                 <div class="description">
                   <a class="avatar product-desc"> </a>
                   <p class="price">${{price}}</p>
                   <p class="condition">{{type}}</p>
                   <p class="title product-desc">{{name}}</p>
-
                   <!-- <p class="id product-des">id: {{_id}}</p> -->
+
+
+
+
+                  {{#if isListed}}
+                   <i class="fa fa-check-circle-o verified"></i>
+                  {{else}}
+                    <i class="fa fa-times-circle not-verified"></i>
+                  {{/if}}
                 <!-- <p class="author product-desc">{{author}}</p> -->
                 </div>
               </a>
               {{#if isOwner}}
-              <form class="idUpdate">
-                <fieldset class="form-group">
-                  <label for="product_id">Set Product Id</label>
-                  <input type="text" class="form-control" name="productId" id="productId" placeholder="Set product Id" />
-                </fieldset>
-              </form>
+                {{#unless isListed}}
+                <form class="idUpdate">
+                  <fieldset class="form-group">
+                    <label for="product_id">Verify Listing</label>
+                    <input type="text" class="form-control productId" name="text" placeholder="Set product Id" />
+                  </fieldset>
+                  <button type="submit" class="btn-default submit-link" data-dismiss="modal">Submit</button>
+                </form>
+                {{/unless}}
               {{/if}}
             </div>
           </div>
@@ -95,10 +106,10 @@
   </div>
 
 <!-- footer -->
-<div style="position:absolute; bottom:0; left:0; width:100%">
+<!-- <div style="position:absolute; bottom:0; left:0; width:100%">
   {{> footer}}
 
-</div>
+</div> -->
 
 
   <!-- if this is the current user -->
