@@ -104,6 +104,7 @@ html {
   padding: 8px 12px;
   line-height: 35px;
   padding-top: 6px;
+  height: 35px!important;
   border: 2px solid #ccc;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -116,6 +117,7 @@ html {
 .typeahead {
   background-color: #5D5D5D;
   color: white;
+  line-height: 35px;
 }
 
 .typeahead:focus {
@@ -221,6 +223,7 @@ p,h3,h4{
 }
 #main{
   padding: 0px;
+  background: white;
 }
 .jumbotron{
   background: url('/resources/Hunters-Explore.jpg');
@@ -317,7 +320,7 @@ p,h3,h4{
 
 //Title
 .pdp-container .title h1 {
-    text-align: center;
+    text-align: left;
     font-family: 'EB Garamond', serif;
     font-size: 50px;
     font-weight: 700;
@@ -329,11 +332,12 @@ p,h3,h4{
 //Subtitle
 
 .pdp-container .pageTitle h2 {
-    text-align: center;
+    text-align: left;
     font-family: 'EB Garamond', serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: #1999dd;
+    margin-top: 0px;
 }
 
 //add to cart button
@@ -342,6 +346,10 @@ p,h3,h4{
   border-radius: 0;
   border:none;
   font-family: 'EB Garamond', serif;
+  width: auto;
+  padding-right: 40px;
+  padding-left: 40px;
+  float: right;
 }
 .container-main{
   background-color: white;
@@ -376,4 +384,49 @@ p,h3,h4{
     // color: white;
     // background-color: darkgrey!important;
   }
+}
+
+// make the container for product not full width
+
+.pdp-container .currency-symbol {
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: 5px;
+}
+
+// positioning add to cart button
+#add-to-cart{
+  display: inline-block;
+}
+.social-pricing{
+  .price{
+    width:100%;
+  }
+}
+html:not(.rtl) .pdp-container .add-to-cart-text {
+  margin-right: 0;
+}
+
+body{
+  background-color: white;
+}
+.product-detail-edit input {
+    border: 1px solid #fafafa;
+    text-align: inherit;
+    border: none;
+}
+.product-detail-edit {
+    position: relative;
+    display: inline-block;
+}
+li.list-group-item.metafield-list-item {
+    border: none;
+}
+.pdp-container .metafield-new-item {
+    padding: 5px 3px 5px;
+    cursor: pointer;
+    border: none;
+}
+.add-to-cart-quantity{
+  display: none;
 }

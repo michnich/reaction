@@ -105,5 +105,10 @@ $helvet: 'HelveticaNeue-Bold';
   .cancel{
     color: $red;
   }
-
+  .product-detail-edit{
+    display: inline-block;
+  }
+  .title, .pageTitle{
+    text-align: left;
+  }
 }
