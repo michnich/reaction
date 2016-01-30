@@ -4,5 +4,31 @@
   background-image: url('resources/about-banner-2.jpg');
 }
 .shirts{
-  background-image: url('resources/about-banner-3.jpg');
+  background-image: url('resources/shirts-banner.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.shoes{
+  background-image: url('resources/shoes-banner.jpg');
+}
+.suits{
+  background-image: url('resources/suits-banner.jpg');
+}
+.ties{
+  background-image: url('resources/ties-banner.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.hats{
+  background-image: url('resources/hats-banner.jpg');
+}
+.blazers-sport{
+  background-image: url('resources/blazersport-banner.jpg');
+}
+.pocket-squares{
+  background-image: url('resources/pocketsquare-banner.jpg');
+}
+.lapel-pins{
+  background-image: url('resources/lapelpins-banner.jpg');
 }

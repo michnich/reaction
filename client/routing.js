@@ -33,6 +33,7 @@ ProfileController=ReactionController.extend({
 Router.map(function() {
   return this.route("productsNew", {
     controller: ReactionController,
+    loadingTemplate: "loading",
     path: "/products"
   });
 });
@@ -56,12 +57,14 @@ Router.map(function() {
 Router.map(function() {
   return this.route("aboutUs", {
     controller: ReactionController,
+    loadingTemplate: "loading",
     path: "/about-us"
   });
 });
 Router.map(function() {
   return this.route("works", {
     controller: ReactionController,
+    loadingTemplate: "loading",
     path: "/how-it-works"
   });
 });
@@ -69,6 +72,7 @@ Router.map(function() {
 Router.map(function() {
   return this.route("profile", {
     path: "/profile/:username",
+    loadingTemplate: "loading",
     waitOn:function(){
 
         return Meteor.subscribe('userProducts');
@@ -80,6 +84,7 @@ Router.map(function() {
 Router.map(function() {
   return this.route("addProduct", {
     controller: ReactionController,
+    loadingTemplate: "loading",
     waitOn:function(){
         return Meteor.subscribe('userProducts');
 
@@ -90,12 +95,14 @@ Router.map(function() {
 Router.map(function() {
   return this.route("sell", {
     controller: ReactionController,
+    loadingTemplate: "loading",
     path: '/sell'
   });
 });
 Router.map(function() {
   return this.route("redirect", {
     controller: ReactionController,
+    loadingTemplate: "loading",
     path: '/landing'
   });
 });

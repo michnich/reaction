@@ -6,10 +6,10 @@
  *
  *     Template.layout.replaces "coreLayout"
  */
+ Template.layoutHeaderNew.replaces("layoutHeader");
 
 Template.layout.replaces("coreLayout");
 
-Template.layoutHeaderNew.replaces("layoutHeader");
 
 // Template.landingPro.replaces("products");
 // Template.loginFormNew.replaces("loginFormSignUpView");

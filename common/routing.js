@@ -26,16 +26,3 @@ Router.map(function route() {
     template: 'landingPro'
   });
 });
-
-// var requireLogin = function(pause) {
-//   if (! Meteor.user().username) {
-//     if (Meteor.loggingIn())
-//       this.render(this.loadingTemplate);
-//     else
-//       this.render('landing');
-//   } else {
-//     this.next();
-//   }
-// }
-//
-// Router.onBeforeAction(requireLogin, {except: ['landing']});
