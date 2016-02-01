@@ -41,14 +41,17 @@ Template.addProduct.events({
       var userEmail = Meteor.user().emails[0].address;
       var productName = $('#productName').val();
       var productPrice = $('#productPrice').val();
+      var productDesc = $('#product-desc').val();
+      var productCondition = $('#productCondition').val();
+
       //
       // // Send email to huntrs
       Meteor.call('sendEmail', {
         to: 'ehughestaylor@codedbykids.com',
         from: 'no-reply@huntrs.com',
-        subject: userEmail + 'has added a product check it out',
+        subject: userEmail + 'has added a new product, please review',
         text: 'Mailgun is totally awesome for sending emails!',
-        html: '<h1>Product Details </h1> <br> ' + productName + '<br>' + productPrice
+        html: '<h1>Product Details </h1> <br> <h2> Product Title: </h2> <p>' + productName + '</p> <br> <h2>Product Price: </h2> <p>' + productPrice + '</p> <br> <h2> Product Description: </h2> <p>' + productDesc + ' </p> <br> <h2> Product Condition: </h2> <p>' + productCondition + '</p>'
       });
 
       // Send email to user
@@ -57,7 +60,7 @@ Template.addProduct.events({
         from: 'no-reply@huntrs.com',
         subject: 'Thank you for adding a product please allow 3-5 days for us here at huntrs to review your submission!',
         text: 'Mailgun is totally awesome for sending emails!',
-        html: 'Thank you for adding the following product, please allow 3-5 days for us to review your submission <br> ' + productName + '<br>' + productPrice
+        html: 'Thank you for adding a new product, please allow 3-5 days for us to review your submission. <br> ' + productName + '<br>' + productPrice
       });
     }
 

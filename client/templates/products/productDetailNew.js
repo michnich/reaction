@@ -7,7 +7,7 @@ Template.productDetailNew.helpers({
     return ProductDetail
   },
   isOwner: function(){
-    return Roles.userIsInRole(Meteor.userId(),['dashboard','owner','admin']);
+    Roles.userIsInRole(Meteor.userId(), ['dashboard', 'owner', 'admin']);
   },
   tags: function () {
     let product = selectedProduct();
@@ -59,6 +59,7 @@ Template.productDetailNew.helpers({
     }
     return Template.productMetaField;
   }
+
 });
 
 /**
@@ -264,9 +265,8 @@ Template.productDetailNew.events({
     Session.set("editing-" + this.field, false);
     return $(".social-media-inputs > *").hide();
   },
-  "click .link-to-closet": function(){
-    console.log('fasasdf');
-  },
+
+
 });
 
 
@@ -278,5 +278,16 @@ Template.productDetail.rendered = function(){
   } else{
     //if not the owner then hide the editable link
     $('.edit-user').hide();
+    $('.copy-link').hide();
   }
+
+  $('.copy-link').on('click',function(){
+    var pathArray = window.location.pathname.split('/');
+    var returnArray = pathArray[pathArray.length -1];
+    sweetAlert({
+      title: "Copy the following Link for verification on user closet",
+      text: returnArray,
+    });
+
+  });
 }
