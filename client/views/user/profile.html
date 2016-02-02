@@ -86,7 +86,7 @@
                     <label for="product_id">Verify Listing</label>
                     <input type="text" class="form-control productId" name="text" placeholder="Set product Id" />
                   </fieldset>
-                  <button type="submit" class="btn-default submit-link" data-dismiss="modal">Submit</button>
+                  <button type="submit" class="btn-default submit-link hvr-sweep-to-right" data-dismiss="modal">Submit</button>
                 </form>
                 {{/unless}}
               {{/if}}
@@ -124,7 +124,7 @@
 
 
 <template name="editProfile">
-    <div class="modal fade">
+    <div class="modal fade" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -165,7 +165,11 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    {{#if isUser}}
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      {{else}}
+                      <a href="/" data-toggle="modal"><button type="button" name="btn btn-default">Set up later</button></a>
+                    {{/if}}
                 </div>
 
             </div>
