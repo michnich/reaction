@@ -7,8 +7,8 @@
   #landing .banner p {
     font-size: 4rem;
     color: white;
-    font-family: HelveticaNeue-Bold;
-    background: rgba(0, 0, 0, 0.1);
+    font-family: gotham;
+    background: rgba(0, 0, 0, 0.2);
     margin: 0;
     padding: 0;
     margin-right: -4px;
