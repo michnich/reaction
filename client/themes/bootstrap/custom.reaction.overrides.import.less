@@ -78,7 +78,9 @@
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #FFF;
-  background-color: transparent; }
+  background-color: transparent;
+  font-family: gotham;
+}
 
 html {
   background: white; }
@@ -171,6 +173,8 @@ html {
 
 .navbar-default .navbar-nav > li > a {
     color: #777;
+    font-family: gotham;
+    text-transform: lowercase;
 }
 .navbar-brand img {
     height: 100%;
@@ -455,4 +459,16 @@ li.list-group-item.metafield-list-item {
 }
 .form-control{
   border-radius: 0;
+}
+
+
+// gotham font for landing page
+@font-face {
+    font-family: gotham;
+    src: url('/resources/gotham.ttf');
+}
+//for search bar font
+span.twitter-typeahead {
+    text-transform: lowercase;
+    font-family: gotham;
 }
