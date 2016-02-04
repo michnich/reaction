@@ -200,9 +200,9 @@ html {
 
 
 
-h1,h2{
-  font-family: 'HelveticaNeue-Bold', sans-serif;
-}
+// h1,h2{
+//   font-family: 'HelveticaNeue-Bold', sans-serif;
+// }
 //fonts
 
 .reaction-navigation-header{
@@ -445,13 +445,119 @@ li.list-group-item.metafield-list-item {
 }
 
 
+// gotham font for landing page
+@font-face {
+    font-family: gotham;
+    src: url('resources/gotham.ttf');
+}
+//for search bar font
+span.twitter-typeahead {
+    text-transform: lowercase;
+    font-family: gotham;
+}
+.checkout-progress-bar li.active:before, .checkout-progress-bar li.active .progress-step-badge {
+    background-color: #FFF;
+    color: #000;
+    font-family: gotham;
+
+}
+.progress-step-badge{
+  background-color: #FFF;
+  color: #000;
+  font-family: gotham;
+
+}
+li.visited .progress-step-badge {
+    background-color: #C1332C!important;
+    color: #FFF;
+    font-family: gotham;
+}
+.checkout-progress-bar li.visited:before, .checkout-progress-bar li.visited:after, .checkout-progress-bar li.visited .progress-step-badge{
+  background-color: #C1332C!important;
+  color: #FFF;
+  font-family: gotham;
+
+}
+.checkout-step-badge.active {
+  background-color: #C1332C!important;
+  color: #FFF;
+  font-family: gotham;
+
+}
+
+// background of checkout progress bar
+.checkout-progress {
+    background-color: #000;
+    border-bottom: 1px solid #e6e6e6;
+}
+.progress-step-label {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    font-family: gotham;
+    text-align: center;
+    text-transform: uppercase;
+    color: grey;
+}
+
+//bottom section badge-border-radius
+.checkout-step-badge {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+    background: #FFF;
+    color: #414141;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: gotham;
+}
+
+
+
+/// default elements color and font
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: gotham;
+}
+.jumbotron{
+  font-family: gotham;
+}
 //default buttons
+.btn-primary {
+    color: #ffffff;
+    background-color: #666666;
+    border-color: #595959;
+    border-radius: 0;
+    font-family: gotham;
+}
 .btn-default{
   background-color: #C1332C;
   color: white;
   border: none;
   padding: 0.5em 1.2em;
-  font-family: HelveticaNeue-Bold, sans-serif;;
+  font-family: HelveticaNeue-Bold, sans-serif;
+  border-radius: 0;
 }
 .btn-default:hover{
   background-color: #962823;
@@ -459,16 +565,4 @@ li.list-group-item.metafield-list-item {
 }
 .form-control{
   border-radius: 0;
-}
-
-
-// gotham font for landing page
-@font-face {
-    font-family: gotham;
-    src: url('/resources/gotham.ttf');
-}
-//for search bar font
-span.twitter-typeahead {
-    text-transform: lowercase;
-    font-family: gotham;
 }

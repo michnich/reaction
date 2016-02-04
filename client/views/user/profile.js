@@ -52,6 +52,16 @@ Template.profile.events({
     userProducts.update(oldId, {
       $set: {link_id: newId}
     });
+
+    //send email to user saying that the product has been listed
+    var userEmail = Router.current().params.username;
+    Meteor.call('sendEmail', {
+      to: userEmail,
+      from: 'no-reply@huntrs.com',
+      subject: 'Your product has been listed!',
+      text: 'Mailgun is totally awesome for sending emails!',
+      html: '<h1>Congratulations</h1> <br> <h2> Your Product has been listed on the shop! You are well on your way to cashing in!</h2>'
+    });
   }
 });
 
