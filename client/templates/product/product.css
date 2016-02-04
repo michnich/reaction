@@ -43,7 +43,8 @@
     color: black !important;
     font-family: "EB Garamond", serif; }
   .add-product h2 {
-    margin-top: 0; }
+    margin-top: 0;
+    color: black; }
   .add-product .break {
     list-style-type: none;
     width: 100%;
@@ -63,5 +64,9 @@
     border: 1px solid black; }
   .add-product .cancel {
     color: #C1332C; }
+  .add-product .product-detail-edit {
+    display: inline-block; }
+  .add-product .title, .add-product .pageTitle {
+    text-align: left; }
 
 /*# sourceMappingURL=product.css.map */
