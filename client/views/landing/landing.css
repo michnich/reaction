@@ -3,7 +3,7 @@
   text-align: center;
   line-height: 40vh; }
 #landing .banner {
-  border: 10px solid black; }
+  border: 5px solid #000; }
   #landing .banner p {
     font-size: 4rem;
     color: white;

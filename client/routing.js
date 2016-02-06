@@ -100,9 +100,9 @@ Router.map(function() {
   });
 });
 Router.map(function() {
-  return this.route("redirect", {
+  return this.route("home", {
     controller: ReactionController,
     loadingTemplate: "loading",
-    path: '/landing'
+    path: '/home'
   });
 });

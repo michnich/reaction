@@ -1,7 +1,7 @@
 <template name="layoutHeaderNew">
   <div class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
-          <a class="navbar-brand" href="{{pathFor 'redirect'}}"><img src="/resources/logo-white.png" alt="" /></a>
+          <a class="navbar-brand" href="{{pathFor 'home'}}"><img src="/resources/logo-white.png" alt="" /></a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
@@ -25,7 +25,11 @@
 
               <li>
                 {{#if currentUser}}
-                  {{> search}}
+                <form class="navbar-form" role="search">
+                  <div class="input-group user-search">
+                      <textarea class="form-control typeahead" name="username" type="email" role="presentation" placeholder="Search for users..." autocomplete="off" spellcheck="off" data-source="usernames"></textarea>
+                  </div>
+                </form>
                 {{/if}}
             </li>
           </ul>
@@ -45,14 +49,6 @@
 </template>
 
 
-
-<template name="search">
-  <form class="navbar-form" role="search">
-    <div class="input-group user-search">
-        <textarea class="form-control typeahead" name="username" type="email" role="presentation" placeholder="Search for users..." autocomplete="off" spellcheck="off" data-source="usernames"></textarea>
-    </div>
-  </form>
-</template>
 
                 <!-- test for each username -->
                 <!-- {{#each usernames}}

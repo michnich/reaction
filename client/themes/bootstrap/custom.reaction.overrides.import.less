@@ -267,6 +267,7 @@ p,h3,h4{
 }
 
 
+
 // NAVIGATION BUTTON
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle  {
     background-color: transparent;
@@ -308,9 +309,9 @@ p,h3,h4{
   background-color: white;
 }
 .cart-icon .badge {
-    position: absolute;
-    bottom: 0px;
-    margin-right: 9px;
+    position: relative;
+    bottom: auto;
+    margin-right: auto;
     color: darkgrey;
     background-color: transparent;
 }
@@ -569,4 +570,27 @@ label {
 .navbar-default .navbar-brand {
     color: #f2f2f2;
     font-family: gotham;
+}
+
+
+// MEDIA QUERY FOR SHOP INTERFACE ON MOBILE
+
+@media screen and (max-width: 768px) {
+  .tag-link-list{
+    float: none;
+    margin-top: 29px;
+    margin-left: 2em;
+    text-align: center;
+    border: none;
+    li{
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+  }
+  .product-grid {
+    clear: both;
+  }
+  .input-group.user-search {
+    margin-left: 1em;
+  }
 }
