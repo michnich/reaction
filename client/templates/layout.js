@@ -6,7 +6,7 @@
  *
  *     Template.layout.replaces "coreLayout"
  */
- Template.layoutHeaderNew.replaces("layoutHeader");
+Template.layoutHeaderNew.replaces("layoutHeader");
 
 Template.layout.replaces("coreLayout");
 
