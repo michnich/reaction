@@ -6,7 +6,8 @@
         <div class="row top-profile">
           <div class="col-md-6 col-xs-12">
 
-            <img src="/resources/profile-pic.png" alt="" class="profile-img img-responsive inline">
+            <img src="{{url}}" alt="" class="profile-img img-responsive inline">
+            {{> imageForm}}
             <h1 class="username inline">{{firstName}}</h1>
             <h4 class="inline">{{#if isVerified}}<i class="fa fa-check-circle-o"></i>{{else}}<i class="fa fa-times-circle"></i>{{/if}}</h4>
             <!-- {{> profile}} -->
@@ -175,6 +176,6 @@
         </div>
     </div>
 </template>
-<!-- <template name="imageForm">
+<template name="imageForm">
   {{> quickForm collection="Images" type="insert" id="add-image"}}
-</template> -->
+</template>
