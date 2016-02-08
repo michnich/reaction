@@ -62,19 +62,19 @@ Template.profile.events({
       text: 'Mailgun is totally awesome for sending emails!',
       html: '<h1>Congratulations</h1> <br> <h2> Your Product has been listed on the shop! You are well on your way to cashing in!</h2>'
     });
-  },
-  'submit form': function(e, t){
-       // Prevent default actions
-       e.preventDefault();
-   var files = [];
-   var file = $('#userimage')[0].files[0];
-   console.log(file);
-   files.push(file);
-   Cloudinary._upload_file(files[0], {}, function(err, res) {
-         console.log("Upload Error: " + err);
-         console.log("Upload Result: " + res);
-       });
-   }
+  }
+  // 'submit form': function(e, t){
+  //      // Prevent default actions
+  //      e.preventDefault();
+  //  var files = [];
+  //  var file = $('#userimage')[0].files[0];
+  //  console.log(file);
+  //  files.push(file);
+  //  Cloudinary._upload_file(files[0], {}, function(err, res) {
+  //        console.log("Upload Error: " + err);
+  //        console.log("Upload Result: " + res);
+  //      });
+  //  }
 });
 
 
