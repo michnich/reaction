@@ -154,6 +154,6 @@ if (Meteor.isClient){
   // });
 
 }
-Meteor.Spinner.options = {
-    color: '#000', // #rgb or #rrggbb
-}
+// Meteor.Spinner.options = {
+//     color: '#000', // #rgb or #rrggbb
+// }
