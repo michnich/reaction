@@ -53,6 +53,7 @@ check@1.0.6
 cmather:handlebars-server@2.0.0
 codechimera:meteor-bootstrap-sweetalert@0.0.1
 coffeescript@1.0.10
+cosio55:autoform-cloudinary@0.0.2
 cosmos:browserify@0.3.0
 d3js:d3@3.5.5
 dburles:factory@0.3.10
@@ -115,6 +116,7 @@ mongo-id@1.0.1
 mongo-livedata@1.0.9
 mquandalle:bower@1.5.2_1
 msavin:mongol@1.6.2
+nekojira:cloudinary-jquery-upload@0.1.0
 nemo64:bootstrap@3.3.5_2
 nemo64:bootstrap-data@3.3.5
 npm-bcrypt@0.7.8_2

@@ -16,7 +16,7 @@
         <!-- <div class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusantium quibusdam fugiat accusamus fugit suscipit et assumenda sint reiciendis. Repellendus ut similique quibusdam sunt enim dolores! Laboriosam nihil tempora in!</div> -->
         <!-- User style -->
         <h5>{{firstName}}'s style</h5>
-
+        {{> imageForm}}
         <div class="style">
           {{aboutYou}}
         </div>
@@ -175,4 +175,7 @@
             </div>
         </div>
     </div>
+</template>
+<template name="imageForm">
+  {{> quickForm collection="Images" type="insert" id="add-image"}}
 </template>
