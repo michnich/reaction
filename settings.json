@@ -1,0 +1,9 @@
+{
+  "accessKeyId": "asdfasdfasfasdasfs",
+  "secretAccessKey":"asdfadsfasdf",
+  "bucketName": "afsdafsdaf",
+  "bucketUrl": "adfasdfad",
+  "public": {
+    "somePublicKey": "987654321"
+  }
+}
