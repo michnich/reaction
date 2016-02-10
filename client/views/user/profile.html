@@ -7,10 +7,12 @@
         <div class="row top-profile">
           <div class="col-md-6 col-xs-12">
             <!-- <img src="{{profileUrl}}" alt="" class="profile-img img-responsive inline"> -->
-            {{#if isUser}}
+
+            <!-- UNCOMMENT  THIS and image below WHEN IMAGE UPLOAD IS READY -->
+            <!-- {{#if isUser}}
               {{> profileImg}}
-            {{/if}}
-            <img src="{{image}}" alt="" />
+            {{/if}} -->
+            <!-- <img src="{{image}}" alt="" /> -->
             <h1 class="username inline">{{firstName}}</h1>
             <h4 class="inline">{{#if isVerified}}<i class="fa fa-check-circle-o"></i>{{else}}<i class="fa fa-times-circle"></i>{{/if}}</h4>
             <!-- {{> profile}} -->
@@ -179,12 +181,12 @@
         </div>
     </div>
 </template>
-<template name="profileImg">
+<!-- <template name="profileImg">
   <p class="profile-img img-responsive">
     {{> uploadImage imageCollection="userImages" doc=currentUser classImage="image-round" classInput="image-picker" inputName="user-image"}}
   </p>
-</template>
-<template name="users">
+</template> -->
+<!-- <template name="users">
   <div id="users-online">
       <h5>User's Online</h5>
       <ul>
@@ -194,9 +196,9 @@
       </ul>
   </div>
 
-</template>
+</template> -->
 
-<template name="user">
+<!-- <template name="user">
   <li>
     <a href="#">
     {{id}}
@@ -205,4 +207,4 @@
     {{/if}}
     </a>
   </li>
-</template>
+</template> -->
