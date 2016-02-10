@@ -130,7 +130,9 @@ Meteor.app = _.extend(Meteor.app || {}, {
 //
 //     // });
 // }
+
 if (Meteor.isClient){
+
   Template.products.rendered = function(){
     var pathArray = window.location.pathname.split('/');
     //return the product tag

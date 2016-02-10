@@ -1,3 +1,4 @@
+
 <template name="profile">
   <div id="userPro" class="container">
     <div id="profile" class="row">
@@ -5,9 +6,11 @@
 
         <div class="row top-profile">
           <div class="col-md-6 col-xs-12">
-
-            <img src="{{url}}" alt="" class="profile-img img-responsive inline">
-            {{> imageForm}}
+            <!-- <img src="{{profileUrl}}" alt="" class="profile-img img-responsive inline"> -->
+            {{#if isUser}}
+              {{> profileImg}}
+            {{/if}}
+            <img src="{{image}}" alt="" />
             <h1 class="username inline">{{firstName}}</h1>
             <h4 class="inline">{{#if isVerified}}<i class="fa fa-check-circle-o"></i>{{else}}<i class="fa fa-times-circle"></i>{{/if}}</h4>
             <!-- {{> profile}} -->
@@ -60,7 +63,7 @@
           <div class="col-xs-12 col-md-6 product">
             <div class="product">
               <a class="" href="/product/{{link_id}}">
-                <img src="/resources/buttons.jpg" alt="">
+                <img src="{{image}}" alt="">
                 <div class="description">
                   <a class="avatar product-desc"> </a>
                   <p class="price">${{price}}</p>
@@ -176,6 +179,30 @@
         </div>
     </div>
 </template>
-<template name="imageForm">
-  {{> quickForm collection="Images" type="insert" id="add-image"}}
+<template name="profileImg">
+  <p class="profile-img img-responsive">
+    {{> uploadImage imageCollection="userImages" doc=currentUser classImage="image-round" classInput="image-picker" inputName="user-image"}}
+  </p>
+</template>
+<template name="users">
+  <div id="users-online">
+      <h5>User's Online</h5>
+      <ul>
+        {{#each users}}
+          <li>{{> user}}</li>
+        {{/each}}
+      </ul>
+  </div>
+
+</template>
+
+<template name="user">
+  <li>
+    <a href="#">
+    {{id}}
+    {{#if avatar}}
+      <img class="uploaded-image" src="{{imageUrl}}"/>
+    {{/if}}
+    </a>
+  </li>
 </template>

@@ -22,7 +22,7 @@ Template.addProduct.events({
         description: $(e.target).find('[name=description]').val(),
         name: $(e.target).find('[name=name]').val(),
         price: $(e.target).find('[name=price]').val(),
-        // image: $('.uploaded-image').prop('src')
+        image: $('.uploaded-image').prop('src')
 
       }
 

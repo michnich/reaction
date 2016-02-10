@@ -34,7 +34,21 @@ Template.profile.helpers({
   },
   isListed: function(){
     return userProducts.findOne({_id:this._id}).link_id;
+  },
+  profileUrl: function(){
+    var imageSource = $('.uploaded-image').attr('src');
+    return imageSource;
+  },
+  image: function() {
+  // var doc = Template.parentData(1);
+  var email = Router.current().params.username;
+  var id = Meteor.users.findOne({"profile.name": email})._id;
+  var image = UserImages.findOne({associatedObjectId: id});
+  if (image) {
+    return image.url({store: "userImages-thumbnail"});
+    }
   }
+
 });
 
 
@@ -63,18 +77,6 @@ Template.profile.events({
       html: '<h1>Congratulations</h1> <br> <h2> Your Product has been listed on the shop! You are well on your way to cashing in!</h2>'
     });
   }
-  // 'submit form': function(e, t){
-  //      // Prevent default actions
-  //      e.preventDefault();
-  //  var files = [];
-  //  var file = $('#userimage')[0].files[0];
-  //  console.log(file);
-  //  files.push(file);
-  //  Cloudinary._upload_file(files[0], {}, function(err, res) {
-  //        console.log("Upload Error: " + err);
-  //        console.log("Upload Result: " + res);
-  //      });
-  //  }
 });
 
 
@@ -109,8 +111,4 @@ Template.editProfile.events({
     Modal.hide('editProfile');
 
   }
-
-
-
-
 });
