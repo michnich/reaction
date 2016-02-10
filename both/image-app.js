@@ -203,7 +203,7 @@ if (Meteor.isClient) {
 
   Meteor.subscribe("users");
 
-  Template.body.helpers({
+  Template.profile.helpers({
     formTemplate: function () {
       return Session.get("formTemplate");
     },
@@ -212,7 +212,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.productPage.helpers({
+  Template.profile.helpers({
     imageUploadConfig: function() {
       return {
         imageCollection: UserImages,
@@ -228,7 +228,7 @@ if (Meteor.isClient) {
   });
 
 
-  Template.prod.helpers({
+  Template.profile.helpers({
     id: function() {
       return this.product.name;
     },
