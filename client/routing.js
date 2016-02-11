@@ -106,3 +106,17 @@ Router.map(function() {
     path: '/home'
   });
 });
+Router.map(function() {
+  return this.route("faq", {
+    controller: ReactionController,
+    loadingTemplate: "loading",
+    path: '/faq'
+  });
+});
+Router.map(function() {
+  return this.route("contact", {
+    controller: ReactionController,
+    loadingTemplate: "loading",
+    path: '/contact'
+  });
+});

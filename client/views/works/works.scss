@@ -3,6 +3,7 @@
     background-position-y: 51%;
     h1{
       text-align: center;
+      font-family: gotham;
       text-shadow: 1px 1px 1px black;
     }
   }
@@ -11,7 +12,7 @@
   min-height: 100%;
   .step-one{
     margin-top: -15rem;
-    background: #FAFAFA;
+    background: #FFF;
   }
   .col-xs-8 {
     padding-left: 2em;
@@ -25,6 +26,7 @@
     }
     h3{
       text-align: center;
+      font-family: gotham;
     }
     .step-photo{
       font-size: 7em;
@@ -34,6 +36,9 @@
     }
     .col-xs-4{
       text-align: left;
+    }
+    p{
+      font-size:1.3em;
     }
   }
 }

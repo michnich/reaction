@@ -4,7 +4,6 @@
  * https://github.com/reactioncommerce/reaction-core/blob/master/client/templates/layout/layout.html
  * To use custom template in layout.html uncomment
  *
- *     Template.layout.replaces "coreLayout"
  */
 Template.layoutHeaderNew.replaces("layoutHeader");
 
