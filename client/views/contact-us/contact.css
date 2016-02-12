@@ -19,12 +19,13 @@
       text-shadow: 1px 1px 1px black;
       text-transform: uppercase;
       letter-spacing: 4px;
-      margin-top: 30vh; }
+      margin-top: 10vh; }
     .contact-us .contact-banner .text h2 {
       font-family: gotham;
       text-shadow: 1px 1px 1px black;
       color: white;
-      text-transform: lowercase; }
+      text-transform: lowercase;
+      margin-top: 20vh; }
     .contact-us .contact-banner .text a {
       color: white;
       border-bottom: 1px solid white; }

@@ -11,5 +11,5 @@ if Meteor.isServer
           siteName: 'mycompany'
 
         PrettyEmail.defaults.verifyEmail =
-          heading: 'Need to activate your account',
+          heading: 'Activate your account to start hunting',
           buttonText: 'Activate',
