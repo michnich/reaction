@@ -1,0 +1,26 @@
+.sell-page .btn-primary {
+  background-color: black; }
+.sell-page .form-group > a {
+  color: white; }
+.sell-page h1, .sell-page h2 {
+  text-transform: uppercase;
+  text-align: center; }
+.sell-page .loginForm-title {
+  display: none; }
+.sell-page .top-row {
+  padding: 6rem 0;
+  min-height: 50vh;
+  background-image: url("resources/wood-2.jpg");
+  background-size: cover;
+  color: white; }
+  .sell-page .top-row h2 {
+    color: white; }
+.sell-page .bottom-row {
+  margin-bottom: 5rem; }
+  .sell-page .bottom-row h2 {
+    color: black;
+    line-height: 16vh; }
+  .sell-page .bottom-row .heading-row {
+    height: 16.6666vh; }
+
+/*# sourceMappingURL=sell.css.map */

@@ -2,6 +2,10 @@
   min-height: 40vh;
   text-align: center;
   line-height: 40vh; }
+#landing .top-row {
+  min-height: 40vh;
+  text-align: center;
+  line-height: 40vh; }
 #landing .banner {
   border: 5px solid #000; }
   #landing .banner p {
@@ -21,9 +25,10 @@
     transition-duration: 0.3s;
     background: rgba(0, 0, 0, 0.4); }
 #landing .top-banner {
-  background-image: url("resources/bwstripes.jpg");
+  background-image: url("resources/wood-2.jpg");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: bottom; }
 #landing .mid-top-right-banner {
   background-image: url("resources/about-media-3.jpg");
   background-size: cover;

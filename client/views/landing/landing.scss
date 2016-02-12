@@ -7,6 +7,12 @@
     // line-height: 20%;
     line-height: 40vh;
   }
+  .top-row{
+    min-height: 40vh;
+    text-align: center;
+    // line-height: 20%;
+    line-height: 40vh;
+  }
   .banner{
     border: 5px solid #000;
     p{
@@ -29,9 +35,10 @@
     }
   }
   .top-banner{
-    background-image: url('resources/bwstripes.jpg');
+    background-image: url('resources/wood-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
   }
   .mid-top-right-banner{
     background-image: url('resources/about-media-3.jpg');

@@ -1,0 +1,36 @@
+.sell-page{
+  .btn-primary{
+    background-color: black;
+  }
+  .form-group > a {
+    color: white;
+  }
+  h1,h2{
+    text-transform: uppercase;
+    text-align:center;
+
+  }
+  .loginForm-title{
+    display: none;
+  }
+  .top-row{
+    h2{
+      color: white;
+    }
+    padding: 6rem 0;
+    min-height: 50vh;
+    background-image: url('resources/wood-2.jpg');
+    background-size: cover;
+    color: white;
+  }
+  .bottom-row{
+    margin-bottom: 5rem;
+    h2{
+      color: black;
+      line-height: 16vh;
+    }
+    .heading-row{
+      height: 16.6666vh;
+    }
+  }
+}
