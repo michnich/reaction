@@ -43,14 +43,14 @@
   }
 }
 
-// .tag-link-list {
-//     float: left;
-//     margin-top: 29px;
-//     margin-left: 2em;
-//     margin-right: 2em;
-//     padding-right: 2em;
-//     border-right: 1px solid darkgrey;
-// }
+.tag-link-list {
+    float: left;
+    margin-top: 29px;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-right: 2em;
+    border-right: 1px solid darkgrey;
+}
 // .checkout-login{
 //   display: none!important;
 // }
@@ -258,15 +258,15 @@ p,h3,h4{
     top: 0;
     background-color: white;
 }
-// .tag-link-list{
-//   float: left;
-//   margin-top: 29px;
-//   margin-left: 2em;
-//   li{
-//     display: block;
-//     margin-bottom: 1em;
-//   }
-// }
+.tag-link-list{
+  float: left;
+  margin-top: 29px;
+  margin-left: 2em;
+  li{
+    display: block;
+    margin-bottom: 1em;
+  }
+}
 
 
 
@@ -578,21 +578,96 @@ label {
 // MEDIA QUERY FOR SHOP INTERFACE ON MOBILE
 
 @media screen and (max-width: 768px) {
-  // .tag-link-list{
-  //   float: none;
-  //   margin-top: 29px;
-  //   margin-left: 2em;
-  //   text-align: center;
-  //   border: none;
-  //   li{
-  //     display: inline-block;
-  //     margin-bottom: 1em;
-  //   }
-  // }
+  .tag-link-list{
+    float: none;
+    margin-top: 29px;
+    margin-left: 2em;
+    text-align: center;
+    border: none;
+    li{
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+  }
   .product-grid {
     clear: both;
   }
   .input-group.user-search {
     margin-left: 1em;
   }
+}
+
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+    //iPhone 6 Portrait
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
+    //iPhone 6 landscape
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) {
+    //iPhone 6+ Portrait
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {
+    //iPhone 6+ landscape
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
+    //iPhone 6 and iPhone 6+ portrait and landscape
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){
+    //iPhone 6 and iPhone 6+ portrait
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
+    //iPhone 6 and iPhone 6+ landscape
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
 }
