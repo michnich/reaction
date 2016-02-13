@@ -35,11 +35,12 @@
     }
   }
   .top-banner{
-    background-image: url('resources/wood-2.jpg');
+    background-image: url("/resources/skate.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position-y: 28%;
   }
+  
   .mid-top-right-banner{
     background-image: url('resources/about-media-3.jpg');
     background-size: cover;
