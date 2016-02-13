@@ -14,3 +14,5 @@ Template.layout.replaces("coreLayout");
 // Template.loginFormNew.replaces("loginFormSignUpView");
 
 Template.productDetailNew.replaces("productDetail");
+
+Template.layoutHeaderNew.replaces("checkoutHeader");
