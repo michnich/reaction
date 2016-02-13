@@ -16,18 +16,18 @@
         h1{
           font-size: 5em;
           color: white;
-          font-family: 'Garamond';
+          font-family: gotham;
 
-          text-shadow: 1px 1px 1px black;
+          text-shadow: 1px 2px 1px black;
           text-transform: uppercase;
-          font-style: italic;
+          // font-style: italic;
           letter-spacing: 4px;
           margin-top: 35vh;
         }
         h2{
-          font-family: 'Garamond';
+          font-family: gotham;
           text-shadow: 1px 1px 1px black;
-          font-style: italic;
+          // font-style: italic;
           color: white;
           text-transform: lowercase;
         }
@@ -90,13 +90,13 @@
 
 
   .featured-banner{
-    background-image: url('/resources/featured-banner-1.jpg');
+    background-image: url('/resources/featured-banner-01.jpg');
   }
   .second-banner{
-    background-image: url('/resources/featured-banner2.jpg');
+    background-image: url('/resources/featured-banner-02.jpg');
   }
   .third-banner{
-    background-image: url('/resources/featured-banner-3.jpg');
+    background-image: url('/resources/featured-banner-03.jpg');
   }
 }
 

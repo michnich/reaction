@@ -34,7 +34,7 @@
   background-size: cover;
   background-repeat: no-repeat; }
 #landing .mid-top-left-banner {
-  background-image: url("resources/landing-featured.jpg");
+  background-image: url("resources/featured-banner.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 #landing .mid-bottom-right-banner {
@@ -43,10 +43,6 @@
   background-repeat: no-repeat; }
 #landing .mid-bottom-left-banner {
   background-image: url("resources/about-banner.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
-#landing .bottom-banner {
-  background-image: url("resources/boatsntie.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 
