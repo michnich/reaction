@@ -1,3 +1,11 @@
+.featured-closet .social {
+  text-align: center; }
+  .featured-closet .social .col-xs-4 {
+    text-align: center; }
+    .featured-closet .social .col-xs-4 a {
+      text-decoration: none;
+      border-bottom: none;
+      font-size: 3.3em; }
 .featured-closet .featured-banner {
   margin-top: -66px;
   min-height: 100%;

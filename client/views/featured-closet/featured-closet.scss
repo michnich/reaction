@@ -1,4 +1,15 @@
 .featured-closet{
+  .social{
+    text-align: center;
+    .col-xs-4{
+      text-align: center;
+      a{
+        text-decoration: none;
+        border-bottom:none;
+        font-size: 3.3em;
+      }
+    }
+  }
   .featured-banner{
     margin-top:-66px;
     min-height: 100%;
