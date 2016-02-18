@@ -12,7 +12,7 @@
       <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 
-              <li class="active explore-btn"><a href="/products">Hunt</a></li>
+              <li class="explore-btn"><a href="/products">Hunt</a></li>
 
               {{#if currentUser}}
               <li class="profile-button"><a href="/profile/{{username}}">Closet</a></li>
@@ -39,7 +39,7 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-
+              <li><a href="#"><img class="nav-image" src="{{profileImage}}" alt=""></a></li>
               <li><a href="#">{{> accounts tpl="loginDropdown"}}</a></li>
               <li><a href="#">{{> cartIcon}}</a></li>
 

@@ -39,15 +39,22 @@ Template.profile.helpers({
     var imageSource = $('.uploaded-image').attr('src');
     return imageSource;
   },
-  image: function() {
-  // var doc = Template.parentData(1);
-  var email = Router.current().params.username;
-  var id = Meteor.users.findOne({"profile.name": email})._id;
-  var image = UserImages.findOne({associatedObjectId: id});
-  if (image) {
-    return image.url({store: "userImages-thumbnail"});
-    }
+  profilePic: function () {
+    var email = Router.current().params.username;
+    return Meteor.users.findOne({"emails.address": email}).profile.profile_pic;
   }
+  // productImage: function(){
+  //   // var fart = "fart";
+  //   // return fart;
+  //   var id = this.product._id;
+  //   var image = ProductImages.findOne({associatedObjectId: id});
+  //   if (image) {
+  //     return image.url({store: "productImages-thumbnail"});
+  //     }
+  //   },
+  // productImage: function() {
+  //   return this.image;
+  // }
 
 });
 
@@ -76,6 +83,17 @@ Template.profile.events({
       text: 'Mailgun is totally awesome for sending emails!',
       html: '<h1>Congratulations</h1> <br> <h2> Your Product has been listed on the shop! You are well on your way to cashing in!</h2>'
     });
+  },
+  "click .add-profile-image":function(event){
+    alert('image added');
+    var profileImage = $('.afCloudinary-thumbnail a').attr('href');
+    console.log(profileImage);
+    Meteor.users.update(Meteor.userId(),
+    {$set: {
+      'profile.profile_pic': profileImage
+      }
+    }
+    );
   }
 });
 

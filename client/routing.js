@@ -3,29 +3,28 @@ var ReactionController;
 ReactionController = ShopController.extend({
   layoutTemplate: "layout",
   waitOn: function() {
+    return Meteor.subscribe("userProducts");
     return Meteor.subscribe('Products');
     return Meteor.subscribe("directory");
-    return Meteor.subscribe('userProducts');
-
-  }
+  },
+  fastRender: true
 });
 
 
 ProfileController=ReactionController.extend({
     layoutTemplate:"profile",
     waitOn:function(){
-        return Meteor.subscribe("allUserData");
         return Meteor.subscribe("directory");
         return Meteor.subscribe("userProfile",this.params.username);
         return Meteor.subscribe('userProducts');
-
     },
     data:function(){
         var username=Router.current().params.username;
         return Meteor.users.findOne({
             username:username
         });
-    }
+    },
+    fastRender: true
 });
 
 
@@ -37,6 +36,7 @@ Router.map(function() {
     path: "/products"
   });
 });
+
 // Router.map(function() {
 //   return this.route("profile", {
 //     controller: ReactionController,

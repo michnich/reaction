@@ -125,4 +125,56 @@
     </div>
   </div>
 </div>
+{{> sellerSection}}
+{{> footer}}
+</template>
+
+
+<template name="sellerSection">
+{{#if subscription}}
+  <!-- <h1>{{sellerEmail}}</h1>
+  <h2>hello world</h2> -->
+<div style="background-color:#EFF0F1" class="wrapper seller-wrapper">
+  <div class="container">
+    <div style="margin: 6rem 0" class="row">
+      <div class="col-xs-6">
+        <div class="row">
+          <div style="text-align:center;" class="col-md-3">
+            <p class="helvet"><b>Seller:</b></p>
+            <br>
+            <img style="height:90px; width:90px; margin-bottom:2rem;" src="{{sellerImage}}" class="img-circle" alt="">
+            <br>
+            <a style="display:block; text-transform:uppercase; font-family:'HelveticaNeue-Bold'" class="btn btn-default helvet" href="/profile/{{sellerEmail}}">Visit</a>
+
+          </div>
+
+          <div class="col-xs-9">
+            <br>
+            <h1 class="helvet">{{sellerName}}</h1>
+            <p>{{sellerAbout}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p class="helvet"><b>More from {{sellerName}}</b></p>
+        <br>
+        {{#each sellerProducts}}
+        <div class="product">
+          <a class="" href="/product/{{link_id}}">
+            <img style="height:100px; width:100px;" src="{{this.image}}" class="" alt="">
+            <div class="description">
+              <a class="avatar product-desc"> </a>
+              <!-- <p class="price">${{price}}</p>
+              <p class="condition">{{type}}</p>
+              <p class="title product-desc">{{name}}</p> -->
+              <!-- <p class="id <product></product>-des">id: {{_id}}</p> -->
+            </div>
+          </a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
 </template>

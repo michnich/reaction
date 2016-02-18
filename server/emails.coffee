@@ -3,13 +3,13 @@ if Meteor.isServer
           from: 'huntrs@huntrs.co'
           # logoUrl: "http://localhost:3000/resources/huntrs-h.png",
           logoUrl: "http://huntrsapp-s.herokuapp.com/resources/huntrs-h.png"
-          companyName: 'myCompany'
-          companyUrl: 'http://mycompany.com'
-          companyAddress: '123 Street, ZipCode, City, Country'
-          companyTelephone: '+1234567890'
-          companyEmail: 'support@mycompany.com'
-          siteName: 'mycompany'
+          companyName: 'huntrs'
+          companyUrl: 'http://huntrs.co'
+          companyAddress: 'Philadelphia'
+          companyTelephone: '+6572294868'
+          companyEmail: 'customerservice@huntrs.co'
+          siteName: 'huntrs'
 
         PrettyEmail.defaults.verifyEmail =
-          heading: 'Activate your account to start hunting',
+          heading: 'Activate your account to start begin the hunt',
           buttonText: 'Activate',

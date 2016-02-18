@@ -2,17 +2,25 @@
 <template name="profile">
   <div id="userPro" class="container">
     <div id="profile" class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div style="padding-right:6rem"  class="col-xs-12 col-sm-6">
 
         <div class="row top-profile">
           <div class="col-md-6 col-xs-12">
             <!-- <img src="{{profileUrl}}" alt="" class="profile-img img-responsive inline"> -->
 
+            <img style="height:130px; width:130px; display:inline-block; margin-bottom:2rem;" src="{{profilePic}}" class="img-responsive img-circle" alt="" />
+
             <!-- UNCOMMENT  THIS and image below WHEN IMAGE UPLOAD IS READY -->
-            <!-- {{#if isUser}}
-              {{> profileImg}}
-            {{/if}} -->
-            <!-- <img src="{{image}}" alt="" /> -->
+            {{#if isUser}}
+              <!-- {{> profileImg}} -->
+              {{#unless profilePic}}
+                {{> profileImageForm}}
+                <a style="display:block" class = "btn btn-default add-profile-image">
+                  Add Profile Image
+                </a>
+              {{/unless}}
+            {{/if}}
+            <img src="{{image}}" alt="" />
             <h1 class="username inline">{{firstName}}</h1>
             <h4 class="inline">{{#if isVerified}}<i class="fa fa-check-circle-o"></i>{{else}}<i class="fa fa-times-circle"></i>{{/if}}</h4>
             <!-- {{> profile}} -->
@@ -46,7 +54,7 @@
           <div class="col-xs-12 col-md-6 product">
 
             <div class="product">
-              <a class="" href="/product/QaCvrZFSvonsDpaHT">
+              <a class="" href="/product/example-product">
                 <img src="/resources/example-product.jpg" alt="">
                 <div class="description">
                   <a class="avatar product-desc"> </a>
@@ -65,13 +73,13 @@
           <div class="col-xs-12 col-md-6 product">
             <div class="product">
               <a class="" href="/product/{{link_id}}">
-                <img src="{{image}}" alt="">
+                <img src="{{this.image}}" alt="">
                 <div class="description">
                   <a class="avatar product-desc"> </a>
                   <p class="price">${{price}}</p>
                   <p class="condition">{{type}}</p>
                   <p class="title product-desc">{{name}}</p>
-                  <!-- <p class="id product-des">id: {{_id}}</p> -->
+                  <!-- <p class="id <product></product>-des">id: {{_id}}</p> -->
 
 
 
@@ -98,9 +106,15 @@
             </div>
           </div>
           {{/each}}
+
+
           <div class="col-xs-12 col-md-6 product">
             {{#if isUser}}
-            <a class="btn" href="{{pathFor 'addProduct'}}"><a class="add-product"><i class="fa fa-plus-circle"></i> Add New Product</a></a>
+            <div id="addProduct">
+              <a class="add-product" href="{{pathFor 'addProduct'}}">
+                <i class="fa fa-plus-circle"></i> Add New Product
+              </a>
+            </div>
             {{/if}}
           </div>
 
@@ -110,21 +124,8 @@
     </div>
   </div>
 
-<!-- footer -->
-<!-- <div style="position:absolute; bottom:0; left:0; width:100%">
   {{> footer}}
 
-</div> -->
-
-
-  <!-- if this is the current user -->
-  {{#if isUser}}
-
-    <!-- {{> editProfile}} -->
-
-
-
-  {{/if}}
 </template>
 
 
@@ -181,11 +182,17 @@
         </div>
     </div>
 </template>
-<!-- <template name="profileImg">
+
+<template name="profileImg">
   <p class="profile-img img-responsive">
+    <span style="background-color:darkgrey" class="btn btn-default btn-file">
+    <i>Profile Pic</i>
     {{> uploadImage imageCollection="userImages" doc=currentUser classImage="image-round" classInput="image-picker" inputName="user-image"}}
+    </span>
+
+
   </p>
-</template> -->
+</template>
 <!-- <template name="users">
   <div id="users-online">
       <h5>User's Online</h5>
@@ -196,7 +203,7 @@
       </ul>
   </div>
 
-</template> -->
+</template>
 
 <!-- <template name="user">
   <li>
@@ -208,3 +215,6 @@
     </a>
   </li>
 </template> -->
+<template name="profileImageForm">
+  {{> quickForm collection="profileImages" type="insert" id="add-profile-image"}}
+</template>

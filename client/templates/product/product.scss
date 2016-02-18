@@ -17,7 +17,9 @@ $helvet: 'HelveticaNeue-Bold';
 
 
 
-
+.helvet{
+  font-family: $helvet;
+}
 // ADD PRODUCT
 // add product
 .add-product{
@@ -111,5 +113,17 @@ $helvet: 'HelveticaNeue-Bold';
   }
   .title, .pageTitle{
     text-align: left;
+  }
+
+
+  //cloudinary button
+  .afCloudinary{
+    .btn{
+      width: 100%;
+      padding: 1.5rem;
+      background: transparent;
+      color: darkgrey;
+      border: 1px solid black;
+    }
   }
 }

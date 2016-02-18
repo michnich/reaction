@@ -272,6 +272,7 @@ Template.productDetailNew.events({
 
 
 Template.productDetail.rendered = function(){
+
   //if the user is the owner/ admin then hide the link to that persons link
   if(Roles.userIsInRole(Meteor.userId(),['dashboard','owner','admin'])){
     $('.go-to-user').hide();
@@ -291,3 +292,40 @@ Template.productDetail.rendered = function(){
 
   });
 }
+
+// Template.productDetailNew.rendered = function(){
+//   var sellerEmail= $('.go-to-user .vendor').text().trim();
+//   if (sellerEmail.length < 1){
+//     alert('hello world');
+//   }
+// }
+
+Template.sellerSection.onCreated(function(){
+    this.documents = this.subscribe( 'userProducts');
+    this.users = this.subscribe('directory');
+});
+Template.sellerSection.helpers({
+  subscription: function(){
+    return Template.instance().documents.ready();
+  },
+  sellerName: function(){
+    var sellerEmail= $('.go-to-user').delay(300).children().text().trim()
+    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.first_name;
+  },
+  sellerEmail: function(){
+    var sellerEmail= $('.go-to-user').delay(300).children().text().trim()
+    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.name;
+  },
+  sellerImage: function(){
+    var sellerEmail= $('.go-to-user').children().text().trim();
+    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.profile_pic;
+  },
+  sellerAbout: function(){
+    var sellerEmail= $('.go-to-user').children().text().trim();
+    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.about;    
+  },
+  sellerProducts: function(){
+    var sellerEmail= $('.go-to-user').children().text().trim();
+    return userProducts.find({author: sellerEmail}).fetch()
+  }
+});

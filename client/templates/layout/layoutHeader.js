@@ -30,6 +30,9 @@ Template.layoutHeader.helpers({
   username: function(){
     return Meteor.user().emails[0].address
   },
+  profileImage: function(){
+    return Meteor.user().profile.profile_pic
+  },
   usernames: function(){
     return Meteor.users.find().fetch().map(function(user){
 

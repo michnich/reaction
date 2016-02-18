@@ -1,3 +1,6 @@
+.helvet {
+  font-family: "HelveticaNeue-Bold"; }
+
 .add-product {
   margin: 5rem auto; }
   .add-product .control-group {
@@ -68,5 +71,11 @@
     display: inline-block; }
   .add-product .title, .add-product .pageTitle {
     text-align: left; }
+  .add-product .afCloudinary .btn {
+    width: 100%;
+    padding: 1.5rem;
+    background: transparent;
+    color: darkgrey;
+    border: 1px solid black; }
 
 /*# sourceMappingURL=product.css.map */

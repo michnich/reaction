@@ -7,6 +7,7 @@
 Template.addProduct.events({
   'submit form': function(e) {
       e.preventDefault();
+      // Meteor.Dropzone.processQueue();
 
       // add product to product collection and to user closet
 
@@ -22,7 +23,9 @@ Template.addProduct.events({
         description: $(e.target).find('[name=description]').val(),
         name: $(e.target).find('[name=name]').val(),
         price: $(e.target).find('[name=price]').val(),
-        image: $('.uploaded-image').prop('src')
+        // image: $('.dz-image img').prop('src')
+        image: $('.afCloudinary-thumbnail a').attr('href')
+        // image:$(e.target).find('[name=image]').val()
 
       }
 
@@ -44,7 +47,6 @@ Template.addProduct.events({
       var productDesc = $('#product-desc').val();
       var productCondition = $('#productCondition').val();
 
-      //
       // // Send email to huntrs
       Meteor.call('sendEmail', {
         to: 'ehughestaylor@codedbykids.com',

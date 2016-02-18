@@ -4,6 +4,7 @@
   }
   .about-banner{
     background-image: url('resources/landing-featured.jpg');
+    background-size: cover;
     margin-top:-66px;
     min-height: 80%;
     min-height: 80vh;
@@ -20,18 +21,16 @@
         h1{
           font-size: 5em;
           color: white;
-          font-family: 'Garamond';
+          font-family: gotham;
 
           text-shadow: 1px 1px 1px black;
           text-transform: uppercase;
-          font-style: italic;
           letter-spacing: 4px;
           margin-top: 30vh;
         }
         h2{
-          font-family: 'Garamond';
+          font-family: gotham;
           text-shadow: 1px 1px 1px black;
-          font-style: italic;
           color: white;
           text-transform: lowercase;
         }

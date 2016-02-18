@@ -3,6 +3,7 @@
 .contact-us .gotham {
   font-family: gotham; }
 .contact-us .contact-banner {
+  background-image: url("resources/contact-banner.jpg");
   padding: 0; }
   .contact-us .contact-banner .text {
     position: relative;
