@@ -1,3 +1,9 @@
+.product-page {
+  background-image: url("resources/Hunters-Explore.jpg"); }
+
+.works-banner {
+  background-image: url("resources/gloves.jpg"); }
+
 .products {
   background-image: url("resources/about-banner-2.jpg"); }
 
@@ -32,8 +38,5 @@
 
 .faq-banner {
   background-image: url("resources/faq-banner.jpg"); }
-
-.contact-banner {
-  background-image: url("resources/contact-banner.jpg"); }
 
 /*# sourceMappingURL=jumbotron.css.map */
