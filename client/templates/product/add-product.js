@@ -23,9 +23,7 @@ Template.addProduct.events({
         description: $(e.target).find('[name=description]').val(),
         name: $(e.target).find('[name=name]').val(),
         price: $(e.target).find('[name=price]').val(),
-        // image: $('.dz-image img').prop('src')
         image: $('.afCloudinary-thumbnail a').attr('href')
-        // image:$(e.target).find('[name=image]').val()
 
       }
 
@@ -51,7 +49,7 @@ Template.addProduct.events({
       Meteor.call('sendEmail', {
         to: 'ehughestaylor@codedbykids.com',
         from: 'no-reply@huntrs.com',
-        subject: userEmail + 'has added a new product, please review',
+        subject: userEmail + ' has added a new product, please review',
         text: 'Mailgun is totally awesome for sending emails!',
         html: '<h1>Product Details </h1> <br> <h2> Product Title: </h2> <p>' + productName + '</p> <br> <h2>Product Price: </h2> <p>' + productPrice + '</p> <br> <h2> Product Description: </h2> <p>' + productDesc + ' </p> <br> <h2> Product Condition: </h2> <p>' + productCondition + '</p>'
       });
@@ -62,7 +60,7 @@ Template.addProduct.events({
         from: 'no-reply@huntrs.com',
         subject: 'Thank you for adding a product please allow 3-5 days for us here at huntrs to review your submission!',
         text: 'Mailgun is totally awesome for sending emails!',
-        html: '<table width="100%" bgcolor="#EFF0F1" cellpadding="0" cellspacing="0" border="0">'+
+        html: '<table width="100%" bgcolor="#FFF" cellpadding="0" cellspacing="0" border="0">'+
         '    <tbody>'+
         '        <tr>'+
         '            <td style="padding:40px 0;">'+

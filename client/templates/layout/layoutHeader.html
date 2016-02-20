@@ -1,5 +1,5 @@
 <template name="layoutHeaderNew">
-  <div class="navbar navbar-default" role="navigation">
+  <div id="nav-main" class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
           <a class="navbar-brand" href="{{pathFor 'home'}}"><img src="/resources/logo-white.png" alt="" /></a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -12,23 +12,23 @@
       <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 
-              <li class="explore-btn"><a href="/products">Hunt</a></li>
+              <li class="explore-btn nav-item"><a href="/products">Hunt</a></li>
 
               {{#if currentUser}}
-              <li class="profile-button"><a href="/profile/{{username}}">Closet</a></li>
+              <li class="profile-button nav-item"><a href="/profile/{{username}}">Closet</a></li>
               {{/if}}
 
               <!-- if not a current user then show the sell info page -->
               {{#unless currentUser}}
-              <li><a href="{{pathFor 'sell'}}">Start Selling</a></li>
+              <li class="nav-item"><a href="{{pathFor 'sell'}}">Start Selling</a></li>
               {{/unless}}
-              <li><a href="/about-us">About</a></li>
+              <li class="nav-item"><a href="/about-us">About</a></li>
               <!-- <li><a href="http://huntrs-staging.herokuapp.com/terms">Terms</a></li> -->
               <!-- <li><a href="http://huntrs-staging.herokuapp.com/press">Press</a></li> -->
               <!-- <li><a href="/contact">Contact</a></li> -->
-              <li><a href="/how-it-works">How It Works</a></li>
+              <li class="nav-item"><a href="/how-it-works">How It Works</a></li>
               <!-- <li><a href="/faq">FAQ</a></li> -->
-              <li>
+              <li class="nav-item">
                 {{#if currentUser}}
                 <form class="navbar-form" role="search">
                   <div class="input-group user-search">
@@ -39,10 +39,10 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><img class="nav-image" src="{{profileImage}}" alt=""></a></li>
-              <li><a href="#">{{> accounts tpl="loginDropdown"}}</a></li>
+              <li class="hidden-xs"><a href="#"><img class="nav-image" src="{{profileImage}}" alt=""></a></li>
               <li><a href="#">{{> cartIcon}}</a></li>
 
+              <li><a href="#">{{> accounts tpl="loginDropdown"}}</a></li>
           </ul>
 
       </div>

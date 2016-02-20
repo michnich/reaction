@@ -18,6 +18,11 @@ Template.layoutHeader.onRendered(function(){
   //   }
   //   });
 
+  
+  //on click close menu
+  $('.nav-item').on('click',function(){
+    $('.navbar-collapse').removeClass('in');
+  });
   Meteor.subscribe("allUserData");
   Meteor.typeahead.inject();
   $('.typeahead').bind('typeahead:select', function(ev, suggestion){

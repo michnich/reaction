@@ -81,7 +81,7 @@ Template.profile.events({
       from: 'no-reply@huntrs.com',
       subject: 'Your product has been listed!',
       text: 'Mailgun is totally awesome for sending emails!',
-      html: '<h1>Congratulations</h1> <br> <h2> Your Product has been listed on the shop! You are well on your way to cashing in!</h2>'
+      html: '<h1>Congratulations</h1> <br> <h2>Your Product has been listed on the shop! You are well on your way to cashing in!</h2>'
     });
   },
   "click .add-profile-image":function(event){

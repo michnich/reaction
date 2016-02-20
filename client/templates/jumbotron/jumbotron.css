@@ -19,10 +19,8 @@
   background-image: url("resources/suits-banner.jpg"); }
 
 .ties {
-  background-image: url("resources/ties-banner.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left; }
+  background-image: url("resources/boots.jpg");
+  background-position: bottom; }
 
 .hats {
   background-image: url("resources/hats-banner.jpg"); }
