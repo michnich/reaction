@@ -4,7 +4,7 @@
  * ReactionCore common/routing.js contains the core routes.
  */
 
-let staticPages = ["about", "team", "faqs", "terms", "privacy" ];
+let staticPages = ["about", "team", "faqs", "privacy" ];
 
 /**
  * app router mapping
@@ -23,6 +23,7 @@ Router.map(function route() {
 Router.map(function route() {
   _.extend(Router.routes.index.options, {
     // Just an example. You can put any Iron Router options here.
-    template: 'landingPro'
+    template: 'landingPro',
+
   });
 });

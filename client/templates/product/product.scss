@@ -23,6 +23,12 @@ $helvet: 'HelveticaNeue-Bold';
 // ADD PRODUCT
 // add product
 .add-product{
+
+  //hide add product button
+  .btn-primary{
+    display: none;
+  }
+
   margin: 5rem auto;
   .control-group {
       display: inline-block;

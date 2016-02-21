@@ -3,6 +3,8 @@
 
 .add-product {
   margin: 5rem auto; }
+  .add-product .btn-primary {
+    display: none; }
   .add-product .control-group {
     display: inline-block;
     min-width: 200px; }
