@@ -28,9 +28,9 @@
               <!-- <li><a href="/contact">Contact</a></li> -->
               <li class="nav-item"><a href="/how-it-works">How It Works</a></li>
               <!-- <li><a href="/faq">FAQ</a></li> -->
-              <li class="nav-item">
+              <li class="">
                 {{#if currentUser}}
-                <form class="navbar-form" role="search">
+                <form class="navbar-form hidden-xs" role="search">
                   <div class="input-group user-search">
                       <textarea class="form-control typeahead" name="username" type="email" role="presentation" placeholder="Search for users..." autocomplete="off" spellcheck="off" data-source="usernames"></textarea>
                   </div>
@@ -42,7 +42,7 @@
               <li class="hidden-xs"><a href="#"><img class="nav-image" src="{{profileImage}}" alt=""></a></li>
               <li><a href="#">{{> cartIcon}}</a></li>
 
-              <li><a href="#">{{> accounts tpl="loginDropdown"}}</a></li>
+              <li class="login-dropdown-menu"><a href="#">{{> accounts tpl="loginDropdown"}}</a></li>
           </ul>
 
       </div>

@@ -80,4 +80,8 @@
     color: darkgrey;
     border: 1px solid black; }
 
+.seller-wrapper .product {
+  display: inline-block;
+  padding-bottom: 10px; }
+
 /*# sourceMappingURL=product.css.map */
