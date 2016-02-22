@@ -14,7 +14,6 @@
     width: 100%;
     height: 100vh; }
     .about-us .about-banner .text h1 {
-      font-size: 5em;
       color: white;
       font-family: gotham;
       text-shadow: 1px 1px 1px black;
@@ -29,6 +28,7 @@
 .about-us .second-banner, .about-us .third-banner {
   margin-top: 0; }
 .about-us .content {
+  padding: 0 15px;
   margin: 7rem 0;
   text-align: left; }
   .about-us .content h1 {
@@ -48,6 +48,8 @@
 .about-us .second-banner {
   background-image: url("/resources/about-banner-2.jpg"); }
 .about-us .third-banner {
-  background-image: url("/resources/about-banner-3.jpg"); }
+  background-image: url("/resources/about-banner-3.jpg");
+  border-radius: 0;
+  margin-bottom: 3rem; }
 
 /*# sourceMappingURL=about.css.map */

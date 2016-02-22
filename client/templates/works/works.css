@@ -1,12 +1,10 @@
 .how-it .jumbotron {
-  height: 50vh;
   background-position-y: 51%; }
   .how-it .jumbotron h1 {
     text-align: center;
     font-family: gotham;
     text-shadow: 1px 1px 1px black;
-    margin: 0;
-    line-height: 44vh; }
+    margin: 0; }
 
 #works {
   min-height: 100%;
@@ -15,20 +13,22 @@
     padding-left: 2em;
     padding-bottom: 1em;
     border-bottom: 1px solid darkgrey; }
-  #works .row h1 {
-    text-align: left;
-    text-transform: lowercase; }
-  #works .row h3 {
-    text-align: center;
-    font-family: gotham; }
-  #works .row .step-photo {
-    font-size: 7em;
-    margin: 0 auto;
-    display: block;
-    text-align: center; }
-  #works .row .col-xs-4 {
-    text-align: left; }
-  #works .row p {
-    font-size: 1.3em; }
+  #works .row {
+    padding: 0 15px; }
+    #works .row h1 {
+      text-align: left;
+      text-transform: lowercase; }
+    #works .row h3 {
+      text-align: center;
+      font-family: gotham; }
+    #works .row .step-photo {
+      font-size: 7em;
+      margin: 0 auto;
+      display: block;
+      text-align: center; }
+    #works .row .col-xs-4 {
+      text-align: left; }
+    #works .row p {
+      font-size: 1.3em; }
 
 /*# sourceMappingURL=works.css.map */

@@ -7,4 +7,39 @@
     color: black;
     margin-top: 6rem;
   }
+  .faq-banner{
+    background-image: url('resources/faq-banner.jpg');
+    background-size: cover;
+    margin-top:-66px;
+    min-height: 80%;
+    min-height: 80vh;
+    .text{
+      position: relative;
+      z-index: 0;
+      text-align: center;
+      color: #fff;
+      // top: 54%;
+      width: 100%;
+      // margin-top: -122px;
+      // left: 0;
+      height: 100vh;
+        h1{
+          // font-size: 5em;
+          color: white;
+          font-family: gotham;
+
+          text-shadow: 1px 1px 1px black;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          margin-top: 31vh;
+        }
+        h2{
+          font-family: gotham;
+          text-shadow: 1px 1px 1px black;
+          color: white;
+          text-transform: lowercase;
+        }
+
+    }
+  }
 }
