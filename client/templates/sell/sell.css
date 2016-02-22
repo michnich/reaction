@@ -1,5 +1,6 @@
 .sell-page .btn-primary {
-  background-color: black; }
+  background-color: black;
+  border: none; }
 .sell-page .form-group > a {
   color: white; }
 .sell-page h1, .sell-page h2 {

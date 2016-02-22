@@ -151,13 +151,8 @@ if (Meteor.isClient){
       $(".jumbotron").remove();
     }
   }
-  // Tracker.autorun(function(){
-  //   if($('#landing').siblings(0).hasClass('featured-banner')){
-  //     $('.featured-banner').hide();
-  //   }
-  // });
+  Template.cartCheckout.rendered= function(){
+    $('.panel-title span').hide();
+  }
 
 }
-// Meteor.Spinner.options = {
-//     color: '#000', // #rgb or #rrggbb
-// }
