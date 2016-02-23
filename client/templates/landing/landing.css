@@ -40,7 +40,8 @@
 #landing .mid-bottom-right-banner {
   background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456090213/style-tips-banner_fgyrfp.jpg");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: bottom; }
 #landing .mid-bottom-left-banner {
   background-image: url("resources/landing-featured.jpg");
   background-size: cover;
