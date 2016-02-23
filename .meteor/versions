@@ -58,7 +58,7 @@ cmather:handlebars-server@2.0.0
 codechimera:meteor-bootstrap-sweetalert@0.0.1
 coffeescript@1.0.11
 cosio55:autoform-cloudinary@0.0.2
-cosmos:browserify@0.9.3
+cosmos:browserify@0.10.0
 danappelxx:hover.css@1.0.0
 dburles:mongo-collection-instances@0.3.4
 ddp@1.2.2
@@ -109,8 +109,8 @@ matb33:collection-hooks@0.8.1
 mdg:validation-error@0.4.0
 meteor@1.1.10
 meteor-base@1.0.1
-meteorhacks:fast-render@2.11.0
-meteorhacks:inject-data@1.4.1
+meteorhacks:fast-render@2.12.0
+meteorhacks:inject-data@2.0.0
 meteorhacks:picker@1.0.3
 meteorhacks:ssr@2.2.0
 meteortoys:toykit@2.2.1
@@ -119,7 +119,7 @@ minifiers@1.1.7
 minimongo@1.0.10
 mobile-experience@1.0.1
 mobile-status-bar@1.0.6
-momentjs:moment@2.11.1
+momentjs:moment@2.11.2
 mongo@1.1.3
 mongo-id@1.0.1
 mongo-livedata@1.0.9
@@ -149,7 +149,7 @@ rate-limit@1.0.0
 reactioncommerce:core@0.11.0
 reactioncommerce:core-theme@2.0.1
 reactioncommerce:default-theme@1.0.3
-reactioncommerce:launchdock-connect@0.1.4
+reactioncommerce:launchdock-connect@0.1.5
 reactioncommerce:reaction-accounts@1.6.2
 reactioncommerce:reaction-analytics@1.2.1
 reactioncommerce:reaction-analytics-libs@1.1.0
@@ -157,7 +157,7 @@ reactioncommerce:reaction-collections@1.0.4
 reactioncommerce:reaction-email-templates@0.1.2
 reactioncommerce:reaction-inventory@0.2.1
 reactioncommerce:reaction-paymentmethod@0.0.2
-reactioncommerce:reaction-paypal@1.2.7
+reactioncommerce:reaction-paypal@1.2.8
 reactioncommerce:reaction-sample-data@0.1.1
 reactioncommerce:reaction-schemas@1.0.4
 reactioncommerce:reaction-shipping@0.6.2

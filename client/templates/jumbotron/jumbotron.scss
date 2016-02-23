@@ -10,26 +10,35 @@
   background-image: url('resources/about-banner-2.jpg');
 }
 .shirts{
-  background-image: url('resources/shirts-banner.jpg');
-  background-size: contain;
+  background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456253606/shirts-banner_rbjvvg.jpg');
+  // background-size: contain;
   background-repeat: no-repeat;
+  background-position-y:20%!important;
 }
 .shoes{
   background-image: url('resources/shoes-banner.jpg');
 }
 .suits{
-  background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456177448/suits-banner_zbpsnv.jpg');
+  background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456253133/ties_im6scf.jpg');
+}
+.socks{
+  background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456253788/socks-banner_plvwdd.jpg');
+  background-position: bottom!important;
 }
 .belts{
   background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456177446/belts-banner_p5vvwz.jpg');
   background-position: bottom!important;
 }
+.accessories{
+  background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456254152/186H_oob6x5.jpg');
+  background-position-y: 20%!important;
+}
 .pants{
-  // background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456178097/pants-banner_uljbkk.jpg');
-  // background-position: bottom!important;
+  background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456254300/O9UAOILDA2_syssqg.jpg');
 }
 .sweaters{
   background-image: url('https://res.cloudinary.com/dvzdxf8an/image/upload/v1456177808/sweater-banner_n7wdfi.jpg');
+  background-position-y: 20%!important;
 
 }
 .ties{
