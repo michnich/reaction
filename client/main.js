@@ -133,7 +133,6 @@ Meteor.app = _.extend(Meteor.app || {}, {
 
 
 if (Meteor.isClient){
-  // Meteor.subscribe("userProducts");
 
   Template.products.rendered = function(){
     var pathArray = window.location.pathname.split('/');

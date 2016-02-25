@@ -1,6 +1,6 @@
 Meteor.publish("userProfile",function(username){
     // simulate network latency by sleeping 2s
-    Meteor._sleepForMs(2000);
+    // Meteor._sleepForMs(2000);
     // try to find the user by username
     var user=Meteor.users.findOne({
         username:username
@@ -36,7 +36,9 @@ Meteor.publish("userProfile",function(username){
 
 Meteor.publish('directory', function(){
 
-  var user=Meteor.users.findOne({});
+  // var user= Meteor.users.findOne({} ,{fields: {_id: 1}}).fetch();
+  // var employee_ids = Employees.find({}, {fields: {_id: 1}}).fetch();
+
 
   // if(user.emails == undefined){
   //   Meteor.users.update(Meteor.userId(),
@@ -44,8 +46,9 @@ Meteor.publish('directory', function(){
   //   );
   // }
   return Meteor.users.find({});
-
 });
+
+
 Meteor.publish('userProducts', function(){
-  return userProducts
+  return userProducts;
 });
