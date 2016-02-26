@@ -1,8 +1,5 @@
 
-#works .row h1 {
-    text-align: center;
-    text-transform: lowercase;
-}// ************************************************
+// ************************************************
 // THIS FILE IS FOR YOU TO MODIFY REACTION THEMING!
 // ************************************************
 //
@@ -14,25 +11,85 @@
 // If you want to override variables or add custom styles to the top,
 // see 'custom.reaction.import.less'
 
-
-.reactionAvatar-small {
-    width: 30px;
-    min-width: 30px;
-    height: 30px;
-    display: inline-block;
-}
-.navbar-default{
-  background-color: black;
-}
-// navigation image
-img.nav-image {
-    height: 45px;
-    width: 45px;
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+// gotham font for landing page
+@font-face {
+    font-family: gotham;
+    src: url('resources/gotham.ttf');
 }
 
+#works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+
+
+/////////GENERAL STYLE CHANGES
+html {
+  background: black;
+  // overflow-x: hidden;
+}
+#main{
+  padding: 0px;
+  background: white;
+}
+
+body{
+  background-color: white;
+}
+
+h1,h2{
+  font-family: gotham, sans-serif;
+}
+
+p,h3,h4{
+  font-family: 'Garamond';
+}
 h5{
   font-family: HelveticaNeue-Bold;
 }
+.reaction-navigation-header{
+  .navbar-default .navbar-nav,li>a{
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+  }
+}
+/// default elements color and font
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: gotham;
+}
+//// JUMBOTRON FONT
+.jumbotron{
+  font-family: gotham;
+}
+//BUTTON STYLES
+.btn-primary {
+    color: #ffffff;
+    background-color: #666666;
+    border-color: #595959;
+    border-radius: 0;
+    font-family: gotham;
+}
+.btn-default{
+  background-color: #C1332C;
+  color: white;
+  border: none;
+  padding: 0.5em 1.2em;
+  font-family: gotham;
+  border-radius: 0;
+}
+.btn-default:hover{
+  background-color: #962823;
+  color: white;
+}
+.form-control{
+  border-radius: 0;
+}
+
+
 
 /////////MOBILE BUG THAT LOGIN FORM IS OFFSET TO THE RIGHT FIX
 @media (max-width: 767px){
@@ -55,29 +112,31 @@ h5{
   }
 }
 
-.tag-link-list {
-    float: left;
-    margin-top: 29px;
-    margin-left: 2em;
-    margin-right: 2em;
-    padding-right: 2em;
-    border-right: 1px solid darkgrey;
-}
-// .checkout-login{
-//   display: none!important;
-// }
-// .col-md-6.pull-right.guest-checkout {
-//     float: right !important;
-//     float: none !important;
-//     margin: 0 auto;
-// }
-.checkout-login{
-  // visibility: hidden;
+
+
+
+/////////////////////////////////////////////////////
+///////////////////// NAVIGATION
+////////////////////////////////////////////////////
+
+
+.navbar-default{
+  background-color: black;
 }
 
-// NAVIGATION
+.reactionAvatar-small {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    display: inline-block;
+}
 
-@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+// navigation image
+img.nav-image {
+    height: 45px;
+    width: 45px;
+}
+
 .navbar, .navbar-default {
   margin-bottom: 0;
   border: none;
@@ -94,25 +153,59 @@ h5{
   font-family: gotham;
 }
 
-html {
-  background: black;
-  // overflow-x: hidden;
+// NAVIGATION BUTTON
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle  {
+    background-color: transparent;
+    border-color: transparent;
 }
 
-/* Custom page footer */
-.footer {
-  background-color: #000; }
-  .footer .nav, .footer .navbar-nav {
-    border: none; }
-    .footer .nav li a, .footer .navbar-nav li a {
-      color: #777; }
-    .footer .nav li a:hover, .footer .navbar-nav li a:hover {
-      color: #FFF;
-      background-color: transparent; }
-  .footer p, .footer a, .footer i {
-    color: #FFF; }
+// HAMBURGER
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+    height: 1px;
+}
 
-/* basic typeahead styles */
+//COMPANY LOGO
+.navbar-brand img {
+  height: 100%; }
+
+  .navbar-default .navbar-nav > li > a {
+      padding-top:0;
+      line-height: 50px;
+  }
+  .reactionAvatar .reactionAvatar-image, .reactionAvatar .reactionAvatar-initials {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 8px;
+      left: 0px;
+  }
+
+  .cart-icon {
+      color: darkgrey;
+      border: none;
+      padding: 0px 1rem;
+      border-radius: 0;
+      position: relative;
+      background-color: transparent;
+      height: 50px;
+  }
+  .cart-icon:hover{
+    background-color: white;
+  }
+  .cart-icon .badge {
+      position: relative;
+      bottom: auto;
+      margin-right: auto;
+      color: darkgrey;
+      background-color: transparent;
+  }
+  .user-accounts-dropdown-apps {
+    list-style-type: none;
+  }
+
+///////// SEARCH FOR USER SECTION
+
 .typeahead,
 .tt-query,
 .tt-hint {
@@ -174,29 +267,38 @@ html {
 .tt-suggestion p {
   margin: 0; }
 
-.navbar-brand img {
-  height: 100%; }
+// NAVIGATION PROFILE IMAGE
+  .nav-image{
+    height: 40px;
+    border-radius: 100%;
+  }
+  .dropdown-toggle > .circular-icon {
+      display: none;
+  }
 
-// .cart-icon{
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//
-// }
 
+//////////////////////////////////////////
+///////// FOOTER
+/////////////////////////////////////////
+
+.footer {
+  background-color: #000; }
+  .footer .nav, .footer .navbar-nav {
+    border: none; }
+    .footer .nav li a, .footer .navbar-nav li a {
+      color: #777; }
+    .footer .nav li a:hover, .footer .navbar-nav li a:hover {
+      color: #FFF;
+      background-color: transparent; }
+  .footer p, .footer a, .footer i {
+    color: #FFF; }
 
 .navbar-default .navbar-nav > li > a {
     color: #777;
     font-family: gotham;
     text-transform: lowercase;
 }
-.navbar-brand img {
-    height: 100%;
-}
 
-////////////////////////////////////////// FOOTER
-
-@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 .footer {
   font-family: 'EB Garamond';
   position: static;
@@ -210,38 +312,16 @@ html {
   padding:0;
 }
 
-//////////////////////////////////////////// GLOBAL
+/////////////////////////////////////////////////
+// JUMBOTRON DEFAULT STYLES
+////////////////////////////////////////////////
 
-
-
-h1,h2{
-  font-family: gotham, sans-serif;
-}
-//fonts
-
-.reaction-navigation-header{
-  .navbar-default .navbar-nav,li>a{
-    font-family: 'HelveticaNeue-Bold', sans-serif;
-  }
-
-}
-
-p,h3,h4{
-  font-family: 'Garamond';
-}
-
-
-///////////////////////////////////////////////// JUMBOTRON
 .container-fluid{
   padding: 0;
   margin: 0;
 }
 .container-fluid .jumbotron {
     border-radius: 0px;
-}
-#main{
-  padding: 0px;
-  background: white;
 }
 
 .jumbotron{
@@ -282,82 +362,36 @@ p,h3,h4{
 
   }
 }
-// .dropdown{
-//   top: 0;
-//   right: 80px
-// }
+
 .spinner-container {
     left: 0;
     position: absolute;
     top: 0;
     background-color: white;
 }
+
+
+
+//////////////////
+//////PRODUCT TYPE TAG LIST ON PRODUCT PAGE
+/////////////////
+
 .tag-link-list{
   float: left;
   margin-top: 29px;
   margin-left: 2em;
+  margin-right: 2em;
+  padding-right: 2em;
+  border-right: 1px solid darkgrey;
   li{
     display: block;
     margin-bottom: 1em;
   }
 }
 
-
-
-// NAVIGATION BUTTON
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle  {
-    background-color: transparent;
-    border-color: transparent;
-}
-// HAMBURGER
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #FFF;
-    height: 1px;
-}
-
-
-// NAVBAR
-
-//text area resize off
-
-.navbar-default .navbar-nav > li > a {
-    padding-top:0;
-    line-height: 50px;
-}
-.reactionAvatar .reactionAvatar-image, .reactionAvatar .reactionAvatar-initials {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 8px;
-    left: 0px;
-}
-
-.cart-icon {
-    color: darkgrey;
-    border: none;
-    padding: 0px 1rem;
-    border-radius: 0;
-    position: relative;
-    background-color: transparent;
-    height: 50px;
-}
-.cart-icon:hover{
-  background-color: white;
-}
-.cart-icon .badge {
-    position: relative;
-    bottom: auto;
-    margin-right: auto;
-    color: darkgrey;
-    background-color: transparent;
-}
-.user-accounts-dropdown-apps {
-  list-style-type: none;
-}
-
-
-
-///////////// PRODUCT DETAIL
+/////////////////////////////
+////PRODUCT DETAIL PAGE
+////////////////////////////
 
 //Title
 .pdp-container .title h1 {
@@ -366,8 +400,6 @@ p,h3,h4{
     font-size: 50px;
     font-weight: 700;
     color: inherit;
-
-
 }
 
 //Subtitle
@@ -448,9 +480,6 @@ html:not(.rtl) .pdp-container .add-to-cart-text {
   margin-right: 0;
 }
 
-body{
-  background-color: white;
-}
 .product-detail-edit input {
     border: 1px solid #fafafa;
     text-align: inherit;
@@ -484,11 +513,7 @@ span.badge {
     display: none;
 }
 
-// gotham font for landing page
-@font-face {
-    font-family: gotham;
-    src: url('resources/gotham.ttf');
-}
+
 //for search bar font
 span.twitter-typeahead {
     text-transform: lowercase;
@@ -571,40 +596,7 @@ li.visited .progress-step-badge {
 
 
 
-/// default elements color and font
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-family: gotham;
-}
-.jumbotron{
-  font-family: gotham;
-}
-//default buttons
-.btn-primary {
-    color: #ffffff;
-    background-color: #666666;
-    border-color: #595959;
-    border-radius: 0;
-    font-family: gotham;
-}
-.btn-default{
-  background-color: #C1332C;
-  color: white;
-  border: none;
-  padding: 0.5em 1.2em;
-  font-family: gotham;
-  border-radius: 0;
-}
-.btn-default:hover{
-  background-color: #962823;
-  color: white;
-}
-.form-control{
-  border-radius: 0;
-}
+
 .navbar-default .navbar-brand {
     color: #f2f2f2;
     font-family: gotham;
@@ -621,15 +613,6 @@ label {
 }
 
 
-// NAVIGATION IMAGE
-.nav-image{
-  height: 40px;
-  border-radius: 100%;
-}
-.dropdown-toggle > .circular-icon {
-    display: none;
-}
-
 // MEDIA QUERY FOR SHOP INTERFACE ON MOBILE
 .col-md-6.pull-left.checkout-guest {
     display: none;
@@ -637,15 +620,6 @@ label {
 .col-md-6.pull-right.checkout-login {
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
 
 
 //////////////////////////

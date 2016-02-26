@@ -38,7 +38,7 @@
         >{{this}}</span>
 
         <div class="send-email">
-          <a href="mailto:{{username}}"><i class="fa fa-envelope"></i>Message {{firstName}}</a>
+          <a style="HelveticaNeue-Bold" href="mailto:{{username}}"><i class="fa fa-envelope"></i>Message {{firstName}}</a>
         </div>
 
       </div>
@@ -110,11 +110,12 @@
 
           <div class="col-xs-12 col-md-6 product">
             {{#if isUser}}
-            <div id="addProduct">
-              <a class="add-product" href="{{pathFor 'addProduct'}}">
-                <i class="fa fa-plus-circle"></i> Add New Product
+              <a href="{{pathFor'addProduct'}}">
+                <div class="box">
+                  <i class="fa fa-plus"></i>
+                  <p>Add Product</p>
+                </div>
               </a>
-            </div>
             {{/if}}
           </div>
 
