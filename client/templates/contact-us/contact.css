@@ -4,6 +4,8 @@
   font-family: gotham; }
 .contact-us .contact-banner {
   background-image: url("resources/contact-banner.jpg");
+  min-height: 100vh;
+  margin: 0;
   padding: 0; }
   .contact-us .contact-banner .text {
     position: relative;
@@ -20,7 +22,7 @@
       text-shadow: 1px 1px 1px black;
       text-transform: uppercase;
       letter-spacing: 4px;
-      margin-top: 10vh; }
+      margin-top: 20vh; }
     .contact-us .contact-banner .text h2 {
       font-family: gotham;
       text-shadow: 1px 1px 1px black;

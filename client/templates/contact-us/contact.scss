@@ -11,6 +11,8 @@
     // margin-top:-66px;
     // min-height: 50%;
     // min-height: 50vh;
+    min-height: 100vh;
+    margin: 0;
     padding: 0;
     .text{
       position: relative;
@@ -32,7 +34,7 @@
           text-transform: uppercase;
           // font-style: italic;
           letter-spacing: 4px;
-          margin-top: 10vh;
+          margin-top: 20vh;
         }
         h2{
           font-family: gotham;
