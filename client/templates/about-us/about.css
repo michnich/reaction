@@ -1,3 +1,11 @@
+.about-us .team-photos {
+  text-align: center; }
+  .about-us .team-photos .employee {
+    list-style-type: none;
+    display: inline-block; }
+    .about-us .team-photos .employee .employee-img {
+      max-width: 350px;
+      height: 230px; }
 .about-us .gotham {
   font-family: gotham; }
 .about-us .about-banner {
@@ -49,7 +57,7 @@
   background-image: url("/resources/about-banner-2.jpg"); }
 .about-us .third-banner {
   background-image: url("/resources/about-banner-3.jpg");
-  border-radius: 0;
+  border-radius: 0 !important;
   margin-bottom: 3rem; }
 
 /*# sourceMappingURL=about.css.map */

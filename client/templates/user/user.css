@@ -13,7 +13,7 @@
   clear: both; }
 #userPro .product {
   width: auto;
-  height: 300px; }
+  margin-bottom: 1em; }
   #userPro .product img {
     height: 200px; }
 #userPro .inline {
