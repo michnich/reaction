@@ -9,7 +9,7 @@
 .about-us .gotham {
   font-family: gotham; }
 .about-us .about-banner {
-  background-image: url("resources/landing-featured.jpg");
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456846369/landing-featured_zgodsz.jpg");
   background-size: cover;
   margin-top: -66px;
   min-height: 80%;
@@ -54,9 +54,9 @@
     font-family: 'Garamond';
     margin: 3.5rem 0; }
 .about-us .second-banner {
-  background-image: url("/resources/about-banner-2.jpg"); }
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456846413/about-banner-2_wao1va.jpg"); }
 .about-us .third-banner {
-  background-image: url("/resources/about-banner-3.jpg");
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456846438/about-banner-3_hzk87t.jpg");
   border-radius: 0 !important;
   margin-bottom: 3rem; }
 
