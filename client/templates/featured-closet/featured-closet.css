@@ -36,7 +36,7 @@
   text-align: left; }
   .featured-closet .content h1 {
     margin: 2rem 0;
-    font-size: 5em; }
+    font-size: 3em; }
   .featured-closet .content p {
     font-size: 1.4em; }
 .featured-closet .media-row {
@@ -49,11 +49,11 @@
     font-family: 'Garamond';
     margin: 3.5rem 0; }
 .featured-closet .featured-banner {
-  background-image: url("/resources/featured-banner-01.jpg"); }
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456847555/featured-banner-01_hlzltk.jpg"); }
 .featured-closet .second-banner {
-  background-image: url("/resources/featured-banner-02.jpg"); }
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456847580/featured-banner-02_dtiemp.jpg"); }
 .featured-closet .third-banner {
-  background-image: url("/resources/featured-banner-03.jpg"); }
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456847612/featured-banner-03_uo89uo.jpg"); }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .featured-closet .jumbotron {
     margin-top: -66px;

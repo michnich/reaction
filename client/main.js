@@ -133,12 +133,18 @@ Meteor.app = _.extend(Meteor.app || {}, {
 
 
 if (Meteor.isClient){
+  // var tag = $('.header-tag');
+  // if(tag == tag.toUpperCase()){
+  //   this.css('color:red')
+  // }
+$('a[class="header-tag"]').each(function(){
+  console.log(this.innerHTML.toUpperCase())
+});
 
   Template.products.rendered = function(){
     var pathArray = window.location.pathname.split('/');
     //return the product tag
     typeOfProduct = pathArray[3];
-
 
     if(window.location.pathname.indexOf("/product/tag/"+typeOfProduct) == 0){
       //place a jumbotron before the main container
