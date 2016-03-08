@@ -116,23 +116,27 @@ Meteor.app = _.extend(Meteor.app || {}, {
       //     alert('hello' + Meteor.user().profile.name);
       //   }
       // });
-//       Tracker.autorun(function(){
-//         if (Meteor.user().emails[0].address.length > 1) {
-//           // Meteor.users.update(Meteor.userId(),
-//           //   {$set: {'profile.name': Meteor.user().emails[0].address}}
-//           // );
-//         } else {
-//           Meteor.users.update(Meteor.userId(),
-//             {$set: {'profile.name': 'default'}}
-//           );
-//         }
-//       });
 //
 //     // });
 // }
 
 
 if (Meteor.isClient){
+  Template.shop.rendered = function(){
+    var classesNodeList = document.querySelectorAll(".header-tag");
+    var classes = Array.prototype.slice.call(classesNodeList).map(function(element) {
+        return element;
+    });
+    for (var i = 0; i < classes.length; i++) {
+      if(classes[i].innerHTML.toUpperCase() == classes[i].innerHTML){
+        console.log(classes[i]);
+        //add class that creates the section
+        classes[i].classList.add("foo");
+        //disable a
+        classes[i].removeAttribute("href");
+      }
+    }
+  }
   // var tag = $('.header-tag');
   // if(tag == tag.toUpperCase()){
   //   this.css('color:red')
