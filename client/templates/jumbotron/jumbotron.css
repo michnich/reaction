@@ -38,7 +38,7 @@
   background-position-y: 20% !important; }
 
 .ties {
-  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456253133/ties_im6scf.jpg"); }
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1458065871/ties_zypa2s.jpg"); }
 
 .hats {
   background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456846847/hats-banner_owcb8p.jpg"); }
@@ -54,5 +54,25 @@
 
 .faq-banner {
   background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456846987/faq-banner_urumzc.jpg"); }
+
+.luggage {
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1456254152/186H_oob6x5.jpg"); }
+
+.cufflinks-tie-clips {
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1458065910/cufflinks_onus2v.jpg");
+  background-position: bottom !important; }
+
+.sneakers {
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1458066001/sneakers_b3f9yn.jpg"); }
+
+.blazers {
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1458066372/blazers_bdbvif.jpg"); }
+
+.jeans {
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1458066468/gloves_ac5jyx.jpg"); }
+
+.boots {
+  background-image: url("https://res.cloudinary.com/dvzdxf8an/image/upload/v1458067456/unspecified_bggnev.jpg");
+  background-position-y: 42% !important; }
 
 /*# sourceMappingURL=jumbotron.css.map */

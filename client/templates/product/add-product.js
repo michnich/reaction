@@ -65,7 +65,7 @@ Template.addProduct.events({
       Meteor.call('sendEmail', {
         to: Meteor.user().emails[0].address,
         from: 'no-reply@huntrs.com',
-        subject: 'Thank you for adding a product please allow 3-5 days for us here at huntrs to review your submission!',
+        subject: 'Thank you for adding a product!',
         text: 'Mailgun is totally awesome for sending emails!',
         html: '<table width="100%" bgcolor="#FFF" cellpadding="0" cellspacing="0" border="0">'+
         '    <tbody>'+
@@ -90,7 +90,7 @@ Template.addProduct.events({
         '                                            <td colspan="3" rowspan="3" bgcolor="#FFFFFF" style="padding:0 0 30px;">'+
         '                                                <!-- begin content -->'+
         '                                                <p style="margin:2em 30px 33px; text-align:center; text-transform:uppercase; font-size:24px; line-height:30px; font-weight:bold; color:#484a42;">'+
-        '                                                    Thank you for adding a product.'+
+        '                                                    Thank you for your interest in listing your product on HUNTRS. Our team will now review your product and decide if it meets our quality and condition standards. We want to ensure that items listed on our app is of high-quality and interest to our fellow HUNTRS. You will be informed shortly if your product has made the cut.'+
         '                                                </p>'+
         '                                                <h3 style="margin:2em 30px 33px; text-align:center; text-transform:lowercase; line-height:30px; font-weight:bold; color:#484a42;"> Please allow 3-5 days for us here at huntrs to review your submission</h3>'+
         '                                                <!-- begin articles -->'+
