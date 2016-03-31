@@ -11,7 +11,7 @@
     }
   }
   .featured-banner{
-    margin-top:-66px;
+    // margin-top:-66px;
     min-height: 100%;
     min-height: 100vh;
     .text{
@@ -52,6 +52,7 @@
   }
   .jumbotron.featured-banner.second-banner {
     margin-top: 1em;
+
 }
   // Content layout
   .content{
@@ -70,7 +71,7 @@
 
 // Gallery for featured-closet
 .media-row{
-  margin: 7rem 0 0;
+  // margin: 7rem 0 0;
 }
 
 
@@ -115,7 +116,6 @@
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
       //iPhone 6 Portrait
       .jumbotron{
-        margin-top:-66px;
         min-height: 50%;
         min-height: 50vh;
         .text{
@@ -171,10 +171,10 @@
   }
 
 
+
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
       //iPhone 6 landscape
       .jumbotron{
-        margin-top:-66px;
         min-height: 50%;
         min-height: 50vh;
         .text{
@@ -233,7 +233,6 @@
   @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) {
       //iPhone 6+ Portrait
       .jumbotron{
-        margin-top:-66px;
         min-height: 50%;
         min-height: 50vh;
         .text{
@@ -292,7 +291,6 @@
   @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {
       //iPhone 6+ landscape
       .jumbotron{
-        margin-top:-66px;
         min-height: 50%;
         min-height: 50vh;
         .text{
@@ -350,7 +348,6 @@
   @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
       //iPhone 6 and iPhone 6+ portrait and landscape
       .jumbotron{
-        margin-top:-66px;
         min-height: 50%;
         min-height: 50vh;
         .text{
@@ -408,7 +405,6 @@
   @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){
       //iPhone 6 and iPhone 6+ portrait
       .jumbotron{
-        margin-top:-66px;
         min-height: 50%;
         min-height: 50vh;
         .text{
@@ -467,7 +463,6 @@
   @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
       //iPhone 6 and iPhone 6+ landscape
       .jumbotron{
-        margin-top:-66px;
         min-height: 50%;
         min-height: 50vh;
         .text{
@@ -523,6 +518,13 @@
   }
 }
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  .title-text{
+    font-size: 1.3em;
+  }
 
+}
 
 // backgrounds for banner

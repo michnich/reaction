@@ -280,6 +280,8 @@ Template.productDetail.rendered = function(){
     //if not the owner then hide the editable link
     $('.edit-user').hide();
     $('.copy-link').hide();
+    //hides the user email
+    $('.go-to-user').hide();
   }
 
   $('.copy-link').on('click',function(){
@@ -322,10 +324,11 @@ Template.sellerSection.helpers({
   },
   sellerAbout: function(){
     var sellerEmail= $('.go-to-user').children().text().trim();
-    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.about;    
+    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.about;
   },
   sellerProducts: function(){
     var sellerEmail= $('.go-to-user').children().text().trim();
     return userProducts.find({author: sellerEmail}).fetch()
   }
+
 });

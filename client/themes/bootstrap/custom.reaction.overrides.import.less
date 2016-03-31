@@ -48,6 +48,7 @@ html {
 #main{
   padding: 0px;
   background: white;
+  overflow: hidden;
 }
 
 body{
@@ -67,6 +68,7 @@ h5{
 .reaction-navigation-header{
   .navbar-default .navbar-nav,li>a{
     font-family: 'HelveticaNeue-Bold', sans-serif;
+    font-size: 15px;
   }
 }
 /// default elements color and font
@@ -184,6 +186,18 @@ img.nav-image {
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle  {
     background-color: transparent;
     border-color: transparent;
+}
+
+.product-list-item{
+  display: block;
+}
+
+.product-toggle{
+
+  .icon-bar{
+    background-color: black;
+  }
+
 }
 
 // HAMBURGER
@@ -662,7 +676,7 @@ li.visited .progress-step-badge {
     text-align: center;
     border: none;
     li{
-      display: inline-block;
+      // display: inline-block;
       margin-bottom: 1em;
     }
   }
@@ -676,6 +690,10 @@ li.visited .progress-step-badge {
       width: 100%;
       margin-left: 0;
       margin-right: 0;
+  }
+  //tags
+  .tag-group{
+    text-align: right;
   }
 }
 
@@ -738,6 +756,12 @@ display: block;
 .jumbotron .text h1{
     margin-top: 25vh;
 }
+
+//tags
+.tag-group{
+  text-align: right;
+}
+
 }
 
 
@@ -798,6 +822,12 @@ display: block;
 .jumbotron .text h1{
     margin-top: 25vh;
 }
+
+//tags
+.tag-group{
+  text-align: right;
+}
+
 }
 
 
@@ -856,6 +886,11 @@ display: block;
 }
 .jumbotron .text h1{
     margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
 }
 }
 
@@ -916,6 +951,11 @@ display: block;
 .jumbotron .text h1{
     margin-top: 25vh;
 }
+
+//tags
+.tag-group{
+  text-align: right;
+}
 }
 
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
@@ -975,6 +1015,10 @@ display: block;
     margin-top: 25vh;
 }
 
+//tags
+.tag-group{
+  text-align: right;
+}
 }
 
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){
@@ -1033,6 +1077,11 @@ display: block;
 .jumbotron .text h1{
     margin-top: 25vh;
 }
+
+//tags
+.tag-group{
+  text-align: right;
+}
 }
 
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
@@ -1090,6 +1139,11 @@ display: block;
 }
 .jumbotron .text h1{
     margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
 }
 
 }
