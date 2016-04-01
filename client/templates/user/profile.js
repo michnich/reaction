@@ -43,19 +43,6 @@ Template.profile.helpers({
     var email = Router.current().params.username;
     return Meteor.users.findOne({"emails.address": email}).profile.profile_pic;
   }
-  // productImage: function(){
-  //   // var fart = "fart";
-  //   // return fart;
-  //   var id = this.product._id;
-  //   var image = ProductImages.findOne({associatedObjectId: id});
-  //   if (image) {
-  //     return image.url({store: "productImages-thumbnail"});
-  //     }
-  //   },
-  // productImage: function() {
-  //   return this.image;
-  // }
-
 });
 
 
