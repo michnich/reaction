@@ -51,7 +51,7 @@ Template.addProduct.events({
 
       // // Send email to huntrs
       Meteor.call('sendEmail', {
-        to: 'ehughestaylor@codedbykids.com',
+        to: 'isaac@onehunted.com',
         from: 'no-reply@huntrs.com',
         subject: userEmail + ' has added a new product, please review',
         text: 'Mailgun is totally awesome for sending emails!',

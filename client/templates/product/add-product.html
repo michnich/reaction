@@ -16,9 +16,9 @@
 
             </div>
             <div class="control-group">
-              <label for="type">*Category</label>
+              <label for="type">*Brand</label>
               <div class="controls">
-                <input name="category" type="text" value="" id="category" class="form-control" placeholder="Category of Product" required>
+                <input name="category" type="text" value="" id="category" class="form-control" placeholder="Brand of Product" required>
               </div>
 
             </div>
@@ -52,6 +52,7 @@
               <div class="col-xs-12">
                 <!-- uncomment when ready for image uploads -->
                 <!-- {{> uploadImage imageCollection="productImages" doc=currentUser classInput="image-picker" inputName="product-image"}} -->
+                {{> imageForm}}
                 {{> imageForm}}
                 {{> imageForm}}
 
