@@ -10,11 +10,7 @@
 // });
 // client configuration
 if (Meteor.isClient) {
-  ITEMS_INCREMENT = 50;
-  // sets default number of product displayed on a grid
-  Session.setDefault("productScrollLimit", ITEMS_INCREMENT);
-
-  // Accounts.ui.config({
-  //   passwordSignupFields: "USERNAME_AND_EMAIL"
-  // });
-}
+	  ITEMS_INCREMENT = 24;
+	  // sets default number of product displayed on a grid
+	  Session.setDefault("productScrollLimit", ITEMS_INCREMENT);
+	}

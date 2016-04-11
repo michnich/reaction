@@ -122,6 +122,8 @@ Meteor.app = _.extend(Meteor.app || {}, {
 
 
 if (Meteor.isClient){
+
+
   Template.shop.rendered = function(){
     var classesNodeList = document.querySelectorAll(".header-tag");
     var classes = Array.prototype.slice.call(classesNodeList).map(function(element) {
