@@ -157,7 +157,7 @@ $('a[class="header-tag"]').each(function(){
       $("#main").prepend("<div class='jumbotron featured-banner'> <div class='text' style='text-align:center; color:black; text-shadow: 1px 1px 1px solid black'> <h1> " + typeOfProduct + "</h1></div>");
       // dynamically add the class of the tag so that the jumbotron background can change with the product tag
       $('.featured-banner').addClass(typeOfProduct);
-      console.log(typeOfProduct);
+      // console.log(typeOfProduct);
     } else{
       $(".jumbotron").remove();
     }
