@@ -47,15 +47,17 @@ Template.addProduct.events({
       var productSize = $('#size').val();
       var productColor = $('#color').val();
       var productCategory = $('#category').val();
-
+      var productImage =  $('.afCloudinary-thumbnail a').attr('href');
+      var productImageTwo = $('#imageTwo .afCloudinary-thumbnail a').attr('href');
+      var productImageThree = $('#imageThree .afCloudinary-thumbnail a').attr('href');
 
       // // Send email to huntrs
       Meteor.call('sendEmail', {
-        to: 'isaac@onehunted.com',
+        to: 'ehughestaylor@codedbykids.com',
         from: 'no-reply@huntrs.com',
         subject: userEmail + ' has added a new product, please review',
         text: 'Mailgun is totally awesome for sending emails!',
-        html: '<h1>Product Details </h1> <br> <h2> Product Title: </h2> <p>' + productName + '</p> <br> <h2>Product Price: </h2> <p>' + productPrice +
+        html: '<h1>Product Details </h1> <br> <img style="width:100%" src='+ productImage +'> <img style="width:100%" src='+ productImageTwo +'> <img style="width:100%" src='+ productImageTwo +'> <h2> Product Title: </h2> <p>' + productName + '</p> <br> <h2>Product Price: </h2> <p>' + productPrice +
               '</p> <br> <h2> Product Description: </h2> <p>' + productDesc + ' </p> <br> <h2> Product Condition: </h2> <p>' + productCondition + '</p>'
               + ' </p> <br> <h2> Product Size: </h2> <p>' + productSize + '</p>' + ' </p> <br> <h2> Product Color: </h2> <p>' + productColor + '</p>'
               + ' </p> <br> <h2> Product Category: </h2> <p>' + productCategory + '</p>'
