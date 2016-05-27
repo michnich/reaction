@@ -321,7 +321,7 @@ Template.sellerSection.helpers({
   },
   sellerEmail: function(){
     var sellerEmail= $('.go-to-user').delay(300).children().text().trim()
-    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.name;
+    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.username;
   },
   sellerImage: function(){
     var sellerEmail= $('.go-to-user').children().text().trim();
