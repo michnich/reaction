@@ -1,13 +1,7 @@
-// Tracker.autorun(function(){
-//  if(Meteor.user().username){
-//    // login handler
-//    Router.go("/");
-//  }
-//  else{
-//    // logout handler
-//    Router.go("landing");
-//  }
-// });
+Tracker.autorun(function(){
+  $('span#btn-checkout').on('click',function(){alert('word')});
+
+});
 // Meteor.publish('comments', function(){
 //   return Comments.find({}, {sort: {submitted: -1}});
 // });
@@ -103,25 +97,23 @@ Meteor.app = _.extend(Meteor.app || {}, {
 });
 
 
-
-// if (Meteor.isClient) {
-//   // This code only runs on the client
-//
-    // Meteor.startup(function () {
-      // Tracker.autorun(function () {
-      //   if (Meteor.user().emails == undefined ){
-      //     Meteor.users.update(Meteor.userId(),
-      //     {$set: {'profile.name': 'default'}}
-      //     );
-      //     alert('hello' + Meteor.user().profile.name);
-      //   }
-      // });
-//
-//     // });
-// }
-
-
 if (Meteor.isClient){
+  // Make sure that mobile users can drop down the stripe payment method
+  // form id genericPaymentForm
+  Template.checkoutPayment.rendered = function(){
+    $('#payment-methods-accordian .panel-title').on('click',function(){
+      if (Meteor.user().emails[0].verified == false){
+        sweetAlert('Oh no you have not verified your email, go do that so we know that you arent a robot');
+        $(".btn-complete-order").hide();
+      }
+    });
+    $('.btn-complete-order').on('submit', function(e){
+      e.preventDefault;
+      Router.go('account/profile');
+    });
+  }
+  // on id reaction-paymentmethod
+  // collapse in
 
 
   Template.shop.rendered = function(){
@@ -138,6 +130,9 @@ if (Meteor.isClient){
         classes[i].removeAttribute("href");
       }
     }
+
+
+
   }
   // var tag = $('.header-tag');
   // if(tag == tag.toUpperCase()){

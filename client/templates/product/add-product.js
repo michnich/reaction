@@ -13,12 +13,12 @@ Template.addProduct.events({
 
       var product = {
 
-        type: $(e.target).find('[name=type]').val(),
+        type: $('#sel1').val(),
         category: $(e.target).find('[name=category]').val(),
         size: $(e.target).find('[name=size]').val(),
         color: $(e.target).find('[name=color]').val(),
         condition: $(e.target).find('[name=condition]').val(),
-        type: $(e.target).find('[name=condition]').val(),
+        // type: $(e.target).find('[name=condition]').val(),
         size2: $(e.target).find('[name=size2]').val(),
         description: $(e.target).find('[name=description]').val(),
         name: $(e.target).find('[name=name]').val(),
@@ -41,6 +41,7 @@ Template.addProduct.events({
       // // send email
       var userEmail = Meteor.user().emails[0].address;
       var productName = $('#productName').val();
+      var productType = $('#sel1').val();
       var productPrice = $('#productPrice').val();
       var productDesc = $('#product-desc').val();
       var productCondition = $('#productCondition').val();

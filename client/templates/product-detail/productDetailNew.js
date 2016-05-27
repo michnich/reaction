@@ -67,6 +67,7 @@ Template.productDetailNew.helpers({
  */
 
 Template.productDetailNew.events({
+
   "click #price": function () {
     let formName;
     if (ReactionCore.hasPermission("createProduct")) {
@@ -272,6 +273,10 @@ Template.productDetailNew.events({
 
 
 Template.productDetail.rendered = function(){
+
+  $('#add-to-cart').on('click', function(){
+    sweetAlert('item added to cart');
+  });
 
   //if the user is the owner/ admin then hide the link to that persons link
   if(Roles.userIsInRole(Meteor.userId(),['dashboard','owner','admin'])){

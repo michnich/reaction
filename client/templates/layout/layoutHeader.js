@@ -1,24 +1,32 @@
+
+//go to the right route when user clicks closet for first time
+Template.layoutHeader.events({
+  'click .profile-button':function(event){
+      var str = Meteor.user().emails[0].address;
+      str = str.split("@");
+      userName = str[0];
+
+      Router.go('/profile/' + userName);
+
+  }
+});
+
+//on click set up username so search function works showing username rather than email
 Template.layoutHeader.events({
   'click .profile-button':function(event){
     if (Meteor.user().profile == undefined){
+      var str = Meteor.user().emails[0].address;
+      str = str.split("@");
+      userName = str[0];
+      Meteor.users.update(Meteor.userId(),{$set: {'profile.username': userName}});
       Meteor.users.update(Meteor.userId(),{$set: {'profile.name': Meteor.user().emails[0].address}});
-      Router.go('/profile/' + Meteor.user().emails[0].address);
 
     }
-
   }
 });
 
 
 Template.layoutHeader.onRendered(function(){
-
-  // $('.profile-button').on('click', function(){
-  //   if (Meteor.user().profile == undefined){
-  //     Meteor.users.update(Meteor.userId(),{$set: {'profile.name': Meteor.user().emails[0].address}});
-  //   }
-  //   });
-
-
   //on click close menu
   $('.nav-item').on('click',function(){
     $('.navbar-collapse').removeClass('in');
@@ -35,7 +43,10 @@ Template.layoutHeader.onRendered(function(){
 
 Template.layoutHeader.helpers({
   username: function(){
-    return Meteor.user().emails[0].address
+    var str = Meteor.user().emails[0].address;
+    str = str.split("@");
+    userName = str[0];
+    return userName;
   },
   profileImage: function(){
     return Meteor.user().profile.profile_pic
@@ -50,8 +61,10 @@ Template.layoutHeader.helpers({
 
       for(var i= 0; i <= amountOfUser; i++){
         if (userProfile !== undefined) {
-          return user.profile.name;
-          console.log(user);
+          return user.profile.username;
+
+          // return user.profile.name;
+          // console.log(user);
         }
       }
 

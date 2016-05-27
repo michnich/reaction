@@ -35,11 +35,15 @@
           {{aboutYou}}
         </div>
 
+
         <span class="editable" title="Rename this document" data-autotext="never"
         >{{this}}</span>
 
         <div class="send-email">
-          <a style="HelveticaNeue-Bold" href="mailto:{{username}}"><i class="fa fa-envelope"></i>Message {{firstName}}</a>
+          <a style="HelveticaNeue-Bold" href="mailto:{{userEmail}}"><i class="fa fa-envelope"></i>Message {{firstName}}</a>
+        </div>
+        <div class="edit-profile">
+          <a style="HelveticaNeue-Bold" data-toggle="modal" data-target="#editProfile">Edit Profie</a>
         </div>
 
       </div>
@@ -126,7 +130,7 @@
     </div>
   </div>
 
-  <!-- {{> footer}} -->
+  {{> footer}}
 
 </template>
 
@@ -176,8 +180,60 @@
                     {{#if isUser}}
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       {{else}}
-                      <a href="/" data-toggle="modal"><button type="button" name="btn btn-default" class="btn btn-default">Set up later</button></a>
+                      <a href="/" id="setUpLater" data-toggle="tooltip" data-placement="top" title="You won't be able to start adding your products though!"><button type="button" name="btn btn-default" class="btn btn-default">Set up later</button></a>
+                      <!-- <a href="/" data-toggle="modal"><button type="button" name="btn btn-default" class="btn btn-default">Set up later</button></a> -->
+
                     {{/if}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="editExistingProfile">
+    <div class="modal fade" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">EDIT YOUR CLOSET</h4>
+                </div>
+
+                <div class="modal-body">
+                  <form class="closetinfo">
+                    <fieldset class="form-group">
+                      <label for="first_name">First Name</label>
+                      <input type="text" class="form-control" name="first_name" id="firstName" placeholder="Add Your First Name" />
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="last_name">Last Name</label>
+                      <input type="text" class="form-control" name="last_name" id="lastName" placeholder="Add Your Last Name">
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                      <label for="exampleTextarea">Tell us about your style and what is interesting to you.</label>
+                      <textarea class="form-control" name="about" id="aboutYou" rows="3"></textarea>
+                    </fieldset>
+                    <!-- <fieldset class="form-group">
+                      <label for="exampleInputFile">File input</label>
+                      <input type="file" class="form-control-file" id="exampleInputFile">
+                      <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                    </fieldset> -->
+                    <!-- Agreeing to the terms -->
+                    <!-- <div class="checkbox">
+                      <p>By Submitting this information you are agreeing to Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis animi, temporibus dicta quis nesciunt suscipit ipsum excepturi, ab qui ipsam, architecto veniam earum quisquam impedit nobis eaque obcaecati tenetur voluptas!</p>
+                      <label>
+                        <input type="checkbox"> I agree
+                      </label>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary closet-info-btn">Submit</button>
+                  </form>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
                 </div>
 
             </div>

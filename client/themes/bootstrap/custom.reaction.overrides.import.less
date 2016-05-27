@@ -27,11 +27,6 @@ button.btn.btn-default.btn-remove-variant {
     display: none;
 }
 
-// .fa-times-circle{
-//   display: none;
-// }
-
-
 .foo{
   text-transform: uppercase;
   font-weight: bold;
@@ -48,6 +43,43 @@ button.btn.btn-default.btn-remove-variant {
   text-decoration: none;
 }
 /////////GENERAL STYLE CHANGES
+
+//checkout payment dropdown menu
+#reaction-paymentmethod{
+  cursor: pointer;
+  background-color:#5cb85c;
+  color:white;
+
+}
+
+#payment-methods-accordian{
+  .panel-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: inherit;
+      width: 100%;
+      text-alight: center;
+      text-align: center;
+  }
+}
+
+
+//mobile cart icon
+.mobile-cart{
+  .cart-icon {
+    color: darkgrey;
+    border: none;
+    padding: 7px;
+    border-radius: 0;
+    position: relative;
+    background-color: transparent;
+    display: inline-block;
+    float: right;
+}
+}
+
+
 html {
   background: black;
   // overflow-x: hidden;
@@ -341,11 +373,19 @@ img.nav-image {
   .footer p, .footer a, .footer i {
     color: #FFF; }
 
+//nav link color
+
 .navbar-default .navbar-nav > li > a {
-    color: #777;
+    color: #95a5a6;
     font-family: gotham;
     text-transform: lowercase;
 }
+.navbar-default .navbar-nav > li:hover > a {
+    color: #FFF;
+    font-family: gotham;
+    text-transform: lowercase;
+}
+
 
 .footer {
   font-family: 'EB Garamond';
