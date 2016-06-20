@@ -7,10 +7,7 @@
 Template.addProduct.events({
   'submit form': function(e) {
       e.preventDefault();
-      // Meteor.Dropzone.processQueue();
-
       // add product to product collection and to user closet
-
       var product = {
 
         type: $('#sel1').val(),

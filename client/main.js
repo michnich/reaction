@@ -1,7 +1,7 @@
-Tracker.autorun(function(){
-  $('span#btn-checkout').on('click',function(){alert('word')});
-
-});
+// Tracker.autorun(function(){
+//
+//
+// });
 // Meteor.publish('comments', function(){
 //   return Comments.find({}, {sort: {submitted: -1}});
 // });
@@ -100,6 +100,7 @@ Meteor.app = _.extend(Meteor.app || {}, {
 if (Meteor.isClient){
   // Make sure that mobile users can drop down the stripe payment method
   // form id genericPaymentForm
+
   Template.checkoutPayment.rendered = function(){
     $('#payment-methods-accordian .panel-title').on('click',function(){
       if (Meteor.user().emails[0].verified == false){
@@ -110,6 +111,7 @@ if (Meteor.isClient){
     $('.btn-complete-order').on('submit', function(e){
       e.preventDefault;
       Router.go('account/profile');
+
     });
   }
   // on id reaction-paymentmethod
@@ -130,19 +132,16 @@ if (Meteor.isClient){
         classes[i].removeAttribute("href");
       }
     }
-
-
-
   }
-  // var tag = $('.header-tag');
-  // if(tag == tag.toUpperCase()){
-  //   this.css('color:red')
-  // }
+
+
 $('a[class="header-tag"]').each(function(){
   console.log(this.innerHTML.toUpperCase())
 });
 
+
   Template.products.rendered = function(){
+    //function for tag pages background image changing;
     var pathArray = window.location.pathname.split('/');
     //return the product tag
     typeOfProduct = pathArray[3];

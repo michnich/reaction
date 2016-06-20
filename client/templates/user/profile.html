@@ -42,7 +42,7 @@
         <div class="send-email">
           <a style="HelveticaNeue-Bold" href="mailto:{{userEmail}}"><i class="fa fa-envelope"></i>Message {{firstName}}</a>
         </div>
-        
+
         {{#if isUser}}
         <div class="edit-profile">
           <a style="HelveticaNeue-Bold" data-toggle="modal" data-target="#editProfile">Edit Profie</a>
@@ -84,7 +84,7 @@
                 <img src="{{this.image}}" alt="">
                 <div class="description">
                   <a class="avatar product-desc"> </a>
-                  <p class="price">${{price}}</p>
+                  <p class="price">{{price}}</p>
                   <p class="condition">{{type}}</p>
                   <p class="title product-desc">{{name}}</p>
                   <!-- <p class="id <product></product>-des">id: {{_id}}</p> -->

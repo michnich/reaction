@@ -18,3 +18,5 @@ Template.productDetailNew.replaces("productDetail");
 Template.layoutHeaderNew.replaces("checkoutHeader");
 
 Template.completed.replaces("cartCompleted");
+
+Template.gridNoticeNew.replaces("gridNotice");
