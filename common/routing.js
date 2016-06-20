@@ -4,7 +4,7 @@
  * ReactionCore common/routing.js contains the core routes.
  */
 
-let staticPages = ["about", "team", "faqs", "terms", "privacy" ];
+let staticPages = ["about", "team", "faqs", "privacy" ];
 
 /**
  * app router mapping
@@ -26,16 +26,3 @@ Router.map(function route() {
     template: 'landingPro'
   });
 });
-
-// var requireLogin = function(pause) {
-//   if (! Meteor.user().username) {
-//     if (Meteor.loggingIn())
-//       this.render(this.loadingTemplate);
-//     else
-//       this.render('landing');
-//   } else {
-//     this.next();
-//   }
-// }
-//
-// Router.onBeforeAction(requireLogin, {except: ['landing']});

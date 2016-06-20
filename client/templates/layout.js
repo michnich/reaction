@@ -4,12 +4,19 @@
  * https://github.com/reactioncommerce/reaction-core/blob/master/client/templates/layout/layout.html
  * To use custom template in layout.html uncomment
  *
- *     Template.layout.replaces "coreLayout"
  */
-
-Template.layout.replaces ("coreLayout");
-
 Template.layoutHeaderNew.replaces("layoutHeader");
 
-// Template.landingPro.replaces("products");
+Template.layout.replaces("coreLayout");
 
+
+// Template.landingPro.replaces("products");
+// Template.loginFormNew.replaces("loginFormSignUpView");
+
+Template.productDetailNew.replaces("productDetail");
+
+Template.layoutHeaderNew.replaces("checkoutHeader");
+
+Template.completed.replaces("cartCompleted");
+
+Template.gridNoticeNew.replaces("gridNotice");
