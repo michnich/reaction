@@ -327,8 +327,12 @@ Template.sellerSection.helpers({
   sellerName: function(){
     return Meteor.users.findOne({"_id": Session.get('user')}).profile.first_name;
   },
+  /*
+    not displayed on page, used to link to profile
+    no usernames system set up, so trims everything after @ in email address
+  */
   sellerEmail: function(){
-    return Meteor.users.findOne({"_id": Session.get('user')}).profile.username;
+    return Meteor.users.findOne({"_id": Session.get('user')}).emails[0].address;
   },
   sellerImage: function(){
     return Meteor.users.findOne({"_id": Session.get('user')}).profile.profile_pic;
