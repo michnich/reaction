@@ -6,5 +6,13 @@ Meteor.publish('userProducts', function(){
 //pass the function the user id
 //returns all published products posted by that user
 Meteor.publish('productsByUser', function(userId) {
-	return ReactionCore.Collections.Products.find({vendor: userId});
+	check(userId, String);
+	return ReactionCore.Collections.Products.find({"vendor": userId});
 });
+
+Meteor.publish('userProductsByUser', function(userId) {
+	check(userId, String);
+	return userProducts.find({"userId": userId});
+});
+
+
