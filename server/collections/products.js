@@ -15,4 +15,9 @@ Meteor.publish('userProductsByUser', function(userId) {
 	return userProducts.find({"userId": userId});
 });
 
+Meteor.publish('userProductsByEmail', function(email) {
+	check(email, String);
+	return userProducts.find({"author": email});
+});
+
 
