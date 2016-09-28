@@ -15,9 +15,14 @@ Template.profile.rendered = function(){
   });
 }
 
+/*
+  can change this helpers once the user directory subscription issue is fixed
+  right now subscribes to all users so need to limit search
+  after should only be subscribed to the seller and can be returned from router
+*/
 Template.profile.helpers({
   isUser: function(){
-    return Meteor.user().profile.username === Router.current().params.username
+    return Meteor.user().profile.emails[0].address === Router.current().params.username
   },
   isOwner: function(){
     return Roles.userIsInRole(Meteor.userId(),['dashboard','owner','admin']);
@@ -27,20 +32,20 @@ Template.profile.helpers({
   },
   userEmail: function(){
     var username = Router.current().params.username;
-    return Meteor.users.findOne({"profile.username":username}).emails[0].address;
+    return Meteor.users.findOne({"emails.address":username}).emails[0].address;
   },
   //super important function that allows us to index the current user that is showed in closet
   firstName: function(){
     var username = Router.current().params.username;
-    return Meteor.users.findOne({"profile.username": username}).profile.first_name;
+    return Meteor.users.findOne({"emails.address": username}).profile.first_name;
   },
   aboutYou: function(){
     var username = Router.current().params.username;
-    return Meteor.users.findOne({"profile.username": username}).profile.about;
+    return Meteor.users.findOne({"emails.address": username}).profile.about;
   },
   products: function(){
     var username = Router.current().params.username;
-    var email = Meteor.users.findOne({"profile.username":username}).emails[0].address;
+    var email = Meteor.users.findOne({"emails.address":username}).emails[0].address;
     return userProducts.find({author: email}).fetch()
   },
   isVerified: function(){

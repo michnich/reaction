@@ -308,32 +308,49 @@ Template.productDetail.rendered = function(){
 // }
 
 Template.sellerSection.onCreated(function(){
-    this.documents = this.subscribe( 'userProducts');
-    this.users = this.subscribe('directory');
+    var product = selectedProduct();
+    Session.set('user', product.vendor);
+    
+    //should be subscribing to products, not userproducts
+    //this.documents = this.subscribe('productsByUser', product.vendor);
+    this.documents = this.subscribe('userProductsByUser', product.vendor);
+
+    //once directory subscribitions are all removed, must subscribe to the just selling user
+    //this.user = this.subscribe('userById', product.vendor);
 });
+
 Template.sellerSection.helpers({
-  subscription: function(){
+  //can switch to generic find statements once subscription issues are fixed
+  subscription: function(){ 
     return Template.instance().documents.ready();
   },
   sellerName: function(){
-    var sellerEmail= $('.go-to-user').delay(300).children().text().trim()
-    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.first_name;
+    return Meteor.users.findOne({"_id": Session.get('user')}).profile.first_name;
   },
+  /*
+    not displayed on page, used to link to profile
+    no usernames system set up, so trims everything after @ in email address
+  */
   sellerEmail: function(){
-    var sellerEmail= $('.go-to-user').delay(300).children().text().trim()
-    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.username;
+    return Meteor.users.findOne({"_id": Session.get('user')}).emails[0].address;
   },
   sellerImage: function(){
-    var sellerEmail= $('.go-to-user').children().text().trim();
-    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.profile_pic;
+    return Meteor.users.findOne({"_id": Session.get('user')}).profile.profile_pic;
   },
   sellerAbout: function(){
-    var sellerEmail= $('.go-to-user').children().text().trim();
-    return Meteor.users.findOne({"emails.address": sellerEmail}).profile.about;
+    return Meteor.users.findOne({"_id": Session.get('user')}).profile.about;
   },
-  sellerProducts: function(){
-    var sellerEmail= $('.go-to-user').children().text().trim();
-    return userProducts.find({author: sellerEmail}).fetch()
+  /*
+    needs to return userproducts since that's where link_id and other things are stored
+    need to find way to check which user products are published, then return those
+    see if title changes to product also change in user product, then can check intersection that way
+  */
+  sellerProducts: function(){ //pretty sure this will return unpublished products
+    //var publishedProducts = ReactionCore.Collections.Products.find({"vendor": Session.get('user')}).fetch();
+    return userProducts.find({'userId': Session.get('user')}).fetch();
+    //doesn't work don't have the same ids
+    //_.intersection(publishedProducts._id, userProducts._id);
+    
   }
 
 });
