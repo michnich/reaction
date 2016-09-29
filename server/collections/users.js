@@ -33,7 +33,6 @@ Meteor.publish("userProfile",function(username){
     }
 });
 
-
 Meteor.publish('directory', function(){
 
   // var user= Meteor.users.findOne({} ,{fields: {_id: 1}}).fetch();
@@ -48,7 +47,6 @@ Meteor.publish('directory', function(){
   return Meteor.users.find({});
 });
 
-
 Meteor.publish('userProducts', function(){
   return userProducts;
 });
@@ -56,5 +54,7 @@ Meteor.publish('userProducts', function(){
 //returns user based on the passed id (from meteor's account collection, not reaction's)
 //switch to return only the neccessary fields
 Meteor.publish('userById', function(userId) {
-  return Meteor.users.findOne({"_id": userId});
+  check(userId, String);
+  console.log(userId);
+  return Meteor.users.find({"_id": userId});
 });
