@@ -55,6 +55,5 @@ Meteor.publish('userProducts', function(){
 //switch to return only the neccessary fields
 Meteor.publish('userById', function(userId) {
   check(userId, String);
-  console.log(userId);
   return Meteor.users.find({"_id": userId});
 });
