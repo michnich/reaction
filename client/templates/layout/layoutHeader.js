@@ -31,8 +31,8 @@ Template.layoutHeader.onRendered(function(){
   $('.nav-item').on('click',function(){
     $('.navbar-collapse').removeClass('in');
   });
-
-  Meteor.subscribe("directory");
+  //removed this subscription
+  //Meteor.subscribe("directory");
 
   Meteor.typeahead.inject();
   $('.typeahead').bind('typeahead:select', function(ev, suggestion){
