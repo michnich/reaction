@@ -31,8 +31,8 @@ Template.layoutHeader.onRendered(function(){
   $('.nav-item').on('click',function(){
     $('.navbar-collapse').removeClass('in');
   });
-
-  Meteor.subscribe("directory");
+  //removed this subscription
+  //Meteor.subscribe("directory");
 
   Meteor.typeahead.inject();
   $('.typeahead').bind('typeahead:select', function(ev, suggestion){
@@ -43,10 +43,7 @@ Template.layoutHeader.onRendered(function(){
 
 Template.layoutHeader.helpers({
   username: function(){
-    var str = Meteor.user().emails[0].address;
-    str = str.split("@");
-    userName = str[0];
-    return userName;
+    return Meteor.user().emails[0].address;
   },
   profileImage: function(){
     return Meteor.user().profile.profile_pic

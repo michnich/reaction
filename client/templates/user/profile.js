@@ -1,3 +1,7 @@
+Template.profile.onCreated(function() {
+  this.subscribe('userProductsByEmail', Router.current().params.username);
+});
+
 Template.profile.rendered = function(){
   if (Meteor.user().profile.first_name == undefined){
     Modal.show('editProfile');
