@@ -38,6 +38,10 @@ Template.profile.helpers({
     var username = Router.current().params.username;
     return Meteor.users.findOne({"emails.address":username}).emails[0].address;
   },
+  userId: function() {
+    var username = Router.current().params.username;
+    return Meteor.users.findOne({"emails.address":username})._id;
+  },
   //super important function that allows us to index the current user that is showed in closet
   firstName: function(){
     var username = Router.current().params.username;

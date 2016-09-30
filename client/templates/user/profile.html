@@ -60,20 +60,10 @@
           <!-- EXAMPLE PRODUCT -->
 
           <div class="col-xs-12 col-md-6 product">
-
-            <div class="product">
-              <a class="" href="/products">
-                <img src="/resources/example-product.jpg" alt="">
-                <div class="description">
-                  <a class="avatar product-desc"> </a>
-                  <p class="price">$170</p>
-                  <p class="condition">Gently Worn</p>
-                  <p class="title product-desc">Superhero Jacket</p>
-
-                  <!-- <p class="id product-des">id: {{_id}}</p> -->
-                <!-- <p class="author product-desc">{{author}}</p> -->
-                </div>
-              </a>
+          <div class="col-xs-12">
+            {{#if isOwner}}
+              <h4>User ID: {{userId}}</h4>
+            {{/if}}
           </div>
 
           </div>
