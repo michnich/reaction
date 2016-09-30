@@ -159,18 +159,20 @@
         <p class="helvet"><b>More from {{sellerName}}</b></p>
         <br>
         {{#each sellerProducts}}
-        <div class="product">
-          <a class="" href="/product/{{link_id}}">
-            <img style="width: 100px; height: auto;" src="{{this.image}}" class="" alt="">
-            <div class="description">
-              <a class="avatar product-desc"> </a>
-              <!-- <p class="price">${{price}}</p>
-              <p class="condition">{{type}}</p>
-              <p class="title product-desc">{{name}}</p> -->
-              <!-- <p class="id <product></product>-des">id: {{_id}}</p> -->
-            </div>
-          </a>
-        </div>
+        {{#if isListed}}
+          <div class="product">
+            <a class="" href="/product/{{link_id}}">
+              <img style="width: 100px; height: auto;" src="{{this.image}}" class="" alt="">
+              <div class="description">
+                <a class="avatar product-desc"> </a>
+                <!-- <p class="price">${{price}}</p>
+                <p class="condition">{{type}}</p>
+                <p class="title product-desc">{{name}}</p> -->
+                <!-- <p class="id <product></product>-des">id: {{_id}}</p> -->
+              </div>
+            </a>
+          </div>
+        {{/if}}
         {{/each}}
       </div>
     </div>
