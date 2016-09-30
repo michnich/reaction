@@ -353,6 +353,11 @@ Template.sellerSection.helpers({
     //doesn't work don't have the same ids
     //_.intersection(publishedProducts._id, userProducts._id);
     
-  }
+  },
+
+    isListed: function(){
+    console.log(this._id);
+    return userProducts.findOne({_id:this._id}).link_id;
+  },
 
 });
