@@ -355,9 +355,20 @@ Template.sellerSection.helpers({
     
   },
 
-    isListed: function(){
-    console.log(this._id);
+  isListed: function(){
     return userProducts.findOne({_id:this._id}).link_id;
-  },
-
+  }
 });
+
+/*Template.sellerSection.events({
+  "click #visitProfile": function() {
+    var name = Meteor.users.findOne({"_id": Session.get('user')}).emails[0].address;
+    var index = name.indexOf('@');
+    var route = name.substring(0, index);
+    var userProfile = {
+      username: name,
+      userRoute: route
+    };
+    Router.go('profile', {user: userProfile});
+  }
+})*/

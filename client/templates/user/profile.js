@@ -26,7 +26,7 @@ Template.profile.rendered = function(){
 */
 Template.profile.helpers({
   isUser: function(){
-    return Meteor.user().profile.emails[0].address === Router.current().params.username
+    return Meteor.user().emails[0].address === Router.current().params.username;
   },
   isOwner: function(){
     return Roles.userIsInRole(Meteor.userId(),['dashboard','owner','admin']);
@@ -68,8 +68,8 @@ Template.profile.helpers({
     return imageSource;
   },
   profilePic: function () {
-    var username = Router.current().params.username;
-    return Meteor.users.findOne({"profile.username": username}).profile.profile_pic;
+    var email = Router.current().params.username;
+    return Meteor.users.findOne({"emails.address": email}).profile.profile_pic;
   }
 });
 
