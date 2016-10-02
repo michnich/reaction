@@ -14,9 +14,9 @@ if(Meteor.isServer) {
      return 'Click on the following link to verify your email address: ' + url;
    };
 
-   Accounts.config({
+   /*Accounts.config({
      sendVerificationEmail:true
-   });
+   });*/
 
   //  Accounts.sendVerificationEmail(Meteor.userId());
   });
