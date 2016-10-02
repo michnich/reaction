@@ -1,3 +1,4 @@
+
 // ************************************************
 // THIS FILE IS FOR YOU TO MODIFY REACTION THEMING!
 // ************************************************
@@ -10,6 +11,175 @@
 // If you want to override variables or add custom styles to the top,
 // see 'custom.reaction.import.less'
 
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+// gotham font for landing page
+@font-face {
+    font-family: gotham;
+    src: url('resources/gotham.ttf');
+}
+
+#works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+// hide variant button on add product
+button.btn.btn-default.btn-remove-variant {
+    display: none;
+}
+
+.foo{
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: default;;
+}
+.header-header{
+  text-decoration: underline;
+}
+.product-tag{
+  margin-left: 1.5em;
+}
+
+.foo:hover{
+  text-decoration: none;
+}
+/////////GENERAL STYLE CHANGES
+
+//checkout payment dropdown menu
+#reaction-paymentmethod{
+  cursor: pointer;
+  background-color:#5cb85c;
+  color:white;
+
+}
+
+#payment-methods-accordian{
+  .panel-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: inherit;
+      width: 100%;
+      text-alight: center;
+      text-align: center;
+  }
+}
+
+
+//mobile cart icon
+.mobile-cart{
+  .cart-icon {
+    color: darkgrey;
+    border: none;
+    padding: 7px;
+    border-radius: 0;
+    position: relative;
+    background-color: transparent;
+    display: inline-block;
+    float: right;
+}
+}
+
+
+html {
+  background: black;
+  // overflow-x: hidden;
+}
+#main{
+  padding: 0px;
+  background: white;
+  overflow: hidden;
+}
+
+body{
+  background-color: white;
+}
+
+h1,h2{
+  font-family: gotham, sans-serif;
+}
+
+p,h3,h4{
+  font-family: 'Garamond';
+}
+h5{
+  font-family: HelveticaNeue-Bold;
+}
+.reaction-navigation-header{
+  .navbar-default .navbar-nav,li>a{
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+    font-size: 15px;
+  }
+}
+/// default elements color and font
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: gotham;
+}
+//// JUMBOTRON FONT
+.jumbotron{
+  font-family: gotham;
+}
+//BUTTON STYLES
+.btn-primary {
+    color: #ffffff;
+    background-color: #666666;
+    border-color: #595959;
+    border-radius: 0;
+    font-family: gotham;
+}
+.btn-default{
+  background-color: #C1332C;
+  color: white;
+  border: none;
+  padding: 0.5em 1.2em;
+  font-family: gotham;
+  border-radius: 0;
+}
+.btn-default:hover{
+  background-color: #962823;
+  color: white;
+}
+.form-control{
+  border-radius: 0;
+}
+
+
+
+/////////MOBILE BUG THAT LOGIN FORM IS OFFSET TO THE RIGHT FIX
+@media (max-width: 767px){
+.navbar-nav .open .dropdown-menu {
+    position: static;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    float: left;
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cart-icon .badge {
+      position: relative;
+  }
+}
+
+
+
+
+/////////////////////////////////////////////////////
+///////////////////// NAVIGATION
+////////////////////////////////////////////////////
+
+
+.navbar-default{
+  background-color: black;
+}
 
 .reactionAvatar-small {
     width: 30px;
@@ -17,33 +187,24 @@
     height: 30px;
     display: inline-block;
 }
-.navbar-default{
-  background-color: black;
 
-}
-.tag-link-list {
-    float: left;
-    margin-top: 29px;
-    margin-left: 2em;
-    margin-right: 2em;
-    padding-right: 2em;
-    border-right: 1px solid darkgrey;
-}
-// .checkout-login{
-//   display: none!important;
-// }
-// .col-md-6.pull-right.guest-checkout {
-//     float: right !important;
-//     float: none !important;
-//     margin: 0 auto;
-// }
-.checkout-login{
-  visibility: hidden;
+// navigation image
+img.nav-image {
+  width: 45px;
+  height: 45px;
+  -webkit-border-radius: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 60px;
+  -moz-background-clip: padding;
+  border-radius: 60px;
+  background-clip: padding-box;
+  margin: 7px 0 0 5px;
+  // float: left;
+  background-size: cover;
+  background-position: center center;
 }
 
-// NAVIGATION
 
-@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 .navbar, .navbar-default {
   margin-bottom: 0;
   border: none;
@@ -56,39 +217,97 @@
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #FFF;
-  background-color: transparent; }
+  background-color: transparent;
+  font-family: gotham;
+}
 
-html {
-  background: white; }
+// NAVIGATION BUTTON
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle  {
+    background-color: transparent;
+    border-color: transparent;
+}
 
-/* Custom page footer */
-.footer {
-  background-color: #000; }
-  .footer .nav, .footer .navbar-nav {
-    border: none; }
-    .footer .nav li a, .footer .navbar-nav li a {
-      color: #777; }
-    .footer .nav li a:hover, .footer .navbar-nav li a:hover {
-      color: #FFF;
-      background-color: transparent; }
-  .footer p, .footer a, .footer i {
-    color: #FFF; }
+.product-list-item{
+  display: block;
+}
 
-/* basic typeahead styles */
+.product-toggle{
+
+  .icon-bar{
+    background-color: black;
+  }
+
+}
+
+// HAMBURGER
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+    height: 1px;
+}
+
+//COMPANY LOGO
+.navbar-brand img {
+  height: 100%; }
+
+  .navbar-default .navbar-nav > li > a {
+      padding-top:0;
+      line-height: 50px;
+  }
+  .reactionAvatar .reactionAvatar-image, .reactionAvatar .reactionAvatar-initials {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 8px;
+      left: 0px;
+  }
+
+  .cart-icon {
+      color: darkgrey;
+      border: none;
+      padding: 0px 1rem;
+      border-radius: 0;
+      position: relative;
+      background-color: transparent;
+      height: 50px;
+  }
+  .cart-icon:hover{
+    background-color: white;
+  }
+  .cart-icon .badge {
+      position: relative;
+      bottom: auto;
+      margin-right: auto;
+      color: darkgrey;
+      background-color: transparent;
+  }
+  .user-accounts-dropdown-apps {
+    list-style-type: none;
+  }
+
+///////// SEARCH FOR USER SECTION
+
 .typeahead,
 .tt-query,
 .tt-hint {
   width: 396px;
   padding: 8px 12px;
-  line-height: 30px;
+  line-height: 35px;
+  padding-top: 6px;
+  height: 35px!important;
   border: 2px solid #ccc;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  outline: none; }
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  background-color: grey;
+  color: white;
+}
 
 .typeahead {
-  background-color: #fff; }
+  background-color: #5D5D5D;
+  color: white;
+  line-height: 35px;
+}
 
 .typeahead:focus {
   border: 2px solid #0097cf; }
@@ -108,12 +327,8 @@ html {
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  border-radius:0;
+  }
 
 .tt-suggestion {
   padding: 3px 20px;
@@ -132,27 +347,46 @@ html {
 .tt-suggestion p {
   margin: 0; }
 
-.navbar-brand img {
-  height: 100%; }
+// NAVIGATION PROFILE IMAGE
+  .nav-image{
+    height: 40px;
+    border-radius: 100%;
+  }
+  .dropdown-toggle > .circular-icon {
+      display: none;
+  }
 
-// .cart-icon{
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//
-// }
 
+//////////////////////////////////////////
+///////// FOOTER
+/////////////////////////////////////////
+
+.footer {
+  background-color: #000; }
+  .footer .nav, .footer .navbar-nav {
+    border: none; }
+    .footer .nav li a, .footer .navbar-nav li a {
+      color: #777; }
+    .footer .nav li a:hover, .footer .navbar-nav li a:hover {
+      color: #FFF;
+      background-color: transparent; }
+  .footer p, .footer a, .footer i {
+    color: #FFF; }
+
+//nav link color
 
 .navbar-default .navbar-nav > li > a {
-    color: #777;
+    color: #95a5a6;
+    font-family: gotham;
+    text-transform: lowercase;
 }
-.navbar-brand img {
-    height: 100%;
+.navbar-default .navbar-nav > li:hover > a {
+    color: #FFF;
+    font-family: gotham;
+    text-transform: lowercase;
 }
 
-////////////////////////////////////////// FOOTER
 
-@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 .footer {
   font-family: 'EB Garamond';
   position: static;
@@ -166,28 +400,10 @@ html {
   padding:0;
 }
 
-//////////////////////////////////////////// GLOBAL
+/////////////////////////////////////////////////
+// JUMBOTRON DEFAULT STYLES
+////////////////////////////////////////////////
 
-
-
-h1,h2{
-  font-family: 'HelveticaNeue-Bold', sans-serif;
-}
-//fonts
-
-.reaction-navigation-header{
-  .navbar-default .navbar-nav,li>a{
-    font-family: 'HelveticaNeue-Bold', sans-serif;
-  }
-
-}
-
-p,h3,h4{
-  font-family: 'Garamond';
-}
-
-
-///////////////////////////////////////////////// JUMBOTRON
 .container-fluid{
   padding: 0;
   margin: 0;
@@ -195,118 +411,94 @@ p,h3,h4{
 .container-fluid .jumbotron {
     border-radius: 0px;
 }
-#main{
-  padding: 0px;
-}
+
 .jumbotron{
-  background: url('/resources/Hunters-Explore.jpg');
+  // background-image: url('resources/faq-banner.jpg');
   background-size: cover;
-  background-position:top;
-  height: 502px;
-  color: white;
-  margin-bottom: 0;
-  border-radius: 0;
-  .content{
-    display: table;
-    height: 100%;
-    .container{
-      display: table-cell;
-      vertical-align: bottom;
-    }
+  // margin-top:-66px;
+  min-height: 80%;
+  min-height: 80vh;
+  max-height: 502px;
+  background-position: top center;
+  .text{
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    color: #fff;
+    // top: 54%;
+    width: 100%;
+    background-position: top;
+    // margin-top: -122px;
+    // left: 0;
+    // height: 100vh;
+      h1{
+        // font-size: 5em;
+        color: white;
+        font-family: gotham;
+
+        text-shadow: 1px 1px 1px black;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-top: 31vh;
+      }
+      h2{
+        font-family: gotham;
+        text-shadow: 1px 1px 1px black;
+        color: white;
+        text-transform: lowercase;
+      }
+
   }
 }
-// .dropdown{
-//   top: 0;
-//   right: 80px
-// }
+
 .spinner-container {
     left: 0;
     position: absolute;
     top: 0;
     background-color: white;
 }
+
+
+
+//////////////////
+//////PRODUCT TYPE TAG LIST ON PRODUCT PAGE
+/////////////////
+
 .tag-link-list{
   float: left;
   margin-top: 29px;
   margin-left: 2em;
+  margin-right: 2em;
+  padding-right: 2em;
+  border-right: 1px solid darkgrey;
   li{
     display: block;
     margin-bottom: 1em;
   }
 }
 
-
-// NAVIGATION BUTTON
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle  {
-    background-color: transparent;
-    border-color: transparent;
-}
-// HAMBURGER
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #FFF;
-    height: 1px;
-}
-
-
-// NAVBAR
-.navbar-default .navbar-nav > li > a {
-    padding-top:0;
-    line-height: 50px;
-}
-.reactionAvatar .reactionAvatar-image, .reactionAvatar .reactionAvatar-initials {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 8px;
-    left: 0px;
-}
-
-.cart-icon {
-    color: darkgrey;
-    border: none;
-    padding: 0px 1rem;
-    border-radius: 0;
-    position: relative;
-    background-color: transparent;
-    height: 50px;
-}
-.cart-icon:hover{
-  background-color: white;
-}
-.cart-icon .badge {
-    position: absolute;
-    bottom: 0px;
-    margin-right: 9px;
-    color: darkgrey;
-    background-color: transparent;
-}
-.user-accounts-dropdown-apps {
-  list-style-type: none;
-}
-
-
-
-///////////// PRODUCT DETAIL
+/////////////////////////////
+////PRODUCT DETAIL PAGE
+////////////////////////////
 
 //Title
 .pdp-container .title h1 {
-    text-align: center;
+    text-align: left;
     font-family: 'EB Garamond', serif;
     font-size: 50px;
     font-weight: 700;
     color: inherit;
-
-
 }
 
 //Subtitle
 
 .pdp-container .pageTitle h2 {
-    text-align: center;
+    text-align: left;
     font-family: 'EB Garamond', serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: #1999dd;
+    margin-top: 0px;
 }
 
 //add to cart button
@@ -315,6 +507,10 @@ p,h3,h4{
   border-radius: 0;
   border:none;
   font-family: 'EB Garamond', serif;
+  width: auto;
+  padding-right: 40px;
+  padding-left: 40px;
+  float: right;
 }
 .container-main{
   background-color: white;
@@ -337,4 +533,664 @@ p,h3,h4{
 }
 #logged-in-display-name {
     text-transform: lowercase;
+}
+.input-group.user-search {
+  textarea{
+    padding: 0 3px;
+    margin: 0;
+    resize: none;
+    height: 36px;
+    border: none;
+    border-radius: 0;
+    // color: white;
+    // background-color: darkgrey!important;
+  }
+}
+
+// make the container for product not full width
+
+.pdp-container .currency-symbol {
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: 5px;
+}
+
+// positioning add to cart button
+#add-to-cart{
+  display: inline-block;
+}
+.social-pricing{
+  .price{
+    width:100%;
+  }
+}
+html:not(.rtl) .pdp-container .add-to-cart-text {
+  margin-right: 0;
+}
+
+.product-detail-edit input {
+    border: 1px solid #fafafa;
+    text-align: inherit;
+    border: none;
+}
+.product-detail-edit {
+    position: relative;
+    display: inline-block;
+}
+li.list-group-item.metafield-list-item {
+    border: none;
+}
+.pdp-container .metafield-new-item {
+    padding: 5px 3px 5px;
+    cursor: pointer;
+    border: none;
+}
+.add-to-cart-quantity{
+  display: none;
+}
+.variant-edit-form {
+    margin: 0px 10px 0 10px;
+    cursor: default;
+    padding: 0px 8px 1px 8px;
+    border-radius: 0 0 6px 6px;
+    white-space: normal;
+    overflow: hidden;
+    font-size: 12px;
+}
+span.badge {
+    display: none;
+}
+
+
+//for search bar font
+span.twitter-typeahead {
+    text-transform: lowercase;
+    font-family: gotham;
+}
+.checkout-progress-bar li.active:before, .checkout-progress-bar li.active .progress-step-badge {
+    background-color: #FFF;
+    color: #000;
+    font-family: gotham;
+
+}
+.progress-step-badge{
+  background-color: #FFF;
+  color: #000;
+  font-family: gotham;
+
+}
+li.visited .progress-step-badge {
+    background-color: #C1332C!important;
+    color: #FFF;
+    font-family: gotham;
+}
+.checkout-progress-bar li.visited:before, .checkout-progress-bar li.visited:after, .checkout-progress-bar li.visited .progress-step-badge{
+  background-color: #C1332C!important;
+  color: #FFF;
+  font-family: gotham;
+
+}
+.checkout-step-badge.active {
+  background-color: #C1332C!important;
+  color: #FFF;
+  font-family: gotham;
+
+}
+
+// background of checkout progress bar
+.checkout-progress {
+    background-color: #000;
+    border-bottom: 1px solid #e6e6e6;
+}
+.progress-step-label {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    font-family: gotham;
+    text-align: center;
+    text-transform: uppercase;
+    color: grey;
+}
+
+//bottom section badge-border-radius
+.checkout-step-badge {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+    background: #FFF;
+    color: #414141;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: gotham;
+}
+
+
+
+
+.navbar-default .navbar-brand {
+    color: #f2f2f2;
+    font-family: gotham;
+}
+
+//profile column
+.profile-col{
+  padding-right:6rem;
+}
+
+// hide admin bar
+.admin-controls-menu{
+  display: none;
+}
+
+
+// MEDIA QUERY FOR SHOP INTERFACE ON MOBILE
+.col-md-6.pull-left.checkout-guest {
+    display: none;
+}
+.col-md-6.pull-right.checkout-login {
+    width: 100%;
+}
+
+
+//////////////////////////
+// MEDIA QUERIES
+/////////////////////////
+
+
+@media screen and (max-width: 768px) {
+  .tag-link-list{
+    float: none;
+    margin-top: 29px;
+    margin-left: 2em;
+    text-align: center;
+    border: none;
+    li{
+      // display: inline-block;
+      margin-bottom: 1em;
+    }
+  }
+  .product-grid {
+    clear: both;
+  }
+  .input-group.user-search {
+    margin-left: 1em;
+  }
+  .container-lg {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  //tags
+  .tag-group{
+    text-align: right;
+  }
+}
+
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+    //iPhone 6 Portrait
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    }
+    .loginForm label{
+      color:white;
+    }
+    .accounts-dialog .loginForm a {
+    color: #FFF;
+    }
+    .nav > li {
+    display:inline-block;
+    }
+    ul.user-accounts-dropdown-apps{
+    padding:5px 0;
+    }
+    .input-group.user-search {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    }
+    ul.nav.navbar-nav {
+    text-align:center;
+    }
+    li.login-dropdown-menu {
+    display: block;
+    }
+    .profile-col{
+      padding-right:0rem;
+    }
+    #userPro #closet {
+    min-height: auto;
+    padding:0;
+    }
+    #userPro .product{
+    padding:0;
+    margin: 1px;
+    }
+    #works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+.jumbotron{
+   min-height: 60vh;
+   max-height: 300px;
+}
+.jumbotron .text h1{
+    margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
+}
+
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
+    //iPhone 6 landscape
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    }
+    .loginForm label{
+      color:white;
+    }
+    .accounts-dialog .loginForm a {
+    color: #FFF;
+    }
+    .nav > li {
+    display:inline-block;
+    }
+    ul.user-accounts-dropdown-apps{
+    padding:5px 0;
+    }
+    .input-group.user-search {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    }
+    ul.nav.navbar-nav {
+    text-align:center;
+    }
+    li.login-dropdown-menu {
+    display: block;
+    }
+    .profile-col{
+      padding-right:0rem;
+    }
+    #userPro #closet {
+    min-height: auto;
+    padding:0;
+    }
+    #userPro .product{
+    padding: 0;
+    margin: 1px;
+    }
+    #works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+.jumbotron{
+   min-height: 60vh;
+   max-height: 300px;
+}
+.jumbotron .text h1{
+    margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
+}
+
+}
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) {
+    //iPhone 6+ Portrait
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    }
+    .loginForm label{
+      color:white;
+    }
+    .accounts-dialog .loginForm a {
+    color: #FFF;
+    }
+    .nav > li {
+    display:inline-block;
+    }
+    ul.user-accounts-dropdown-apps{
+    padding:5px 0;
+    }
+    .input-group.user-search {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    }
+    ul.nav.navbar-nav {
+    text-align:center;
+    }
+    li.login-dropdown-menu {
+    display: block;
+    }
+    .profile-col{
+      padding-right:0rem;
+    }
+    #userPro #closet {
+    min-height: auto;
+    padding:0;
+    }
+    #userPro .product{
+    padding:0;
+    margin: 1px;
+    }
+    #works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+.jumbotron{
+   min-height: 60vh;
+   max-height: 300px;
+}
+.jumbotron .text h1{
+    margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
+}
+}
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {
+    //iPhone 6+ landscape
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    }
+    .loginForm label{
+      color:white;
+    }
+    .accounts-dialog .loginForm a {
+    color: #FFF;
+    }
+    .nav > li {
+    display:inline-block;
+    }
+    ul.user-accounts-dropdown-apps{
+    padding:5px 0;
+    }
+    .input-group.user-search {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    }
+    ul.nav.navbar-nav {
+    text-align:center;
+    }
+    li.login-dropdown-menu {
+    display: block;
+    }
+    .profile-col{
+      padding-right:0rem;
+    }
+    #userPro #closet {
+    min-height: auto;
+    padding:0;
+    }
+    #userPro .product{
+    padding:0;
+    margin: 1px;
+    }
+    #works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+.jumbotron{
+   min-height: 60vh;
+   max-height: 300px;
+}
+.jumbotron .text h1{
+    margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
+}
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
+    //iPhone 6 and iPhone 6+ portrait and landscape
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    }
+    .loginForm label{
+      color:white;
+    }
+    .accounts-dialog .loginForm a {
+    color: #FFF;
+    }
+    .nav > li {
+    display:inline-block;
+    }
+    ul.user-accounts-dropdown-apps{
+    padding:5px 0;
+    }
+    .input-group.user-search {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    }
+    ul.nav.navbar-nav {
+    text-align:center;
+    }
+    li.login-dropdown-menu {
+    display: block;
+    }
+    .profile-col{
+      padding-right:0rem;
+    }
+    #userPro #closet {
+    min-height: auto;
+    padding:0;
+    }
+    #userPro .product{
+    padding:0;
+    margin: 1px;
+    }
+    #works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+.jumbotron{
+   min-height: 60vh;
+   max-height: 300px;
+}
+.jumbotron .text h1{
+    margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
+}
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){
+    //iPhone 6 and iPhone 6+ portrait
+    .product-grid-list{
+display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    }
+    .loginForm label{
+      color:white;
+    }
+    .accounts-dialog .loginForm a {
+    color: #FFF;
+    }
+    .nav > li {
+    display:inline-block;
+    }
+    ul.user-accounts-dropdown-apps{
+    padding:5px 0;
+    }
+    .input-group.user-search {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    }
+    ul.nav.navbar-nav {
+    text-align:center;
+    }
+    li.login-dropdown-menu {
+    display: block;
+    }
+    .profile-col{
+      padding-right:0rem;
+    }
+    #userPro #closet {
+    min-height: auto;
+    padding:0;
+    }
+    #userPro .product{
+    padding:0;
+    margin: 1px;
+    }
+    #works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+.jumbotron{
+   min-height: 60vh;
+   max-height: 300px;
+}
+.jumbotron .text h1{
+    margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
+}
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
+    //iPhone 6 and iPhone 6+ landscape
+    .product-grid-list{
+      display: block;
+    }
+    .product-grid-item{
+      margin: 0 auto;
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    }
+    .loginForm label{
+      color:white;
+    }
+    .accounts-dialog .loginForm a {
+    color: #FFF;
+    }
+    .nav > li {
+    display:inline-block;
+    }
+    ul.user-accounts-dropdown-apps{
+    padding:5px 0;
+    }
+    .input-group.user-search {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    }
+    ul.nav.navbar-nav {
+    text-align:center;
+    }
+    li.login-dropdown-menu {
+    display: block;
+    }
+    .profile-col{
+      padding-right:0rem;
+    }
+    #userPro #closet {
+    min-height: auto;
+    padding:0;
+    }
+    #userPro .product{
+    padding:0;
+    margin: 1px;
+    }
+    #works .row h1 {
+    text-align: center;
+    text-transform: lowercase;
+}
+.jumbotron{
+   min-height: 60vh;
+   max-height: 300px;
+}
+.jumbotron .text h1{
+    margin-top: 25vh;
+}
+
+//tags
+.tag-group{
+  text-align: right;
+}
+
 }

@@ -1,12 +1,6 @@
 // Tracker.autorun(function(){
-//  if(Meteor.user().username){
-//    // login handler
-//    Router.go("/");
-//  }
-//  else{
-//    // logout handler
-//    Router.go("landing");
-//  }
+//
+//
 // });
 // Meteor.publish('comments', function(){
 //   return Comments.find({}, {sort: {submitted: -1}});
@@ -101,3 +95,69 @@ Meteor.app = _.extend(Meteor.app || {}, {
     return Roles.userIsInRole(Meteor.user(), "admin") || this.isOwner;
   }
 });
+
+
+if (Meteor.isClient){
+  // Make sure that mobile users can drop down the stripe payment method
+  // form id genericPaymentForm
+
+  Template.checkoutPayment.rendered = function(){
+    $('#payment-methods-accordian .panel-title').on('click',function(){
+      if (Meteor.user().emails[0].verified == false){
+        sweetAlert('Oh no you have not verified your email, go do that so we know that you arent a robot');
+        $(".btn-complete-order").hide();
+      }
+    });
+    $('.btn-complete-order').on('submit', function(e){
+      e.preventDefault;
+      Router.go('account/profile');
+
+    });
+  }
+  // on id reaction-paymentmethod
+  // collapse in
+
+
+  Template.shop.rendered = function(){
+    var classesNodeList = document.querySelectorAll(".header-tag");
+    var classes = Array.prototype.slice.call(classesNodeList).map(function(element) {
+        return element;
+    });
+    for (var i = 0; i < classes.length; i++) {
+      if(classes[i].innerHTML.toUpperCase() == classes[i].innerHTML){
+        console.log(classes[i]);
+        //add class that creates the section
+        classes[i].classList.add("foo");
+        //disable a
+        classes[i].removeAttribute("href");
+      }
+    }
+  }
+
+
+$('a[class="header-tag"]').each(function(){
+  console.log(this.innerHTML.toUpperCase())
+});
+
+
+  Template.products.rendered = function(){
+    //function for tag pages background image changing;
+    var pathArray = window.location.pathname.split('/');
+    //return the product tag
+    typeOfProduct = pathArray[3];
+
+    if(window.location.pathname.indexOf("/product/tag/"+typeOfProduct) == 0){
+      //place a jumbotron before the main container
+      $("#main").prepend("<div class='jumbotron featured-banner'> <div class='text' style='text-align:center; color:black; text-shadow: 1px 1px 1px solid black'> <h1> " + typeOfProduct + "</h1></div>");
+      // dynamically add the class of the tag so that the jumbotron background can change with the product tag
+      $('.featured-banner').addClass(typeOfProduct);
+      // console.log(typeOfProduct);
+    } else{
+      $(".jumbotron").remove();
+    }
+  }
+  Template.cartCheckout.rendered= function(){
+    $('.panel-title span').hide();
+  }
+
+}
