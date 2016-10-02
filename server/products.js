@@ -28,6 +28,6 @@ if (Meteor.isServer){
       console.log("email sent!");
     }
   });
-//change
+
 
 }
