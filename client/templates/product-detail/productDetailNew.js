@@ -360,15 +360,9 @@ Template.sellerSection.helpers({
   }
 });
 
-/*Template.sellerSection.events({
+Template.sellerSection.events({
   "click #visitProfile": function() {
-    var name = Meteor.users.findOne({"_id": Session.get('user')}).emails[0].address;
-    var index = name.indexOf('@');
-    var route = name.substring(0, index);
-    var userProfile = {
-      username: name,
-      userRoute: route
-    };
-    Router.go('profile', {user: userProfile});
+    var user = Session.get('user');
+    Router.go('profile', {userId: user});
   }
-})*/
+})
