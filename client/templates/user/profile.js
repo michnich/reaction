@@ -1,5 +1,5 @@
 Template.profile.onCreated(function() {
-  this.subscribe('userProductsByEmail', Router.current().params.username);
+  this.subscribe('userProductsByUser', Router.current().params.userId);
 });
 
 Template.profile.rendered = function(){
@@ -26,39 +26,38 @@ Template.profile.rendered = function(){
 */
 Template.profile.helpers({
   isUser: function(){
-    return Meteor.user().emails[0].address === Router.current().params.username;
+    return Meteor.user()._id === Router.current().params.userId;
   },
   isOwner: function(){
     return Roles.userIsInRole(Meteor.userId(),['dashboard','owner','admin']);
   },
   username: function(){
-    return Router.current().params.username
+    return Meteor.users.findOne({"_id": Router.current().params.userId}).profile.username;
   },
   userEmail: function(){
-    var username = Router.current().params.username;
-    return Meteor.users.findOne({"emails.address":username}).emails[0].address;
+    var user = Router.current().params.userId;
+    return Meteor.users.findOne({"_id":user}).emails[0].address;
   },
   userId: function() {
-    var username = Router.current().params.username;
-    return Meteor.users.findOne({"emails.address":username})._id;
+    return Router.current().params.userId;;
   },
   //super important function that allows us to index the current user that is showed in closet
   firstName: function(){
-    var username = Router.current().params.username;
-    return Meteor.users.findOne({"emails.address": username}).profile.first_name;
+    var user = Router.current().params.userId;
+    return Meteor.users.findOne({"_id":user}).profile.first_name;
   },
   aboutYou: function(){
-    var username = Router.current().params.username;
-    return Meteor.users.findOne({"emails.address": username}).profile.about;
+    var user = Router.current().params.userId;
+    return Meteor.users.findOne({"_id":user}).profile.about;
   },
   products: function(){
-    var username = Router.current().params.username;
-    var email = Meteor.users.findOne({"emails.address":username}).emails[0].address;
+    var user = Router.current().params.userId;
+    var email = Meteor.users.findOne({"_id":user}).emails[0].address;
     return userProducts.find({author: email}).fetch()
   },
   isVerified: function(){
-    var email = Router.current().params.username;
-    return Meteor.users.findOne({"emails.address": email}).emails[0].verified;
+    var user = Router.current().params.userId;
+    return Meteor.users.findOne({"_id":user}).emails[0].verified;
   },
   isListed: function(){
     return userProducts.findOne({_id:this._id}).link_id;
@@ -68,8 +67,8 @@ Template.profile.helpers({
     return imageSource;
   },
   profilePic: function () {
-    var email = Router.current().params.username;
-    return Meteor.users.findOne({"emails.address": email}).profile.profile_pic;
+    var user = Router.current().params.userId;
+    return Meteor.users.findOne({"_id":user}).profile.profile_pic;
   }
 });
 
@@ -90,7 +89,8 @@ Template.profile.events({
     });
 
     //send email to user saying that the product has been listed
-    var userEmail = Router.current().params.username;
+    var user = Router.current().params.username;
+    var userEmail = Meteor.users.findOne({"_id":user}).emails[0].address;
     Meteor.call('sendEmail', {
       to: userEmail,
       from: 'no-reply@huntrs.com',
