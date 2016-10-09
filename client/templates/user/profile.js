@@ -109,7 +109,6 @@ Template.profile.events({
     });
   },
   "click .add-profile-image":function(event){
-    alert('image added');
     var profileImage = $('.afCloudinary-thumbnail a').attr('href');
     console.log(profileImage);
     Meteor.users.update(Meteor.userId(),
