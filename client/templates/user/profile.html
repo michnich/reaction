@@ -9,17 +9,17 @@
             <!-- <img src="{{profileUrl}}" alt="" class="profile-img img-responsive inline"> -->
 
             <!-- <img style="height:130px; width:130px; display:inline-block; margin-bottom:2rem;" src="{{profilePic}}" class="img-responsive img-circle" alt="" /> -->
-            <div class="user-header-avatar" style="background-image: url('{{profilePic}}')"></div>
-
+            <div class="user-header-avatar" style="background-image: url({{profilePic}})"></div>
+            
             <!-- UNCOMMENT  THIS and image below WHEN IMAGE UPLOAD IS READY -->
             {{#if isUser}}
               <!-- {{> profileImg}} -->
-              {{#unless profilePic}}
+              <!--{{#unless profilePic}}-->
                 {{> profileImageForm}}
                 <a style="display:block" class = "btn btn-default add-profile-image">
                   Add Profile Image
                 </a>
-              {{/unless}}
+              <!--{{/unless}}-->
             {{/if}}
             <img src="{{image}}" alt="" />
             <h1 class="username inline">{{firstName}}</h1>
@@ -70,7 +70,7 @@
           {{#each products}}
           <div class="col-xs-12 col-md-6 product">
             <div class="product">
-              <a class="" href="/product/{{link_id}}">
+              <a class="" href="{{productLink}}">
                 <img src="{{this.image}}" alt="">
                 <div class="description">
                   <a class="avatar product-desc"> </a>

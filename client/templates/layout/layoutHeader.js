@@ -45,6 +45,9 @@ Template.layoutHeader.helpers({
   username: function(){
     return Meteor.user().emails[0].address;
   },
+  userId: function() {
+    return Meteor.user()._id;
+  },
   profileImage: function(){
     return Meteor.user().profile.profile_pic
   },

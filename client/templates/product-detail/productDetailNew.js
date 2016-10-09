@@ -355,9 +355,14 @@ Template.sellerSection.helpers({
     
   },
 
-    isListed: function(){
-    console.log(this._id);
+  isListed: function(){
     return userProducts.findOne({_id:this._id}).link_id;
-  },
-
+  }
 });
+
+Template.sellerSection.events({
+  "click #visitProfile": function() {
+    var user = Session.get('user');
+    Router.go('profile', {userId: user});
+  }
+})

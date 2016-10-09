@@ -2,7 +2,7 @@ if(Meteor.isServer) {
 
   Meteor.startup(function () {
 
-   process.env.MAIL_URL = 'smtp://postmaster%40sandbox760999b1f5094de9890542012a73d75c.mailgun.org:d8645e3d700146694c415efc7d03027c@smtp.mailgun.org:587';
+   //process.env.MAIL_URL = 'smtp://postmaster%40sandbox760999b1f5094de9890542012a73d75c.mailgun.org:d8645e3d700146694c415efc7d03027c@smtp.mailgun.org:587';
 
    Accounts.emailTemplates.from='no-reply@huntrs.com';
    Accounts.emailTemplates.sitename='HUNTRS';
@@ -18,6 +18,6 @@ if(Meteor.isServer) {
      sendVerificationEmail:true
    });
 
-  //  Accounts.sendVerificationEmail(Meteor.userId());
+   //Accounts.sendVerificationEmail(this.userId);
   });
  }
