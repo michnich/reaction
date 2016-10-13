@@ -36,11 +36,6 @@ fortawesome:fontawesome # font awesome library
 
 # Meteor Auth Packages
 
-accounts-facebook
-accounts-google
-accounts-twitter
-accounts-github
-accounts-weibo
 accounts-oauth
 
 # Reaction Commerce Packages
