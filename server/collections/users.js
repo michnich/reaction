@@ -83,10 +83,6 @@ Meteor.publish('directory', function(){
   return Meteor.users.find({});
 });
 
-Meteor.publish('userProducts', function(){
-  return userProducts;
-});
-
 //returns user based on the passed id (from meteor's account collection, not reaction's)
 //switch to return only the neccessary fields
 Meteor.publish('userById', function(userId) {
