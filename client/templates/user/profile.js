@@ -69,15 +69,6 @@ Template.profile.helpers({
   profilePic: function () {
     var user = Router.current().params.userId;
     return Meteor.users.findOne({"_id":user}).profile.profile_pic;
-  },
-  productLink: function() {
-    var link = userProducts.findOne({_id:this._id}).link_id;
-    if (link) {
-      return "/product/" + link;
-    }
-    else {
-      return "#";
-    }
   }
 });
 
