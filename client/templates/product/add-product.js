@@ -37,6 +37,7 @@ Template.addProduct.events({
 
       // // send email
       var userEmail = Meteor.user().emails[0].address;
+      var userId = Meteor.user()._id;
       var productName = $('#productName').val();
       var productType = $('#sel1').val();
       var productPrice = $('#productPrice').val();
@@ -59,6 +60,8 @@ Template.addProduct.events({
               '</p> <br> <h2> Product Description: </h2> <p>' + productDesc + ' </p> <br> <h2> Product Condition: </h2> <p>' + productCondition + '</p>'
               + ' </p> <br> <h2> Product Size: </h2> <p>' + productSize + '</p>' + ' </p> <br> <h2> Product Color: </h2> <p>' + productColor + '</p>'
               + ' </p> <br> <h2> Product Category: </h2> <p>' + productCategory + '</p>'
+              +'<p>User ID: ' + userId + '</p>'
+              +'<p>User profile: <a href="http://huntrs.co/profile/' + userId +'">http://huntrs.co/profile/' + userId +' </a></p>'
       });
 
       // Send email to user

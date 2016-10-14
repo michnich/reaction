@@ -71,9 +71,9 @@ Template.profile.helpers({
     return Meteor.users.findOne({"_id":user}).profile.profile_pic;
   },
   productLink: function() {
-    var linkId = userProducts.findOne({_id:this._id}).link_id;
-    if (linkId) {
-      return "/product/"+ linkId;
+    var link = userProducts.findOne({_id:this._id}).link_id;
+    if (link) {
+      return "/product/" + link;
     }
     else {
       return "#";
@@ -109,7 +109,6 @@ Template.profile.events({
     });
   },
   "click .add-profile-image":function(event){
-    alert('image added');
     var profileImage = $('.afCloudinary-thumbnail a').attr('href');
     console.log(profileImage);
     Meteor.users.update(Meteor.userId(),
