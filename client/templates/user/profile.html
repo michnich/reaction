@@ -14,12 +14,12 @@
             <!-- UNCOMMENT  THIS and image below WHEN IMAGE UPLOAD IS READY -->
             {{#if isUser}}
               <!-- {{> profileImg}} -->
-              {{#unless profilePic}}
+              <!--{{#unless profilePic}}-->
                 {{> profileImageForm}}
                 <a style="display:block" class = "btn btn-default add-profile-image">
                   Add Profile Image
                 </a>
-              {{/unless}}
+              <!--{{/unless}}-->
             {{/if}}
             <img src="{{image}}" alt="" />
             <h1 class="username inline">{{firstName}}</h1>
