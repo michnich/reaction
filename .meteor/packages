@@ -81,7 +81,6 @@ mdg:validation-error@0.4.0
 #meteorhacks:sikka    # additional ddp, login security
 peppelg:bootstrap-3-modal
 coffeescript
-yogiben:pretty-email
 sergeyt:typeahead
 codechimera:meteor-bootstrap-sweetalert
 msavin:mongol
