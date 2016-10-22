@@ -313,9 +313,9 @@ Template.sellerSection.onCreated(function(){
     
     //should be subscribing to products, not userproducts
     //this.documents = this.subscribe('productsByUser', product.vendor);
-    this.subscribe('userById', product.vendor);
+    this.subscribe('sellerSection', product.vendor);
 
-    this.documents = this.subscribe('userProductsByUser', product.vendor);
+    this.documents = this.subscribe('sellerSectionProducts', product.vendor);
     
     //once directory subscribitions are all removed, must subscribe to the just selling user
     //this.user = this.subscribe('userById', product.vendor);

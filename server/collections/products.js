@@ -20,4 +20,9 @@ Meteor.publish('userProductsByEmail', function(email) {
 	return userProducts.find({"author": email});
 });
 
+Meteor.publish('sellerSectionProducts', function(userId) {
+	check(userId, String);
+	return userProducts.find({"userId": userId}, {"image": 1, "link_id": 1});
+});
+
 

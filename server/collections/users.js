@@ -89,3 +89,15 @@ Meteor.publish('userById', function(userId) {
   check(userId, String);
   return Meteor.users.find({"_id": userId});
 });
+
+//this sub now used to the seller section info of the product page
+//didn't want to change the sub it currently uses, don't know where else it's called
+//or what it could break
+Meteor.publish('sellerSection', function(userId) {
+    check(userId, String);
+    return Meteor.users.find({"_id": userId}, 
+        { "profile.first_name": 1, 
+        "profile.about": 1, 
+        "profile.profile_pic":1,
+        });
+});
