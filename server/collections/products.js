@@ -22,7 +22,24 @@ Meteor.publish('userProductsByEmail', function(email) {
 
 Meteor.publish('sellerSectionProducts', function(userId) {
 	check(userId, String);
-	return userProducts.find({"userId": userId}, {"image": 1, "link_id": 1});
+	return userProducts.find({"userId": userId}, {fields: 
+		{"image": 1, 
+		"link_id": 1,
+		"userId" : 1
+	}});
+});
+
+Meteor.publish('profileProducts', function(userId) {
+	check(userId, String);
+	return userProducts.find({"userId": userId}, {fields: {   
+		"image": 1, 
+		"link_id": 1, 
+		"name": 1, 
+		"price": 1,
+		"type": 1,
+		"userId": 1,
+		"author": 1
+	}});
 });
 
 

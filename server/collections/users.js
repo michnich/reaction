@@ -95,9 +95,44 @@ Meteor.publish('userById', function(userId) {
 //or what it could break
 Meteor.publish('sellerSection', function(userId) {
     check(userId, String);
-    return Meteor.users.find({"_id": userId}, 
-        { "profile.first_name": 1, 
+    return Meteor.users.find({"_id": userId}, {fields: {
+        "profile.first_name": 1, 
         "profile.about": 1, 
-        "profile.profile_pic":1,
-        });
+        "profile.profile_pic": 1
+        }});
+});
+
+Meteor.publish('limitedProfile', function(userId) {
+    // simulate network latency by sleeping 2s
+    // Meteor._sleepForMs(2000);
+    // try to find the user by username
+    check(userId, String);
+    var user = Meteor.users.findOne({"_id":userId});
+    // if we can't find it, mark the subscription as ready and quit
+    if(!user){
+        this.ready();
+        return;
+    }
+    // if the user we want to display the profile is the currently logged in user...
+    if(this.userId == user._id){
+        // then we return the corresponding full document via a cursor
+        return Meteor.users.find(this.userId);
+    }
+    // if(user.emails == undefined){
+    //   Meteor.users.update(Meteor.userId(),
+    //   {$set: {'profile.name': 'default'}}
+    //   );
+    // }
+    else{
+        // if we are viewing only the public part, strip the "profile"
+        // property from the fetched document, you might want to
+        // set only a nested property of the profile as private
+        // instead of the whole property
+        return Meteor.users.find({"_id": userId}, {fields: {
+            "profile.first_name": 1, 
+            "profile.about": 1, 
+            "profile.profile_pic":1,
+            "emails": 1
+        }});
+    }
 });

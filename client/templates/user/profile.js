@@ -1,5 +1,5 @@
 Template.profile.onCreated(function() {
-  this.subscribe('userProductsByUser', Router.current().params.userId);
+  this.subscribe('profileProducts', Router.current().params.userId);
 });
 
 Template.profile.rendered = function(){
