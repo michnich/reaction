@@ -62,7 +62,6 @@ reactioncommerce:reaction-stripe
 
 # Reaction Commerce Data
 
-reactioncommerce:reaction-sample-data   # default Reaction data
 
 # Themes
 reactioncommerce:default-theme          # default Reaction theme
