@@ -49,9 +49,10 @@ Template.addProduct.events({
       var productImageTwo = $('#imageTwo .afCloudinary-thumbnail a').attr('href');
       var productImageThree = $('#imageThree .afCloudinary-thumbnail a').attr('href');
 
+      var emails = ['ikeewell@gmail.com', 'sam@onehunted.com'];
       // // Send email to huntrs
       Meteor.call('sendEmail', {
-        to: 'ikeewell@gmail.com',
+        to: emails,
         from: 'no-reply@huntrs.com',
         subject: userEmail + ' has added a new product, please review',
         text: 'Mailgun is totally awesome for sending emails!',
