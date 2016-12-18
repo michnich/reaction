@@ -3,8 +3,7 @@ Meteor.startup( () => {
 })
 
 if (Meteor.isServer){
-  process.env.MAIL_URL = 'smtp://postmaster%40sandbox760999b1f5094de9890542012a73d75c.mailgun.org:d8645e3d700146694c415efc7d03027c@smtp.mailgun.org:587';
-
+  //process.env.MAIL_URL = 'smtp://postmaster%40huntrs.co.mailgun.org:101fe879dbbb5c4090c6dd0fac4922e7@smtp.mailgun.org:587';
   Meteor.methods({
     sendEmail: function(mailFields) {
       console.log('About to send email....');
