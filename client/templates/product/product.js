@@ -4,9 +4,7 @@ Template.shop.rendered = function() {
 			swal({
 				  title: 'Join the Hunt',
 				  text: "It's free!",
-				  imageUrl: 'resources/popup.png',
-				  imageHeight: 200,
-				  imageWidth: 200,
+				  background: url('resources/popup.png'),
 				  showCancelButton: true,
 				  confirmButtonColor: '#3085d6',
 				  cancelButtonColor: '#d33',
