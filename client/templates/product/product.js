@@ -2,7 +2,7 @@ Template.shop.rendered = function() {
 	if (!Meteor.user()) {
 	    var showSignUp = window.setTimeout(function() {
 			swal({
-				  title: 'Join the Hunt',
+				  title: '<span style="color: white">Join the Hunt</span>',
 				  text: "It's free!",
 				  background: url('resources/popup.png'),
 				  showCancelButton: true,
