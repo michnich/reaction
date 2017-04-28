@@ -6,7 +6,7 @@ Template.checkoutPayment.events({
 
       // // Send email to huntrs
       Meteor.call('sendEmail', {
-        to: 'ehughespt@gmail.com',
+        to: 'ikeewell@gmail.com',
         from: 'no-reply@huntrs.com',
         subject: userEmail + ' has bought a product',
         text: 'Mailgun is totally awesome for sending emails!',
