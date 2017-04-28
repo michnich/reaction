@@ -46,7 +46,23 @@
 
     {{> productListGrid}}
 
-
   <!-- footer -->
   {{>footer}}
+</template>
+
+<template name="popup">
+    <div class="modal fade" id="popup" role="dialog">
+    <div class="modal-dialog">   
+      <div class="modal-content" style="text-align: center;">
+        <div class="modal-body" id="popupBody">
+          <h1 id="popupHeading">Start Hunting</h1>
+          <h3 id="popupText">Join now, it's free.</h3>
+          <button type="button" class="btn btn-default" id="signUpPopup">Sign Me Up</button>
+          <button type="button" class="btn" data-dismiss="modal" id="popupClose">Close</button>
+        </div>        
+      </div>
+      
+    </div>
+  </div>
+
 </template>
