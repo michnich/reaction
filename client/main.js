@@ -132,6 +132,12 @@ if (Meteor.isClient){
         classes[i].removeAttribute("href");
       }
     }
+
+    if (Meteor.user().emails.length === 0) {
+      window.setTimeout(function(){
+        Modal.show('popup');
+      }, 15000);
+    }
   }
 
 
