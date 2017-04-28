@@ -84,4 +84,42 @@
   display: inline-block;
   padding-bottom: 10px; }
 
+#popupBody {
+	background-image: url('resources/popup.jpeg');
+	background-size: cover;
+}
+
+#popupHeading {
+	color: #FFF;
+	font-family: gotham;
+	text-shadow: 1px 1px 1px #000;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-top: 15vh;
+}
+
+#popupText {
+	font-family: gotham;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px rgb(15, 15, 15);
+	color: black;
+	font-weight: 900;
+	font-size: 4vh;
+	margin-bottom: 7vh;
+}
+
+#popupClose {
+	color: #FFF;
+	background-color: #666;
+	border-color: #595959;
+	border-radius: 0px;
+	font-family: gotham;
+}
+
+#popupClose:hover {
+	  color: #ffffff;
+  	  background-color: #4d4d4d;
+	  border-color: #3b3b3b;
+}
+
 /*# sourceMappingURL=product.css.map */
