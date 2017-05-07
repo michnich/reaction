@@ -89,3 +89,15 @@ Meteor.publish('userById', function(userId) {
   check(userId, String);
   return Meteor.users.find({"_id": userId});
 });
+
+
+Meteor.publish('completedOrder', function(userId, cartId) {
+  check(userId, String);
+  check(cartId, String);
+  return ReactionCore.Collections.Orders.find({"cartId": cartId, "userId": userId});
+});
+
+Meteor.publish('orderDetails', function(orderId) {
+  check(orderId, String);
+  return ReactionCore.Collections.Orders.find({"_id": orderId});
+});
