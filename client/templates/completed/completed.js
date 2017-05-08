@@ -5,7 +5,8 @@ Template.cartCompleted.onCreated(function() {
     var itemString = "<h2>Items Ordered</h2>\n";
     var x = 0;
     for (x = 0; x < numItems; x++) {
-      var temp = "<h3>Title: " + order.items[x].variants.title + "</h3>\n" + "<h4>Product Id: " + order.items[x].productId + "</h4>\n";
+      var temp = "<h3>Title: " + order.items[x].variants.title + "</h3>\n" + "<h4>Product Id: " + order.items[x].productId + "</h4>\n"
+      + "<h4>Product Price: " + order.items[x].variants.price + "</h4>";
       itemString = itemString.concat(temp); 
     }
     var userInfoString = "<h2>User Details: </h2>\n" + "<h3>Name: " 
